@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<request>
+	<collection>book</collection>
+	<parts>
+		<part>
+			<book>
+				<_id>101</_id>
+				<author>Gambardella, Matthew</author>
+				<title>XML Developer's Guide</title>
+				<genre>Computer</genre>
+				<price>44.95</price>
+				<publish_date>2000-10-01</publish_date>
+				<description>An in-depth look at creating applications with XML.</description>
+				<chapters>
+					<chapter>
+						<number>1</number>
+						<name>first</name>
+					</chapter>
+					<chapter>
+						<number>2</number>
+						<name>second</name>
+					</chapter>
+					<chapter>
+						<number>3</number>
+						<name>third</name>
+					</chapter>
+				</chapters>
+			</book>
+		</part>
+		<part>
+			<book>
+				<_id>102</_id>
+				<author>Ralls, Kim</author>
+				<title>Midnight Rain</title>
+				<genre>Fantasy</genre>
+				<price>5.95</price>
+				<publish_date>2000-12-16</publish_date>
+				<description>A former architect battles corporate zombies, an evil sorceress, and her own childhood to become queen of the world.
+				</description>
+				<chapters>
+					<chapter>
+						<number>i</number>
+						<name>prolog</name>
+					</chapter>
+					<chapter>
+						<number>ii</number>
+						<name>epilogue</name>
+					</chapter>
+				</chapters>
+			</book>
+		</part>
+	</parts>
+</request>
