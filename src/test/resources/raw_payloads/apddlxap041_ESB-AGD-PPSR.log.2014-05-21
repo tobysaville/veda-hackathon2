@@ -1,0 +1,414 @@
+2014-05-21 15:49:17.166 WARN  [main] [] [org.hibernate.ejb.Ejb3Configuration] Persistence provider caller does not implement the EJB3 spec correctly. PersistenceUnitInfo.getNewTempClassLoader() is null.
+2014-05-21 15:49:17.166 WARN  [main] [] [org.hibernate.ejb.Ejb3Configuration] Persistence provider caller does not implement the EJB3 spec correctly. PersistenceUnitInfo.getNewTempClassLoader() is null.
+2014-05-21 15:50:40.761 INFO  [main] [] [org.springframework.context.support.DefaultLifecycleProcessor] Starting beans in phase 2147483647
+2014-05-21 15:50:40.761 INFO  [main] [] [org.springframework.scheduling.quartz.SchedulerFactoryBean] Starting Quartz Scheduler now
+2014-05-21 15:51:52.561 INFO  [main] [] [com.veda.esb.cmn.actions.VedaExpirationAction] Expire to Wiretap - esb-agd-ppsr:search-by-grantor:expiration
+2014-05-21 15:51:53.895 INFO  [main] [] [com.veda.esb.cmn.actions.VedaExpirationAction] Expire to Wiretap - esb-agd-ppsr:ordinal-search:expiration
+2014-05-21 15:51:54.227 INFO  [main] [] [com.veda.esb.cmn.actions.VedaExpirationAction] Expire to Wiretap - esb-agd-ppsr:search-by-registration-number:expiration
+2014-05-21 15:51:54.535 INFO  [main] [] [com.veda.esb.cmn.actions.VedaExpirationAction] Expire to Wiretap - esb-agd-ppsr:search-by-serial-number:expiration
+2014-05-21 17:23:57.209 INFO  [Thread-317 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00001] [com.veda.esb.cmn.actions.routingslip.RoutingSlipUtils] Using routing slip [expire-to] to route from [esb-agd-ppsr:search-by-registration-number] to [ppsr-registration-number-search-orchestrator:expiry-handler]
+2014-05-21 17:23:57.347 WARN  [Thread-285 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00001] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 17:23:57.349 WARN  [Thread-285 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00001] [esb-agd-ppsr.error-handler] error payload: [<varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00001</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>].
+2014-05-21 17:23:57.349 INFO  [Thread-285 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00001] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00001</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>] 
+2014-05-21 18:09:15.401 TRACE [Thread-388 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [org.springframework.ws.client.MessageTracing.received] Received response [<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" s:mustUnderstand="1">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2013-02-04T06:03:23.530Z</u:Created>
+        <u:Expires>2013-02-04T06:08:23.530Z</u:Expires>
+      </u:Timestamp>
+    </o:Security>
+  </s:Header>
+  <s:Body>
+    <RequestSearchCertificateResponseMessage xmlns="http://schemas.ppsr.gov.au/2011/04/services">
+      <RequestSearchCertificateResponse xmlns:a="http://schemas.ppsr.gov.au/2011/04/data" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:CustomersRequestMessageId>130204-PP078-0002X_AB8Y_0001</a:CustomersRequestMessageId>
+        <a:CustomersUserDefinedFields/>
+        <a:PpsrRequestMessageId>69295456</a:PpsrRequestMessageId>
+        <a:RequestProcessedByEnvironment>Discovery</a:RequestProcessedByEnvironment>
+        <a:RequestProcessedDateTime>2013-02-13T10:24:36</a:RequestProcessedDateTime>
+        <a:AccessToSearchCertificateExpiryTime>2013-03-14T10:24:36</a:AccessToSearchCertificateExpiryTime>
+        <a:PpsrTransactionId>20208669</a:PpsrTransactionId>
+        <a:SearchCertificateNumber>6506474017730002</a:SearchCertificateNumber>
+        <a:SearchCertificateRequestedDateTime>2013-03-13T10:24:36</a:SearchCertificateRequestedDateTime>
+      </RequestSearchCertificateResponse>
+    </RequestSearchCertificateResponseMessage>
+  </s:Body>
+</s:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1"><wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-1"><wsse:Username>DISC-VED</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">089e8b$T#10000m</wsse:Password></wsse:UsernameToken></wsse:Security><TargetEnvironment xmlns="http://schemas.ppsr.gov.au/2011/04/services">Discovery</TargetEnvironment></SOAP-ENV:Header><SOAP-ENV:Body><ns4:RequestSearchCertificateRequestMessage xmlns:ns4="http://schemas.ppsr.gov.au/2011/04/services" xmlns:ns2="http://schemas.ppsr.gov.au/2011/04/data" xmlns:ns3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ns5="http://schemas.ppsr.gov.au/faults"><ns4:RequestSearchCertificateRequest><ns2:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</ns2:CustomersRequestMessageId><ns2:CustomersUserDefinedFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:ChangeNumber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:RegistrationNumber>201210020036336</ns2:RegistrationNumber><ns2:SearchNumber>929227179489</ns2:SearchNumber></ns4:RequestSearchCertificateRequest></ns4:RequestSearchCertificateRequestMessage></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014-05-21 18:09:15.406 INFO  [Thread-388 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [com.veda.esb.agd.ppsr.ws.client.SpringWebServiceClient] Remote call (au.gov.ppsr.schemas.services.RequestSearchCertificateRequestMessage@79648409) to PPSR took 1360532 ms. Status: SUCCESS
+2014-05-21 18:09:15.413 TRACE [Thread-237 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [org.springframework.ws.client.MessageTracing.received] Received response [<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" s:mustUnderstand="1">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2013-02-04T06:03:23.530Z</u:Created>
+        <u:Expires>2013-02-04T06:08:23.530Z</u:Expires>
+      </u:Timestamp>
+    </o:Security>
+  </s:Header>
+  <s:Body>
+    <RequestSearchCertificateResponseMessage xmlns="http://schemas.ppsr.gov.au/2011/04/services">
+      <RequestSearchCertificateResponse xmlns:a="http://schemas.ppsr.gov.au/2011/04/data" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:CustomersRequestMessageId>130204-PP078-0002X_AB8Y_0001</a:CustomersRequestMessageId>
+        <a:CustomersUserDefinedFields/>
+        <a:PpsrRequestMessageId>69295456</a:PpsrRequestMessageId>
+        <a:RequestProcessedByEnvironment>Discovery</a:RequestProcessedByEnvironment>
+        <a:RequestProcessedDateTime>2013-02-13T10:24:36</a:RequestProcessedDateTime>
+        <a:AccessToSearchCertificateExpiryTime>2013-03-14T10:24:36</a:AccessToSearchCertificateExpiryTime>
+        <a:PpsrTransactionId>20208669</a:PpsrTransactionId>
+        <a:SearchCertificateNumber>6506474017730002</a:SearchCertificateNumber>
+        <a:SearchCertificateRequestedDateTime>2013-03-13T10:24:36</a:SearchCertificateRequestedDateTime>
+      </RequestSearchCertificateResponse>
+    </RequestSearchCertificateResponseMessage>
+  </s:Body>
+</s:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1"><wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-2"><wsse:Username>DISC-VED</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">089e8b$T#10000m</wsse:Password></wsse:UsernameToken></wsse:Security><TargetEnvironment xmlns="http://schemas.ppsr.gov.au/2011/04/services">Discovery</TargetEnvironment></SOAP-ENV:Header><SOAP-ENV:Body><ns4:RequestSearchCertificateRequestMessage xmlns:ns4="http://schemas.ppsr.gov.au/2011/04/services" xmlns:ns2="http://schemas.ppsr.gov.au/2011/04/data" xmlns:ns3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ns5="http://schemas.ppsr.gov.au/faults"><ns4:RequestSearchCertificateRequest><ns2:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</ns2:CustomersRequestMessageId><ns2:CustomersUserDefinedFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:ChangeNumber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:RegistrationNumber>201212200005924</ns2:RegistrationNumber><ns2:SearchNumber>929227179489</ns2:SearchNumber></ns4:RequestSearchCertificateRequest></ns4:RequestSearchCertificateRequestMessage></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014-05-21 18:09:15.415 INFO  [Thread-237 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [com.veda.esb.agd.ppsr.ws.client.SpringWebServiceClient] Remote call (au.gov.ppsr.schemas.services.RequestSearchCertificateRequestMessage@22e38bf7) to PPSR took 1360604 ms. Status: SUCCESS
+2014-05-21 18:43:46.030 INFO  [Thread-503 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 18:43:46.037 INFO  [Thread-505 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 19:13:51.030 INFO  [Thread-526 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 19:13:51.039 INFO  [Thread-552 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 19:29:06.514 INFO  [Thread-596 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 19:29:06.665 TRACE [Thread-237 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [org.springframework.ws.client.MessageTracing.received] Received response [<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" s:mustUnderstand="1">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2013-02-04T06:03:23.530Z</u:Created>
+        <u:Expires>2013-02-04T06:08:23.530Z</u:Expires>
+      </u:Timestamp>
+    </o:Security>
+  </s:Header>
+  <s:Body>
+    <RequestSearchCertificateResponseMessage xmlns="http://schemas.ppsr.gov.au/2011/04/services">
+      <RequestSearchCertificateResponse xmlns:a="http://schemas.ppsr.gov.au/2011/04/data" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:CustomersRequestMessageId>130204-PP078-0002X_AB8Y_0001</a:CustomersRequestMessageId>
+        <a:CustomersUserDefinedFields/>
+        <a:PpsrRequestMessageId>69295456</a:PpsrRequestMessageId>
+        <a:RequestProcessedByEnvironment>Discovery</a:RequestProcessedByEnvironment>
+        <a:RequestProcessedDateTime>2013-02-13T10:24:36</a:RequestProcessedDateTime>
+        <a:AccessToSearchCertificateExpiryTime>2013-03-14T10:24:36</a:AccessToSearchCertificateExpiryTime>
+        <a:PpsrTransactionId>20208669</a:PpsrTransactionId>
+        <a:SearchCertificateNumber>6506474017730002</a:SearchCertificateNumber>
+        <a:SearchCertificateRequestedDateTime>2013-03-13T10:24:36</a:SearchCertificateRequestedDateTime>
+      </RequestSearchCertificateResponse>
+    </RequestSearchCertificateResponseMessage>
+  </s:Body>
+</s:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1"><wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-3"><wsse:Username>DISC-VED</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">089e8b$T#10000m</wsse:Password></wsse:UsernameToken></wsse:Security><TargetEnvironment xmlns="http://schemas.ppsr.gov.au/2011/04/services">Discovery</TargetEnvironment></SOAP-ENV:Header><SOAP-ENV:Body><ns4:RequestSearchCertificateRequestMessage xmlns:ns4="http://schemas.ppsr.gov.au/2011/04/services" xmlns:ns2="http://schemas.ppsr.gov.au/2011/04/data" xmlns:ns3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ns5="http://schemas.ppsr.gov.au/faults"><ns4:RequestSearchCertificateRequest><ns2:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</ns2:CustomersRequestMessageId><ns2:CustomersUserDefinedFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:ChangeNumber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:RegistrationNumber>201210310002657</ns2:RegistrationNumber><ns2:SearchNumber>929227179489</ns2:SearchNumber></ns4:RequestSearchCertificateRequest></ns4:RequestSearchCertificateRequestMessage></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014-05-21 19:29:06.667 INFO  [Thread-237 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [com.veda.esb.agd.ppsr.ws.client.SpringWebServiceClient] Remote call (au.gov.ppsr.schemas.services.RequestSearchCertificateRequestMessage@3f0e5b61) to PPSR took 2720384 ms. Status: SUCCESS
+2014-05-21 19:29:06.669 TRACE [Thread-598 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [org.springframework.ws.client.MessageTracing.received] Received response [<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" s:mustUnderstand="1">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2013-02-04T06:03:23.530Z</u:Created>
+        <u:Expires>2013-02-04T06:08:23.530Z</u:Expires>
+      </u:Timestamp>
+    </o:Security>
+  </s:Header>
+  <s:Body>
+    <RequestSearchCertificateResponseMessage xmlns="http://schemas.ppsr.gov.au/2011/04/services">
+      <RequestSearchCertificateResponse xmlns:a="http://schemas.ppsr.gov.au/2011/04/data" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:CustomersRequestMessageId>130204-PP078-0002X_AB8Y_0001</a:CustomersRequestMessageId>
+        <a:CustomersUserDefinedFields/>
+        <a:PpsrRequestMessageId>69295456</a:PpsrRequestMessageId>
+        <a:RequestProcessedByEnvironment>Discovery</a:RequestProcessedByEnvironment>
+        <a:RequestProcessedDateTime>2013-02-13T10:24:36</a:RequestProcessedDateTime>
+        <a:AccessToSearchCertificateExpiryTime>2013-03-14T10:24:36</a:AccessToSearchCertificateExpiryTime>
+        <a:PpsrTransactionId>20208669</a:PpsrTransactionId>
+        <a:SearchCertificateNumber>6506474017730002</a:SearchCertificateNumber>
+        <a:SearchCertificateRequestedDateTime>2013-03-13T10:24:36</a:SearchCertificateRequestedDateTime>
+      </RequestSearchCertificateResponse>
+    </RequestSearchCertificateResponseMessage>
+  </s:Body>
+</s:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1"><wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-4"><wsse:Username>DISC-VED</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">089e8b$T#10000m</wsse:Password></wsse:UsernameToken></wsse:Security><TargetEnvironment xmlns="http://schemas.ppsr.gov.au/2011/04/services">Discovery</TargetEnvironment></SOAP-ENV:Header><SOAP-ENV:Body><ns4:RequestSearchCertificateRequestMessage xmlns:ns4="http://schemas.ppsr.gov.au/2011/04/services" xmlns:ns2="http://schemas.ppsr.gov.au/2011/04/data" xmlns:ns3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ns5="http://schemas.ppsr.gov.au/faults"><ns4:RequestSearchCertificateRequest><ns2:CustomersRequestMessageId>a1d62e7b-682e-405b-940e-552196c6e817</ns2:CustomersRequestMessageId><ns2:CustomersUserDefinedFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:ChangeNumber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:RegistrationNumber>201210260000098</ns2:RegistrationNumber><ns2:SearchNumber>929227179489</ns2:SearchNumber></ns4:RequestSearchCertificateRequest></ns4:RequestSearchCertificateRequestMessage></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014-05-21 19:29:06.670 INFO  [Thread-598 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [com.veda.esb.agd.ppsr.ws.client.SpringWebServiceClient] Remote call (au.gov.ppsr.schemas.services.RequestSearchCertificateRequestMessage@644196f0) to PPSR took 26834 ms. Status: SUCCESS
+2014-05-21 19:51:46.791 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 19:51:46.792 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 19:51:46.792 INFO  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 19:51:46.808 WARN  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 19:51:46.813 WARN  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 19:51:46.813 INFO  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 19:51:46.815 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 19:51:46.817 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 19:51:46.817 INFO  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 19:51:46.820 WARN  [Thread-655 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 19:51:46.821 WARN  [Thread-655 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 19:51:46.821 INFO  [Thread-655 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:21:51.787 WARN  [Thread-691 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:21:51.787 WARN  [Thread-691 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:21:51.787 INFO  [Thread-691 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:25:47.182 WARN  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:25:47.185 WARN  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:25:47.185 INFO  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:25:47.182 WARN  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:25:47.186 WARN  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:25:47.186 INFO  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:25:47.187 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:25:47.187 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:25:47.187 INFO  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:25:47.189 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:25:47.189 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:25:47.189 INFO  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:25:47.215 WARN  [Thread-730 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:25:47.215 WARN  [Thread-730 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:25:47.215 INFO  [Thread-730 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:25:47.220 INFO  [Thread-652 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 20:55:52.205 INFO  [Thread-812 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 20:59:47.434 WARN  [Thread-730 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:59:47.438 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:59:47.438 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:59:47.438 INFO  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:59:47.440 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:59:47.440 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:59:47.440 INFO  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:59:47.448 WARN  [Thread-730 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:59:47.469 INFO  [Thread-730 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:59:47.479 WARN  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:59:47.479 WARN  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:59:47.479 INFO  [Thread-626 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:6:9:1400655669814::1400669769814|201210020036336] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>21dc76d6-1955-4c3c-a6bb-3c0608c50e3d</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210020036336</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:59:47.506 INFO  [Thread-812 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 20:59:47.510 INFO  [Thread-719 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [com.veda.esb.cmn.actions.routingslip.RoutingSlipUtils] Using routing slip [expire-to] to route from [esb-agd-ppsr:search-by-registration-number] to [ppsr-registration-number-search-orchestrator:expiry-handler]
+2014-05-21 20:59:47.514 INFO  [Thread-813 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [com.veda.esb.cmn.actions.routingslip.RoutingSlipUtils] Using routing slip [expire-to] to route from [esb-agd-ppsr:search-by-registration-number] to [ppsr-registration-number-search-orchestrator:expiry-handler]
+2014-05-21 20:59:47.527 WARN  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 20:59:47.527 WARN  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 20:59:47.528 INFO  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 20:59:47.691 TRACE [Thread-718 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [org.springframework.ws.client.MessageTracing.received] Received response [<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" s:mustUnderstand="1">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2013-02-04T06:03:23.530Z</u:Created>
+        <u:Expires>2013-02-04T06:08:23.530Z</u:Expires>
+      </u:Timestamp>
+    </o:Security>
+  </s:Header>
+  <s:Body>
+    <RequestSearchCertificateResponseMessage xmlns="http://schemas.ppsr.gov.au/2011/04/services">
+      <RequestSearchCertificateResponse xmlns:a="http://schemas.ppsr.gov.au/2011/04/data" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:CustomersRequestMessageId>130204-PP078-0002X_AB8Y_0001</a:CustomersRequestMessageId>
+        <a:CustomersUserDefinedFields/>
+        <a:PpsrRequestMessageId>69295456</a:PpsrRequestMessageId>
+        <a:RequestProcessedByEnvironment>Discovery</a:RequestProcessedByEnvironment>
+        <a:RequestProcessedDateTime>2013-02-13T10:24:36</a:RequestProcessedDateTime>
+        <a:AccessToSearchCertificateExpiryTime>2013-03-14T10:24:36</a:AccessToSearchCertificateExpiryTime>
+        <a:PpsrTransactionId>20208669</a:PpsrTransactionId>
+        <a:SearchCertificateNumber>6506474017730002</a:SearchCertificateNumber>
+        <a:SearchCertificateRequestedDateTime>2013-03-13T10:24:36</a:SearchCertificateRequestedDateTime>
+      </RequestSearchCertificateResponse>
+    </RequestSearchCertificateResponseMessage>
+  </s:Body>
+</s:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1"><wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-6"><wsse:Username>DISC-VED</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">089e8b$T#10000m</wsse:Password></wsse:UsernameToken></wsse:Security><TargetEnvironment xmlns="http://schemas.ppsr.gov.au/2011/04/services">Discovery</TargetEnvironment></SOAP-ENV:Header><SOAP-ENV:Body><ns4:RequestSearchCertificateRequestMessage xmlns:ns4="http://schemas.ppsr.gov.au/2011/04/services" xmlns:ns2="http://schemas.ppsr.gov.au/2011/04/data" xmlns:ns3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ns5="http://schemas.ppsr.gov.au/faults"><ns4:RequestSearchCertificateRequest><ns2:CustomersRequestMessageId>a1d62e7b-682e-405b-940e-552196c6e817</ns2:CustomersRequestMessageId><ns2:CustomersUserDefinedFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:ChangeNumber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:RegistrationNumber>201210260000098</ns2:RegistrationNumber><ns2:SearchNumber>929227179489</ns2:SearchNumber></ns4:RequestSearchCertificateRequest></ns4:RequestSearchCertificateRequestMessage></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014-05-21 20:59:47.692 TRACE [Thread-237 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [org.springframework.ws.client.MessageTracing.received] Received response [<?xml version="1.0" encoding="UTF-8"?><s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+  <s:Header>
+    <o:Security xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" s:mustUnderstand="1">
+      <u:Timestamp u:Id="_0">
+        <u:Created>2013-02-04T06:03:23.530Z</u:Created>
+        <u:Expires>2013-02-04T06:08:23.530Z</u:Expires>
+      </u:Timestamp>
+    </o:Security>
+  </s:Header>
+  <s:Body>
+    <RequestSearchCertificateResponseMessage xmlns="http://schemas.ppsr.gov.au/2011/04/services">
+      <RequestSearchCertificateResponse xmlns:a="http://schemas.ppsr.gov.au/2011/04/data" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:CustomersRequestMessageId>130204-PP078-0002X_AB8Y_0001</a:CustomersRequestMessageId>
+        <a:CustomersUserDefinedFields/>
+        <a:PpsrRequestMessageId>69295456</a:PpsrRequestMessageId>
+        <a:RequestProcessedByEnvironment>Discovery</a:RequestProcessedByEnvironment>
+        <a:RequestProcessedDateTime>2013-02-13T10:24:36</a:RequestProcessedDateTime>
+        <a:AccessToSearchCertificateExpiryTime>2013-03-14T10:24:36</a:AccessToSearchCertificateExpiryTime>
+        <a:PpsrTransactionId>20208669</a:PpsrTransactionId>
+        <a:SearchCertificateNumber>6506474017730002</a:SearchCertificateNumber>
+        <a:SearchCertificateRequestedDateTime>2013-03-13T10:24:36</a:SearchCertificateRequestedDateTime>
+      </RequestSearchCertificateResponse>
+    </RequestSearchCertificateResponseMessage>
+  </s:Body>
+</s:Envelope>] for request [<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header><wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" SOAP-ENV:mustUnderstand="1"><wsse:UsernameToken xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="UsernameToken-5"><wsse:Username>DISC-VED</wsse:Username><wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">089e8b$T#10000m</wsse:Password></wsse:UsernameToken></wsse:Security><TargetEnvironment xmlns="http://schemas.ppsr.gov.au/2011/04/services">Discovery</TargetEnvironment></SOAP-ENV:Header><SOAP-ENV:Body><ns4:RequestSearchCertificateRequestMessage xmlns:ns4="http://schemas.ppsr.gov.au/2011/04/services" xmlns:ns2="http://schemas.ppsr.gov.au/2011/04/data" xmlns:ns3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:ns5="http://schemas.ppsr.gov.au/faults"><ns4:RequestSearchCertificateRequest><ns2:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</ns2:CustomersRequestMessageId><ns2:CustomersUserDefinedFields xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:ChangeNumber xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/><ns2:RegistrationNumber>201210310002657</ns2:RegistrationNumber><ns2:SearchNumber>929227179489</ns2:SearchNumber></ns4:RequestSearchCertificateRequest></ns4:RequestSearchCertificateRequestMessage></SOAP-ENV:Body></SOAP-ENV:Envelope>]
+2014-05-21 20:59:47.692 INFO  [Thread-718 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [com.veda.esb.agd.ppsr.ws.client.SpringWebServiceClient] Remote call (au.gov.ppsr.schemas.services.RequestSearchCertificateRequestMessage@a4e0bc4) to PPSR took 1887480 ms. Status: SUCCESS
+2014-05-21 20:59:47.692 INFO  [Thread-237 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [com.veda.esb.agd.ppsr.ws.client.SpringWebServiceClient] Remote call (au.gov.ppsr.schemas.services.RequestSearchCertificateRequestMessage@4839951b) to PPSR took 4080635 ms. Status: SUCCESS
+2014-05-21 21:11:07.765 WARN  [Thread-833 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 21:11:07.765 WARN  [Thread-833 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 21:11:07.766 INFO  [Thread-833 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 21:11:07.766 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 21:11:07.766 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error payload: [<varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>].
+2014-05-21 21:11:07.766 INFO  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>] 
+2014-05-21 21:29:52.445 WARN  [Thread-880 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 21:29:52.445 WARN  [Thread-880 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 21:29:52.445 INFO  [Thread-880 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 21:29:52.508 INFO  [Thread-864 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 21:59:57.507 INFO  [Thread-939 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 22:19:08.204 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 22:19:08.204 WARN  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 22:19:08.204 INFO  [Thread-654 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 22:30:02.512 INFO  [Thread-1005 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 22:30:28.303 WARN  [Thread-833 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 22:30:28.303 WARN  [Thread-833 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 22:30:28.303 INFO  [Thread-833 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:2:9:1400655669814::1400669769814|201210310002657] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>ee80813d-7e10-416e-84cf-b2cc400e2082</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201210310002657</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 22:30:28.309 WARN  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 22:30:28.309 WARN  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] error payload: [<veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>].
+2014-05-21 22:30:28.310 INFO  [Thread-731 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:4:9:1400655669814::1400669769814|201212200005924] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <veda:requestSearchCertificateRequest xmlns:veda="http://www.veda.com.au/services/veda-agd-request-search-certificate-request-v1.0.xsd" >
+  <veda:CustomersRequestMessageId>78896434-d8a1-4358-9522-e93bdc2cbc2a</veda:CustomersRequestMessageId>
+  <veda:RegistrationNumber>201212200005924</veda:RegistrationNumber>
+  <veda:SearchNumber>929227179489</veda:SearchNumber>
+</veda:requestSearchCertificateRequest>] 
+2014-05-21 22:30:28.311 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 22:30:28.311 WARN  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error payload: [<varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>].
+2014-05-21 22:30:28.312 INFO  [Thread-635 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>] 
+2014-05-21 22:30:28.326 WARN  [Thread-1023 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 22:30:28.328 WARN  [Thread-1023 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error payload: [<varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>].
+2014-05-21 22:30:28.335 INFO  [Thread-1023 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>] 
+2014-05-21 23:00:07.522 INFO  [Thread-1102 (HornetQ-client-global-threads-1892465642)] [140521-AN1NU-00004:8:9:1400655669814::1400669769814|201210260000098] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: failure-to - valid outcome
+2014-05-21 23:15:48.604 WARN  [Thread-1023 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error message: [ body.'org.jboss.soa.esb.message.fault.reason' = Error communicating with AGD] 
+2014-05-21 23:15:48.604 WARN  [Thread-1023 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] error payload: [<varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>].
+2014-05-21 23:15:48.604 INFO  [Thread-1023 (HornetQ-client-global-threads-1892465642)] [140521-SN09O-00003] [esb-agd-ppsr.error-handler] report payload: [ reportPayload = <varns:SearchByRegistrationNumberRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:vcmn="uri:veda-ppsr-model-common-types" xmlns:varns="http://www.vedaxml.com/services/agd/registration-number-search-v1.0.xsd"><vcmn:CustomersRequestMessageId>140521-SN09O-00003</vcmn:CustomersRequestMessageId><vcmn:CustomersUserDefinedFields/><varns:RegistrationNumber>201305220000134</varns:RegistrationNumber></varns:SearchByRegistrationNumberRequest>] 
