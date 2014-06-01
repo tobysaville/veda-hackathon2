@@ -22,16 +22,16 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
 	
 	@Before
 	public void before() {
-        deleteDirectory("target/inbox");
-        deleteDirectory("target/outbox");
-        deleteDirectory("target/dropbox");
+//        deleteDirectory("target/inbox");
+//        deleteDirectory("target/outbox");
+//        deleteDirectory("target/dropbox");
 	}
 	
 	@Override
 	protected AbstractApplicationContext createApplicationContext() {
 		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("/META-INF/spring/test-context.xml");
 		
-		CamelPropertyPlaceholderDefinition cpphd = (CamelPropertyPlaceholderDefinition) ctx.getBean("properties");
+		/*CamelPropertyPlaceholderDefinition cpphd = (CamelPropertyPlaceholderDefinition) ctx.getBean("properties");
 		
 		try {
 			String propsPath = "/"+cpphd.getLocation().substring(cpphd.getLocation().indexOf(":")+1)+".cfg";
@@ -41,7 +41,7 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 			
-		}
+		}*/
 		
 		return ctx;
 	}
@@ -53,9 +53,9 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
     public void testMoveFile() throws Exception {
 //    	String startRoute = "file://target/inbox";
     	String startRoute = "direct:start";
-    	String endRoute = "file://target/outbox";
+//    	String endRoute = "file://target/outbox";
     	
-    	String resultFilePath = endRoute.replaceFirst("file://", "");
+//    	String resultFilePath = endRoute.replaceFirst("file://", "");
     	
     	String request = IOUtils.toString(getClass().getResourceAsStream("/request.xml"));
     	

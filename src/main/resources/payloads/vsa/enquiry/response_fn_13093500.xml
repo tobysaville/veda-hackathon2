@@ -1,0 +1,272 @@
+<vsa:response xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
+	xmlns:vs2="http://www.vedaxml.com/services/xmlchannel/vsa/v2"
+	response-type="report">
+	<vsa:product-header>
+		<vsa:enquiry-id>140512-VSA04-TEST7</vsa:enquiry-id>
+		<vsa:datetime-requested>2013-11-24T01:44:07</vsa:datetime-requested>
+		<vsa:datetime-generated>2014-05-23T15:52:08</vsa:datetime-generated>
+		<vsa:client-reference>Client Ref 1</vsa:client-reference>
+		<vsa:operator-id>I1RZ</vsa:operator-id>
+		<vsa:operator-name>PAUL</vsa:operator-name>
+		<vsa:product-name>VedaScore Apply</vsa:product-name>
+		<vsa:permission-type code="XY">CONSUMER+COMMERCIAL
+		</vsa:permission-type>
+		<vsa:product-data-level code="C">Comprehensive
+		</vsa:product-data-level>
+		<vsa:product-version>2.0</vsa:product-version>
+	</vsa:product-header>
+	<vsa:product-data>
+		<vsa:enquiry-report>
+			<vsa:primary-match
+				xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1"
+				id-index="1" type="">
+				<vsa:bureau-reference>13093500</vsa:bureau-reference>
+				<vsa:individual-name first-reported-date="1988-06-01"
+					last-reported-date="2014-05-22" last-credit-enquiry-date="2014-05-23">
+					<vsa:family-name>LAST CONSUMER</vsa:family-name>
+					<vsa:first-given-name>FIRSTCONSUMER</vsa:first-given-name>
+					<vsa:other-given-name>MIDCONSUMER</vsa:other-given-name>
+				</vsa:individual-name>
+				<vsa:gender code="M">Male</vsa:gender>
+				<vsa:date-of-birth first-reported-date="2013-01-22"
+					last-reported-date="2014-05-22">1970-05-04</vsa:date-of-birth>
+				<vsa:drivers-licence first-reported-date="2013-05-01"
+					last-reported-date="2013-05-04">
+					<vsa:number>987654321</vsa:number>
+				</vsa:drivers-licence>
+				<vsa:lodged-complaint reported-date="2013-06-04">true
+				</vsa:lodged-complaint>
+				<vsa:is-deceased reported-date="2001-01-04">true
+				</vsa:is-deceased>
+			</vsa:primary-match>
+			<vsa:addresses xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+				<vsa:address first-reported-date="2013-05-05"
+					last-reported-date="2014-05-05" type="C">
+					<vsa:id-references>
+						<vsa:id-reference>13093500</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:property>CASTLE</vsa:property>
+					<vsa:unit-number>3</vsa:unit-number>
+					<vsa:street-number>18</vsa:street-number>
+					<vsa:street-name>SCOTTS</vsa:street-name>
+					<vsa:street-type>PL</vsa:street-type>
+					<vsa:suburb>HATTON VALE</vsa:suburb>
+					<vsa:state>QLD</vsa:state>
+					<vsa:postcode>4341</vsa:postcode>
+					<vsa:country-code>AUS</vsa:country-code>
+				</vsa:address>
+				<vsa:address type="P">
+					<vsa:id-references>
+						<vsa:id-reference>13093500</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:property>TEST1</vsa:property>
+					<vsa:unit-number>22</vsa:unit-number>
+					<vsa:street-number>40</vsa:street-number>
+					<vsa:street-name>LORINYA</vsa:street-name>
+					<vsa:street-type>ST</vsa:street-type>
+					<vsa:suburb>MANSFIELD</vsa:suburb>
+					<vsa:state>QLD</vsa:state>
+					<vsa:postcode>4122</vsa:postcode>
+					<vsa:country-code>AUS</vsa:country-code>
+				</vsa:address>
+				<vsa:address type="P">
+					<vsa:id-references>
+						<vsa:id-reference>13093500</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:property>TEST2</vsa:property>
+					<vsa:unit-number>21</vsa:unit-number>
+					<vsa:street-number>25</vsa:street-number>
+					<vsa:street-name>GEANEY</vsa:street-name>
+					<vsa:street-type>BLV</vsa:street-type>
+					<vsa:suburb>CRESTMEAD</vsa:suburb>
+					<vsa:state>QLD</vsa:state>
+					<vsa:postcode>4132</vsa:postcode>
+					<vsa:country-code>AUS</vsa:country-code>
+				</vsa:address>
+			</vsa:addresses>
+			<vsa:employment
+				xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+				<vsa:employer first-reported-date="2010-03-14"
+					last-reported-date="2014-01-15" type="C">
+					<vsa:id-references>
+						<vsa:id-reference>13093500</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:name>MECHTRIC PTY LTD</vsa:name>
+				</vsa:employer>
+			</vsa:employment>
+			<vsa:consumer-credit-file>
+				<vsa:file-notes>
+					<vsa:file-note date-recorded="2015-01-24" code="l7oc_cC9">
+						<vsa:note>hdYNvKzG</vsa:note>
+					</vsa:file-note>
+				</vsa:file-notes>
+				<vsa:credit-enquiries>
+					<vsa:credit-enquiry enquiry-date="2015-07-15"
+						type="AfyYrj7s" dispute-code="850o6kd_" dispute-reported-date="2015-05-09"
+						is-disputed="false" />
+				</vsa:credit-enquiries>
+				<vsa:accounts xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+					<vsa:account latest-update-date="2014-05-20">
+						<vsa:account-id>2357257-C1865606</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>GE AUTOMOTIVE FIN SVCS-VIC</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>GE AUTOMOTIVE FIN SVCS-VIC</vsa:name>
+							<vsa:transfer-date>2014-04-16</vsa:transfer-date>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="AL">Auto Loan
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:association-information>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>DACC0003</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:latest-start-date>2014-04-01</vsa:latest-start-date>
+					</vsa:account>
+				</vsa:accounts>
+				<vsa:messages>
+					<vsa:message code="m-fIITis">Q6SBN5WB</vsa:message>
+				</vsa:messages>
+			</vsa:consumer-credit-file>
+			<vsa:commercial-credit-file>
+				<vsa:file-notes>
+					<vsa:file-note date-recorded="2014-05-08" code="ImrssMZv">
+						<vsa:note>u-7C:PL1</vsa:note>
+					</vsa:file-note>
+				</vsa:file-notes>
+				<vsa:credit-enquiries>
+					<vsa:credit-enquiry enquiry-date="2014-10-22"
+						type=".m0QP5Y7" dispute-code="96YjRaPL" dispute-reported-date="2014-11-08"
+						is-disputed="0" />
+				</vsa:credit-enquiries>
+				<vsa:accounts>
+					<vsa:account account-data-level="MhiYG4Ff1KRCAvR"
+						latest-update-date="2015-03-17" />
+				</vsa:accounts>
+				<vsa:messages>
+					<vsa:message code="DoxvOHa9">DgUF</vsa:message>
+				</vsa:messages>
+			</vsa:commercial-credit-file>
+			<vsa:public-record-or-consumer-credit-information>
+				<vsa:court-actions>
+					<vsa:court-action type="C" dispute-code="1BkNmM7t"
+						dispute-reported-date="2015-01-08" is-disputed="false" />
+				</vsa:court-actions>
+				<vsa:disqualified-directorships>
+					<vsa:disqualified-directorship
+						last-update-time="14:41:57.123" last-update-date="2015-10-25"
+						last-extract-time="14:41:57.123" last-extract-date="2014-09-05"
+						dispute-code="33POrGW4" dispute-reported-date="2015-04-21"
+						is-disputed="0" />
+				</vsa:disqualified-directorships>
+				<vsa:directorships>
+					<vsa:directorship last-update-time="14:41:57.123"
+						last-update-date="2016-02-06" last-extract-time="14:41:57.123"
+						last-extract-date="2015-04-14" type="C" dispute-code="uFlPsV9C"
+						dispute-reported-date="2014-10-04" is-disputed="0" />
+				</vsa:directorships>
+				<vsa:business-names>
+					<vsa:business-name last-update-time="14:41:57.123"
+						last-update-date="2014-04-01" last-extract-time="14:41:57.123"
+						last-extract-date="2015-07-08" dispute-code="AOQfIVRu"
+						dispute-reported-date="2014-10-31" is-disputed="0" />
+				</vsa:business-names>
+				<vsa:personal-insolvencies>
+					<vsa:personal-insolvency dispute-code="GmDgzCH."
+						dispute-reported-date="2015-08-09" is-disputed="1" />
+				</vsa:personal-insolvencies>
+				<vsa:sole-trader>
+					<vsa:sole-trader-registration>
+						<vsa:ABN>q58hMKj0</vsa:ABN>
+					</vsa:sole-trader-registration>
+				</vsa:sole-trader>
+				<vsa:messages>
+					<vsa:message code="l04PA-lh">YtJtTCiVJJG2vZoLi6C3McH-
+					</vsa:message>
+				</vsa:messages>
+			</vsa:public-record-or-consumer-credit-information>
+		</vsa:enquiry-report>
+		<vsa:summary-data>
+			<vsa:data-block name="awPpibqf7Kxm" type="C">
+				<vsa:characteristic key-characteristic="false"
+					id="-dwqoeOI">
+					<vsa:variable-name>QoQEUhoJ</vsa:variable-name>
+					<vsa:description>.47hKyl4</vsa:description>
+					<vsa:value>vb1eHKkp</vsa:value>
+					<vsa:data-level code="tcSkdA5a6jQfSBiNfRXQiDp4uY_j">ouuqshBY</vsa:data-level>
+				</vsa:characteristic>
+			</vsa:data-block>
+		</vsa:summary-data>
+		<vsa:score-data>
+			<vsa:score is-gated="false">
+				<vsa:scorecard id="mRS7gHqk">
+					<vsa:name />
+					<vsa:version />
+					<vsa:type />
+					<vsa:data-level code="hY01eulZtF2.8Dq">MbhZiT-6</vsa:data-level>
+				</vsa:scorecard>
+				<vsa:risk-odds>pAsJ3-NF</vsa:risk-odds>
+				<vsa:key-contributing-factors>
+					<vsa:contributing-factor id="3Legm7QX">
+						<vsa:name />
+						<vsa:score-impactor code="Wt-rtN5k">zZmmWJ5P
+						</vsa:score-impactor>
+					</vsa:contributing-factor>
+				</vsa:key-contributing-factors>
+				<vsa:score-masterscale>g2KzPk9M</vsa:score-masterscale>
+				<vsa:additional-fields>
+					<vsa:data-field>
+						<vsa:key>Eu4pgB15</vsa:key>
+						<vsa:value>5NpZL2o_</vsa:value>
+					</vsa:data-field>
+				</vsa:additional-fields>
+			</vsa:score>
+		</vsa:score-data>
+		<vsa:possible-matches>
+			<vsa:possible-match>
+				<vsa:identity>
+					<vsa:bureau-reference>UqS9sS41</vsa:bureau-reference>
+					<vsa:individual-name last-credit-enquiry-date="2015-03-26"
+						last-reported-date="2015-07-11" first-reported-date="2015-11-01" />
+					<vsa:gender code="U">Female</vsa:gender>
+					<vsa:date-of-birth last-reported-date="2015-07-04"
+						first-reported-date="2014-07-21">2015-06-28</vsa:date-of-birth>
+					<vsa:drivers-licence last-reported-date="2015-12-12"
+						first-reported-date="2014-08-07">
+						<vsa:number>Sk93Cn8cMP61TmBvky1pPnTW2F5</vsa:number>
+					</vsa:drivers-licence>
+					<vsa:lodged-complaint>0</vsa:lodged-complaint>
+					<vsa:is-deceased>false</vsa:is-deceased>
+					<vsa:do-not-provide-credit>true</vsa:do-not-provide-credit>
+					<vsa:other-indicators>
+						<vsa:indicator>
+							<vsa:key>0Y7uMlpG</vsa:key>
+							<vsa:value>y4bNbRwv</vsa:value>
+						</vsa:indicator>
+					</vsa:other-indicators>
+				</vsa:identity>
+				<vsa:addresses>
+					<vsa:address type="C" dispute-code="9k00tAMU"
+						dispute-reported-date="2015-11-15" is-disputed="true"
+						last-reported-date="2014-12-10" first-reported-date="2015-01-31" />
+				</vsa:addresses>
+				<vsa:employment>
+					<vsa:employer type="C" dispute-code="AeJ9vtyz"
+						dispute-reported-date="2014-08-28" is-disputed="true"
+						last-reported-date="2016-01-16" first-reported-date="2015-05-30" />
+				</vsa:employment>
+			</vsa:possible-match>
+		</vsa:possible-matches>
+	</vsa:product-data>
+	<vsa:general-messages>
+		<vsa:message code="ZhTu:oRm">STATIC CONTENT RETURNED</vsa:message>
+	</vsa:general-messages>
+</vsa:response>

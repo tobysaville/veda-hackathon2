@@ -27,5 +27,7 @@
 	<bean id="myDb" class="com.mongodb.Mongo">
 		<constructor-arg index="0" value="localhost"/>
 	</bean>
+	
+	<bean id="fileLoader" class="com.veda.icc.esb.common.camel.io.FileLoader"/>
 
 </beans>

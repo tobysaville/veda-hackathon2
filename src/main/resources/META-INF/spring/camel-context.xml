@@ -5,31 +5,83 @@
        	http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
 	<camelContext id="main" useMDCLogging="true" trace="true">
-		<propertyPlaceholder id="properties" location="ref:com.veda.icc.esb.xmlchannel.vsa" />
+		<propertyPlaceholder id="properties" location="ref:com.veda.icc.esb.hackathon" />
 
-		<!-- <endpoint id="inbox" uri="${vsa-part-a.request-handler.step1}" /> -->
-		<endpoint id="inbox" uri="direct:start" />
-		<endpoint id="outbox" uri="${vsa-part-a.request-handler.step2}" />
+		<endpoint id="product-request-handler" uri="direct:start" />
+		<endpoint id="product-orchestrator" uri="direct:product-orchestrator" />
+
+		<endpoint id="vsa-orchestrator" uri="direct:vsa-orchestrator" />
+		<endpoint id="vsa-request-dumper" uri="jms:vsa-request-dumper" />
+		<endpoint id="vsa-response-dumper" uri="jms:vsa-response-dumper" />
+		<endpoint id="vsa-product" uri="direct:vsa-product" />
+		
+		<endpoint id="dumper-request-handler" uri="jms:dumper-request-handler" />
+		<endpoint id="dumper-orchestrator" uri="jms:dumper-orchestrator" />
 		
 		<dataFormats>
 			<xmljson id="xmljson" />
 		</dataFormats>
+		
+		<route id="product-request-handler">
+			<from ref="product-request-handler"/>
+			<to ref="product-orchestrator" />
+		</route>
+		
+		<route id="product-orchestrator">
+			<from ref="product-orchestrator" />
+			<log message="product request: ${body}"/>
+			<to ref="vsa-orchestrator"/>
+			<!-- <to ref="bureau-orchestrator"/>
+			<to ref="agd-orchestrator"/> -->
+		</route>
+		
+		<route id="vsa-orchestrator">
+			<from ref="vsa-orchestrator" />
+			<!-- <to uri="stream:file?fileName=/payloads/vsa/enquiry/request_fn_13093500.xml"/> -->
+			<setHeader headerName="common.io.fileloader.location"><constant>/payloads/vsa/enquiry/request_fn_13093500.xml</constant></setHeader>
+			<process ref="fileLoader"/>
+			<log message="vsa request: ${body}"/>
+			<wireTap ref="vsa-request-dumper"/>
+			<to ref="vsa-product"/>
+			<!-- <wireTap ref="vsa-response-dumper"/> -->
+		</route>
+		
+		<route id="vsa-request-dumper">
+			<from ref="vsa-request-dumper" />
+			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
+			<to uri="xslt:transformation/vsa/request-dumper.xsl"/>
+			<log message="vsa request transformed for dumper: ${body}"/>
+			<wireTap ref="dumper-request-handler"/>
+		</route>
+		
+		<route id="vsa-product">
+			<from ref="vsa-product" />
+			<!-- <to uri="stream:file?fileName=/payloads/vsa/enquiry/response_fn_13093500.xml" /> -->
+			<setHeader headerName="common.io.fileloader.location"><constant>/payloads/vsa/enquiry/response_fn_13093500.xml</constant></setHeader>
+			<process ref="fileLoader"/>
+			<log message="vsa product response: ${body}"/>
+		</route>
+		
+		<route id="vsa-response-dumper">
+			<from ref="vsa-response-dumper" />
+			<!-- transform to appropriate message -->
+			<wireTap ref="dumper-request-handler"/>
+		</route>
 
-		<route id="request-handler">
-			<from ref="inbox" />
-			<!-- <to ref="outbox" /> -->
+		<route id="dumper-request-handler">
+			<from ref="dumper-request-handler" />
 			<setHeader headerName="CamelMongoDbCollection"><xpath>/request/collection/text()</xpath></setHeader>
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
 			<!-- <split streaming="true">
 				<tokenize token="part" inheritNamespaceTagName="parts" xml="true" /> -->
 			<split>
-				<xpath>//part/*</xpath>
+				<xpath>//parts/*</xpath>
 				<to uri="jms:queue:order"/>
 			</split>
 		</route>
 		
-		<route>
-			<from uri="jms:queue:order" />
+		<route id="dumper-orchestrator">
+			<from uri="dumper-orchestrator" />
 			<!-- <convertBodyTo type="java.lang.String"/> -->
 			<log message="xml part: ${body}"/>
 			<marshal ref="xmljson"/>

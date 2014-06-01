@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <request>
 	<collection>book</collection>
+	<uuid>xxxxx</uuid>
+	<timestampe>2000-10-01</timestampe>
 	<parts>
-		<part>
 			<book>
 				<_id>101</_id>
 				<author>Gambardella, Matthew</author>
@@ -26,8 +27,6 @@
 					</chapter>
 				</chapters>
 			</book>
-		</part>
-		<part>
 			<book>
 				<_id>102</_id>
 				<author>Ralls, Kim</author>
@@ -48,6 +47,5 @@
 					</chapter>
 				</chapters>
 			</book>
-		</part>
 	</parts>
 </request>

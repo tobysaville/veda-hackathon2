@@ -1,0 +1,138 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://schemas.ppsr.gov.au/2011/04/services" xmlns:data="http://schemas.ppsr.gov.au/2011/04/data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:SearchByRegistrationNumberResponseMessage>
+         <ser:SearchByRegistrationNumberResponse>
+            <data:CustomersRequestMessageId>140522-SN09O-00002</data:CustomersRequestMessageId>
+            <data:CustomersUserDefinedFields/>
+            <data:PpsrRequestMessageId>101696245</data:PpsrRequestMessageId>
+            <data:RequestProcessedByEnvironment>Discovery</data:RequestProcessedByEnvironment>
+            <data:RequestProcessedDateTime>2013-08-26T11:12:37</data:RequestProcessedDateTime>
+            <data:PpsrTransactionId>0</data:PpsrTransactionId>
+            <data:SearchCriteria>
+               <data:RegistrationNumber>201305220000134</data:RegistrationNumber>
+            </data:SearchCriteria>
+            <data:SearchResult>
+               <data:ResultDetail>
+                  <data:ChangeHistory>
+                     <data:ChangeDetails>
+                        <data:ChangeDetail>
+                           <data:ChangeNumber>1300424</data:ChangeNumber>
+                           <data:ChangeType>Amend</data:ChangeType>
+                           <data:RegistrationChangeTime>2013-05-22T16:31:00</data:RegistrationChangeTime>
+                        </data:ChangeDetail>
+                        <data:ChangeDetail>
+                           <data:ChangeNumber>1300423</data:ChangeNumber>
+                           <data:ChangeType>Create</data:ChangeType>
+                           <data:RegistrationChangeTime>2013-05-22T16:24:09</data:RegistrationChangeTime>
+                        </data:ChangeDetail>
+                     </data:ChangeDetails>
+                  </data:ChangeHistory>
+                  <data:RegistrationDetail>
+                     <data:AddressForService>
+                        <data:Addressee>shijina</data:Addressee>
+                        <data:EmailAddress>shijina.kunnummal@veda.com.au</data:EmailAddress>
+                        <data:FaxNumber>0245676656</data:FaxNumber>
+                        <data:MailingAddress>
+                           <data:CountryName>AUSTRALIA</data:CountryName>
+                           <data:ISO3166CountryCode>AU</data:ISO3166CountryCode>
+                           <data:Line1>1</data:Line1>
+                           <data:Line2>crocus pl</data:Line2>
+                           <data:Line3/>
+                           <data:Locality>quakershill</data:Locality>
+                           <data:Postcode>2763</data:Postcode>
+                           <data:State>NSW</data:State>
+                        </data:MailingAddress>
+                        <data:PhysicalAddress>
+                           <data:CountryName>AUSTRALIA</data:CountryName>
+                           <data:ISO3166CountryCode>AU</data:ISO3166CountryCode>
+                           <data:Line1>1</data:Line1>
+                           <data:Line2>crocus pl</data:Line2>
+                           <data:Line3/>
+                           <data:Locality>quakershill</data:Locality>
+                           <data:Postcode>2763</data:Postcode>
+                           <data:State>NSW</data:State>
+                        </data:PhysicalAddress>
+                     </data:AddressForService>
+                     <data:AreAssetsSubjectToControl xsi:nil="true"/>
+                     <data:AreProceedsClaimed>True</data:AreProceedsClaimed>
+                     <data:Attachments>
+                        <data:AttachmentDetail>
+                           <data:AttachmentDescription/>
+                           <data:AttachmentFileName>Access Code Issued for new Secured Party Group Number 100101129.pdf</data:AttachmentFileName>
+                           <data:AttachmentFileSizeBytes>193413</data:AttachmentFileSizeBytes>
+                           <data:AttachmentId>9236</data:AttachmentId>
+                           <data:IsMigratedAttachment>false</data:IsMigratedAttachment>
+                        </data:AttachmentDetail>
+                     </data:Attachments>
+                     <data:ChangeNumber>1300424</data:ChangeNumber>
+                     <data:CollateralClassDescription>Intangible property - Intellectual property - Circuit layout</data:CollateralClassDescription>
+                     <data:CollateralClassType>CircuitLayout</data:CollateralClassType>
+                     <data:CollateralDescription/>
+                     <data:CollateralType>Commercial</data:CollateralType>
+                     <data:EarlierRegistrationNumber xsi:nil="true"/>
+                     <data:GivingOfNoticeIdentifier/>
+                     <data:Grantors>
+                        <data:GrantorSearchDetail>
+                           <data:GrantorType>Organisation</data:GrantorType>
+                           <data:Individual xsi:nil="true"/>
+                           <data:Organisation>
+                              <data:OrganisationName/>
+                              <data:OrganisationNumber>000602862</data:OrganisationNumber>
+                              <data:OrganisationNumberType>ACN</data:OrganisationNumberType>
+                           </data:Organisation>
+                        </data:GrantorSearchDetail>
+                        <data:GrantorSearchDetail>
+                           <data:GrantorType>Individual</data:GrantorType>
+                           <data:Individual>
+                              <data:FamilyName xsi:nil="true"/>
+                              <data:GivenNames xsi:nil="true"/>
+                           </data:Individual>
+                           <data:Organisation xsi:nil="true"/>
+                        </data:GrantorSearchDetail>
+                     </data:Grantors>
+                     <data:IsInventory>False</data:IsInventory>
+                     <data:IsMigrated>true</data:IsMigrated>
+                     <data:IsPMSI>False</data:IsPMSI>
+                     <data:IsSecurityInterestRegistrationKind>true</data:IsSecurityInterestRegistrationKind>
+                     <data:IsSubordinate>false</data:IsSubordinate>
+                     <data:IsTransitional>false</data:IsTransitional>
+                     <data:MigrationDetail>
+                        <data:OriginalStartDate>2015-08-01T00:52:59+10:00</data:OriginalStartDate>
+                        <data:SourceRegister>Register of Company Charges</data:SourceRegister>
+                     </data:MigrationDetail>
+                     <data:ProceedsClaimedDescription>All present and after acquired property</data:ProceedsClaimedDescription>
+                     <data:RegistrationChangeTime>2013-05-22T16:31:00</data:RegistrationChangeTime>
+                     <data:RegistrationEndTime>2038-05-22T23:59:59</data:RegistrationEndTime>
+                     <data:RegistrationKind>SecurityInterest</data:RegistrationKind>
+                     <data:RegistrationNumber>201305220000134</data:RegistrationNumber>
+                     <data:RegistrationStartTime>2013-05-22T16:24:09</data:RegistrationStartTime>
+                     <data:SecuredParties>
+                        <data:CollateralRegistrationSecuredParty>
+                           <data:Individual xsi:nil="true"/>
+                           <data:Organisation>
+                              <data:OrganisationName>COMMONWEALTH BANK OF AUSTRALIA</data:OrganisationName>
+                              <data:OrganisationNumber>123123124</data:OrganisationNumber>
+                              <data:OrganisationNumberType>ACN</data:OrganisationNumberType>
+                           </data:Organisation>
+                           <data:SecuredPartyType>Organisation</data:SecuredPartyType>
+                        </data:CollateralRegistrationSecuredParty>
+                     </data:SecuredParties>
+                     <data:SerialNumberDetails xsi:nil="true"/>
+                  </data:RegistrationDetail>
+                  <data:RestrictionDetail xsi:nil="true"/>
+                  <data:ResultSequenceNumber>1</data:ResultSequenceNumber>
+               </data:ResultDetail>
+               <data:SearchResultRetrievedDateTime>2013-08-26T11:12:37</data:SearchResultRetrievedDateTime>
+            </data:SearchResult>
+            <data:SearchSummary>
+               <data:AccessToSearchResultExpiryTime>2013-08-27T11:12:37</data:AccessToSearchResultExpiryTime>
+               <data:ResultCount>1</data:ResultCount>
+               <data:SearchExecutedDateTime>2013-08-26T11:12:37</data:SearchExecutedDateTime>
+               <data:SearchNumber>235614909690</data:SearchNumber>
+               <data:SearchType>SearchByRegistrationNumber</data:SearchType>
+            </data:SearchSummary>
+         </ser:SearchByRegistrationNumberResponse>
+      </ser:SearchByRegistrationNumberResponseMessage>
+   </soapenv:Body>
+</soapenv:Envelope>
