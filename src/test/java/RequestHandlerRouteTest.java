@@ -64,7 +64,7 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
     	
         // wait a while to let the file be moved
 //        log.info("waiting for 2 seconds for completion");
-//        Thread.sleep(2000);
+        Thread.sleep(8000);
 //        log.info("waiting complete");
 
         // test the file was moved
@@ -75,7 +75,7 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
 //        String content = context.getTypeConverter().convertTo(String.class, target);
 //        assertEquals(request, content);
         
-        log.info("test complete: " + response);
+        log.debug("test complete: " + response);
     }
 	
 	@Test

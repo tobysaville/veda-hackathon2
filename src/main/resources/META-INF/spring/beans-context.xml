@@ -7,15 +7,15 @@
 
 	<bean id="jms" class="org.apache.activemq.camel.component.ActiveMQComponent">
 		<property name="configuration">
-			<bean class="org.apache.camel.component.jms.JmsConfiguration"
-				p:concurrentConsumers="${amq.broker.concurrent.consumers}">
+			<bean class="org.apache.camel.component.jms.JmsConfiguration">
+				<property name="concurrentConsumers" value="5"/>
 				<property name="connectionFactory">
 					<bean class="org.apache.activemq.pool.PooledConnectionFactory"
-						init-method="start" destroy-method="stop"
-						p:maxConnections="${amq.broker.connections.max}">
+						init-method="start" destroy-method="stop" >
+						<property name="maxConnections" value="10"/>
 						<property name="connectionFactory">
-							<bean class="org.apache.activemq.ActiveMQConnectionFactory"
-								p:brokerURL="${amq.broker.url}">
+							<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+								<property name="brokerURL" value="vm://default?broker.persistent=false&amp;broker.useJmx=false"/>
 							</bean>
 						</property>
 					</bean>
@@ -28,6 +28,6 @@
 		<constructor-arg index="0" value="localhost"/>
 	</bean>
 	
-	<bean id="fileLoader" class="com.veda.icc.esb.common.camel.io.FileLoader"/>
+	<!-- <bean id="fileLoader" class="com.veda.icc.esb.common.camel.io.FileLoader"/> -->
 
 </beans>
