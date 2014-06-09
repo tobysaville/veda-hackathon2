@@ -6,7 +6,10 @@
     	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
        	http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring-2.11.0.xsd">
 
-	<camelContext id="hackathon-2" useMDCLogging="true" trace="true">
+	<beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/>
+
+	<camelContext id="hackathon-2" useMDCLogging="true" trace="true" streamCache="true" >
+		
 		<!-- <propertyPlaceholder id="properties" location="ref:com.veda.icc.esb.hackathon" /> -->
 
 		<endpoint id="product-request-handler" uri="direct:start" />
@@ -25,7 +28,7 @@
 			<xmljson id="xmljson" />
 		</dataFormats>
 		
-		<route id="product-request-handler-http">
+		<route id="product-request-handler-http" streamCache="true" >
 			<from ref="product-request-handler-http"/>
 			<to ref="product-orchestrator" />
 		</route>
@@ -47,8 +50,8 @@
 			<from ref="vsa-orchestrator" />
 			<!-- <to uri="stream:file?fileName=/payloads/vsa/enquiry/request_fn_13093500.xml"/> 
 			<setHeader headerName="common.io.fileloader.location"><constant>/payloads/vsa/enquiry/request_fn_13093500.xml</constant></setHeader>
-			<process ref="fileLoader"/>
-			<setBody><simple>resource:classpath:/payloads/vsa/enquiry/request_fn_13093500.xml</simple></setBody>-->
+			<process ref="fileLoader"/>-->
+			<setBody><simple>resource:classpath:/payloads/vsa/enquiry/request_fn_13093500.xml</simple></setBody>
 			<log message="vsa request: ${body}" loggingLevel="INFO"/>
 			<wireTap ref="vsa-request-dumper"/>
 			<to ref="vsa-product"/>
@@ -57,7 +60,7 @@
 		
 		<route id="vsa-request-dumper">
 			<from ref="vsa-request-dumper" />
-			<log message="vsa request dumper: ${body}"/>
+			<log message="vsa request dumper: ${body}" loggingLevel="INFO"/>
 			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
 			<to uri="xslt:transformation/vsa/request-dumper.xsl"/>
 			<log message="vsa request transformed for dumper: ${body}" loggingLevel="DEBUG"/>
@@ -67,7 +70,7 @@
 		<route id="vsa-product">
 			<from ref="vsa-product" />
 			<setBody><simple>resource:classpath:/payloads/vsa/enquiry/response_fn_13093500.xml</simple></setBody>
-			<log message="vsa product response: ${body}" loggingLevel="INFO"/>
+			<log message="vsa product response: ${body}" loggingLevel="DEBUG"/>
 		</route>
 		
 		<route id="vsa-response-dumper">
@@ -80,6 +83,7 @@
 		<route id="dumper-request-handler">
 			<from ref="dumper-request-handler" />
 			<setHeader headerName="CamelMongoDbCollection"><xpath>/request/collection/text()</xpath></setHeader>
+			<setProperty propertyName="CamelMongoDbCollection"><xpath>/request/collection/text()</xpath></setProperty>
 			<!-- <split streaming="true">
 				<tokenize token="part" inheritNamespaceTagName="parts" xml="true" /> -->
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
@@ -95,8 +99,12 @@
 			<log message="xml part: ${body}"/>
 			<marshal ref="xmljson"/>
 			<log message="json: ${body}" />
+			<!-- TODO: header not passed from before split -->
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
+			<log message="saving payload to collection (prop): ${property.CamelMongoDbCollection}"/>
 			<convertBodyTo type="java.lang.String"/>
+			<!-- <convertBodyTo type="com.mongodb.DBObject"/> -->
+			<process ref="stringToDbObject"/>
 			<to uri="mongodb:myDb?database=test&amp;collection=books&amp;operation=save&amp;dynamicity=true" />
 		</route>
 

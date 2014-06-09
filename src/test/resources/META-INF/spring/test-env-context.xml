@@ -9,9 +9,9 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
 		http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
 
-	<ctx:property-placeholder location="classpath:com.veda.icc.esb.xmlchannel.vsa.cfg" />
+	<ctx:property-placeholder location="classpath:com.veda.icc.esb.utilities.dumper.cfg" />
 	
-	<util:properties id="com.veda.icc.esb.xmlchannel.vsa" location="classpath:com.veda.icc.esb.xmlchannel.vsa.cfg"/>
+	<util:properties id="com.veda.icc.esb.utilities.dumper" location="classpath:com.veda.icc.esb.utilities.dumper.cfg"/>
 	
 	<bean id="broker" class="org.apache.activemq.xbean.BrokerFactoryBean">
 		<property name="config" value="activemq.xml"/>

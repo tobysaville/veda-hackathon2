@@ -1,11 +1,6 @@
 
-
-import java.io.File;
-import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.camel.Exchange;
-import org.apache.camel.core.xml.CamelPropertyPlaceholderDefinition;
 import org.apache.camel.test.spring.CamelSpringTestSupport;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;

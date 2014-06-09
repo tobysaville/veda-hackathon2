@@ -46,10 +46,21 @@
     <xsl:template name="requestToPart">
     	<xsl:param name="request"/>
     
-    	<vs2:request>
+    	<request>
     		<_id><xsl:value-of select="$request//vs2:enquiry-id"/></_id>
-    		<xsl:copy-of select="//*[ancestor::vs2:request]" copy-namespaces="no"/>
-    	</vs2:request>
+    		<!-- <xsl:copy-of select="//*[ancestor::vs2:request]" copy-namespaces="no"/> -->
+    		<xsl:apply-templates select="//*[ancestor::vs2:request]"/>
+    	</request>
     	
     </xsl:template>
+
+	<xsl:template match="//vs2:*[ancestor::vs2:request]">
+		<xsl:element name="{local-name()}">
+			<xsl:apply-templates select="@*|node()" />
+		</xsl:element>
+	</xsl:template>
+
+	<xsl:template match="@*|text()|comment()">
+		<xsl:copy />
+	</xsl:template>
 </xsl:stylesheet>
