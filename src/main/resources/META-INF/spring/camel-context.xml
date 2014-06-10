@@ -6,7 +6,7 @@
     	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
        	http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring-2.11.0.xsd">
 
-	<beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/>
+	<!-- <beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/> -->
 
 	<camelContext id="hackathon-2" useMDCLogging="true" trace="true" streamCache="true" autoStartup="true" useBreadcrumb="true">
 
@@ -46,9 +46,6 @@
 		
 		<route id="vsa-orchestrator">
 			<from ref="vsa-orchestrator" />
-			<!-- <to uri="stream:file?fileName=/payloads/vsa/enquiry/request_fn_13093500.xml"/> 
-			<setHeader headerName="common.io.fileloader.location"><constant>/payloads/vsa/enquiry/request_fn_13093500.xml</constant></setHeader>
-			<process ref="fileLoader"/>-->
 			<setBody><simple>resource:classpath:/payloads/vsa/enquiry/request_fn_13093500.xml</simple></setBody>
 			<log message="vsa request: ${body}" loggingLevel="INFO"/>
 			<wireTap ref="vsa-request-dumper"/>
@@ -80,27 +77,19 @@
 
 		<route id="dumper-request-handler">
 			<from ref="dumper-request-handler" />
-			<setHeader headerName="CamelMongoDbCollection"><xpath>/request/collection/text()</xpath></setHeader>
-			<setProperty propertyName="CamelMongoDbCollection"><xpath>/request/collection/text()</xpath></setProperty>
-			<!-- <split streaming="true">
-				<tokenize token="part" inheritNamespaceTagName="parts" xml="true" /> -->
-			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
-			<log message="saving payload to collection: ${property.CamelMongoDbCollection}"/>
+			<setHeader headerName="CamelMongoDbCollection"><xpath resultType="String">/request/collection/text()</xpath></setHeader>
 			<split>
-				<xpath>//parts/*</xpath>
+				<xpath resultType="String">//parts/*</xpath>
 				<to ref="dumper-orchestrator"/>
 			</split>
 		</route>
 		
 		<route id="dumper-orchestrator">
 			<from ref="dumper-orchestrator" />
-			<!-- <convertBodyTo type="java.lang.String"/> -->
-			<log message="xml part: ${body}"/>
+			<log message="xml part: ${body}" loggingLevel="DEBUG"/>
 			<marshal ref="xmljson"/>
 			<log message="json: ${body}" />
-			<!-- TODO: header not passed from before split -->
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
-			<log message="saving payload to collection (prop): ${property.CamelMongoDbCollection}"/>
 			<convertBodyTo type="java.lang.String"/>
 			<!-- <convertBodyTo type="com.mongodb.DBObject"/>
 			<process ref="stringToDbObject"/> -->

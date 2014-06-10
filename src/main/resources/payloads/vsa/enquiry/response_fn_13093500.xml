@@ -1,5 +1,4 @@
 <vsa:response xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
-	xmlns:vs2="http://www.vedaxml.com/services/xmlchannel/vsa/v2"
 	response-type="report">
 	<vsa:product-header>
 		<vsa:enquiry-id>140512-VSA04-TEST7</vsa:enquiry-id>
