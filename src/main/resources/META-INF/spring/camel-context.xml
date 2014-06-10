@@ -8,9 +8,7 @@
 
 	<beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/>
 
-	<camelContext id="hackathon-2" useMDCLogging="true" trace="true" streamCache="true" >
-		
-		<!-- <propertyPlaceholder id="properties" location="ref:com.veda.icc.esb.hackathon" /> -->
+	<camelContext id="hackathon-2" useMDCLogging="true" trace="true" streamCache="true" autoStartup="true" useBreadcrumb="true">
 
 		<endpoint id="product-request-handler" uri="direct:start" />
 		<endpoint id="product-request-handler-http" uri="jetty:http://0.0.0.0:8080/hackathon/services/submit" />
@@ -87,6 +85,7 @@
 			<!-- <split streaming="true">
 				<tokenize token="part" inheritNamespaceTagName="parts" xml="true" /> -->
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
+			<log message="saving payload to collection: ${property.CamelMongoDbCollection}"/>
 			<split>
 				<xpath>//parts/*</xpath>
 				<to ref="dumper-orchestrator"/>
@@ -103,8 +102,8 @@
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
 			<log message="saving payload to collection (prop): ${property.CamelMongoDbCollection}"/>
 			<convertBodyTo type="java.lang.String"/>
-			<!-- <convertBodyTo type="com.mongodb.DBObject"/> -->
-			<process ref="stringToDbObject"/>
+			<!-- <convertBodyTo type="com.mongodb.DBObject"/>
+			<process ref="stringToDbObject"/> -->
 			<to uri="mongodb:myDb?database=test&amp;collection=books&amp;operation=save&amp;dynamicity=true" />
 		</route>
 
