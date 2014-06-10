@@ -46,20 +46,19 @@
 		
 		<route id="vsa-orchestrator">
 			<from ref="vsa-orchestrator" />
+			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
 			<setBody><simple>resource:classpath:/payloads/vsa/enquiry/request_fn_13093500.xml</simple></setBody>
-			<log message="vsa request: ${body}" loggingLevel="INFO"/>
-			<wireTap ref="vsa-request-dumper"/>
+			<log message="vsa request: ${body}" loggingLevel="DEBUG"/>
+			<!-- <wireTap ref="vsa-request-dumper"/> -->
 			<to ref="vsa-product"/>
-			<!-- <wireTap ref="vsa-response-dumper"/> -->
+			<wireTap ref="vsa-response-dumper"/>
 		</route>
 		
 		<route id="vsa-request-dumper">
 			<from ref="vsa-request-dumper" />
-			<log message="vsa request dumper: ${body}" loggingLevel="INFO"/>
-			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
+			<log message="vsa request dumper: ${body}" loggingLevel="DEBUG"/>
 			<to uri="xslt:transformation/vsa/request-dumper.xsl"/>
-			<log message="vsa request transformed for dumper: ${body}" loggingLevel="DEBUG"/>
-			<wireTap ref="dumper-request-handler"/>
+			<to ref="dumper-request-handler"/>
 		</route>
 		
 		<route id="vsa-product">
@@ -70,23 +69,24 @@
 		
 		<route id="vsa-response-dumper">
 			<from ref="vsa-response-dumper" />
-			<!-- transform to appropriate message -->
-			<to uri="xslt:transformation/dumper/request-template.xsl"/>
-			<wireTap ref="dumper-request-handler"/>
+			<log message="vsa response: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/vsa/response-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
 		</route>
 
 		<route id="dumper-request-handler">
 			<from ref="dumper-request-handler" />
+			<log message="dumper payload: ${body}" loggingLevel="INFO"/>
 			<setHeader headerName="CamelMongoDbCollection"><xpath resultType="String">/request/collection/text()</xpath></setHeader>
 			<split>
-				<xpath resultType="String">//parts/*</xpath>
+				<xpath resultType="String">/request/parts/*</xpath>
 				<to ref="dumper-orchestrator"/>
 			</split>
 		</route>
 		
 		<route id="dumper-orchestrator">
 			<from ref="dumper-orchestrator" />
-			<log message="xml part: ${body}" loggingLevel="DEBUG"/>
+			<log message="xml part: ${body}" loggingLevel="INFO"/>
 			<marshal ref="xmljson"/>
 			<log message="json: ${body}" />
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
