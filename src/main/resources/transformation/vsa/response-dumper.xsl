@@ -49,13 +49,13 @@
     	
     </xsl:template>
 
-	<xsl:template match="//vsa:*[ancestor::vsa:response]">
+	<xsl:template match="vsa:*[ancestor::vsa:response]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
 	</xsl:template>
 
-	<!-- <xsl:template match="@*|text()|comment()">
+	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
-	</xsl:template> -->
+	</xsl:template>
 </xsl:stylesheet>

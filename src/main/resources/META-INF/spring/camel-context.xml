@@ -79,7 +79,7 @@
 			<log message="dumper payload: ${body}" loggingLevel="INFO"/>
 			<setHeader headerName="CamelMongoDbCollection"><xpath resultType="String">/request/collection/text()</xpath></setHeader>
 			<split>
-				<xpath resultType="String">/request/parts/*</xpath>
+				<xpath>/request/parts/*</xpath>
 				<to ref="dumper-orchestrator"/>
 			</split>
 		</route>
