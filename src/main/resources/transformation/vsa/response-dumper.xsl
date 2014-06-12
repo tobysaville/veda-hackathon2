@@ -44,12 +44,13 @@
     
     	<response>
     		<_id><xsl:value-of select="$payload//vsa:enquiry-id"/></_id>
-    		<xsl:apply-templates select="//*[ancestor::vsa:response]"/>
+    		<!--<xsl:apply-templates select="//*[ancestor::vsa:response]"/>-->
+    		<xsl:apply-templates select="* | node()" />
     	</response>
     	
     </xsl:template>
 
-	<xsl:template match="//vsa:*[ancestor::vsa:response]">
+	<xsl:template match="*[ancestor::vsa:response]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
