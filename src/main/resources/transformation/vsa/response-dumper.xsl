@@ -3,7 +3,7 @@
 	xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
 	exclude-result-prefixes="vsa">
 
-    <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="yes"/>
+    <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
     
     <xsl:param name="timestamp"/>
@@ -56,7 +56,7 @@
 		</xsl:element>
 	</xsl:template>
 
-	<!-- <xsl:template match="@*|text()|comment()">
+	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
-	</xsl:template> -->
+	</xsl:template>
 </xsl:stylesheet>
