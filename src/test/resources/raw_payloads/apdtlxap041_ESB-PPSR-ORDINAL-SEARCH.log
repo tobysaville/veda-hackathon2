@@ -1,0 +1,12 @@
+2014-06-12 11:26:16.249 INFO  [JBoss Shutdown Hook] [] [org.jboss.internal.soa.esb.services.rules.util.RulesClassLoader] Removing RulesClassLoader?deployment=ID-8&ruleSource=/META-INF/drl/productCodeRule.drl
+2014-06-12 11:26:16.249 INFO  [JBoss Shutdown Hook] [] [org.jboss.internal.soa.esb.services.rules.util.RulesClassLoader] Removing RulesClassLoader?deployment=ID-8&ruleSource=/META-INF/drl/ordinalSearchRouteRule.drl
+2014-06-12 11:26:16.249 INFO  [JBoss Shutdown Hook] [] [org.jboss.internal.soa.esb.services.rules.util.RulesClassLoader] Removing RulesClassLoader?deployment=ID-8&ruleSource=/META-INF/drl/previousSearchRule.drl
+2014-06-12 11:40:04.240 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:04.329 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:06.079 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:06.917 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:07.513 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:07.882 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:08.133 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:08.133 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:08.728 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]

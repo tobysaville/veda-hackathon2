@@ -1,0 +1,40 @@
+2014-06-11 13:13:30.827 INFO  [Thread-17317 (HornetQ-client-global-threads-1438318103)] [140611-SN02W-00001] [esb-user-profile.user-client-organisations-retrieval-service] request: [<up:UserClientOrganisationsRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:up="http://vedaxml.com/vxml2/veda-userprofile-request-v1.0" xmlns:upc="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0"><upc:pegasusOperatorId>4TZ6</upc:pegasusOperatorId></up:UserClientOrganisationsRequest>].
+2014-06-11 13:13:30.829 INFO  [Thread-17317 (HornetQ-client-global-threads-1438318103)] [140611-SN02W-00001] [com.veda.esb.userprofile.action.UserClientOrganisationsRetrievalAction] Retrieving user profile for Username [null] Pegasus Operator Id [4TZ6]
+2014-06-11 13:13:30.871 INFO  [Thread-17317 (HornetQ-client-global-threads-1438318103)] [140611-SN02W-00001] [esb-user-profile.user-client-organisations-retrieval-service] response: [<ns2:UserClientOrganisationsResponse xmlns:ns2="http://vedaxml.com/vxml2/veda-userprofile-response-v1.0" xmlns="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0">
+    <ns2:clientOrganisations>
+        <clientOrganisation>
+            <organisationName>AMEND NAME LIMITED</organisationName>
+            <acn>000000073</acn>
+            <abn>12000000073</abn>
+        </clientOrganisation>
+        <clientOrganisation>
+            <organisationName>ARROW TILES PTY. LIMITED</organisationName>
+            <acn>050103494</acn>
+            <abn>93050103494</abn>
+        </clientOrganisation>
+        <clientOrganisation>
+            <acn>000105233</acn>
+        </clientOrganisation>
+    </ns2:clientOrganisations>
+</ns2:UserClientOrganisationsResponse>
+].
+2014-06-11 13:39:31.932 INFO  [Thread-17363 (HornetQ-client-global-threads-1438318103)] [140611-SN02W-00003] [esb-user-profile.user-client-organisations-retrieval-service] request: [<up:UserClientOrganisationsRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:up="http://vedaxml.com/vxml2/veda-userprofile-request-v1.0" xmlns:upc="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0"><upc:pegasusOperatorId>4TZ6</upc:pegasusOperatorId></up:UserClientOrganisationsRequest>].
+2014-06-11 13:39:31.934 INFO  [Thread-17363 (HornetQ-client-global-threads-1438318103)] [140611-SN02W-00003] [com.veda.esb.userprofile.action.UserClientOrganisationsRetrievalAction] Retrieving user profile for Username [null] Pegasus Operator Id [4TZ6]
+2014-06-11 13:39:31.975 INFO  [Thread-17363 (HornetQ-client-global-threads-1438318103)] [140611-SN02W-00003] [esb-user-profile.user-client-organisations-retrieval-service] response: [<ns2:UserClientOrganisationsResponse xmlns:ns2="http://vedaxml.com/vxml2/veda-userprofile-response-v1.0" xmlns="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0">
+    <ns2:clientOrganisations>
+        <clientOrganisation>
+            <organisationName>AMEND NAME LIMITED</organisationName>
+            <acn>000000073</acn>
+            <abn>12000000073</abn>
+        </clientOrganisation>
+        <clientOrganisation>
+            <organisationName>ARROW TILES PTY. LIMITED</organisationName>
+            <acn>050103494</acn>
+            <abn>93050103494</abn>
+        </clientOrganisation>
+        <clientOrganisation>
+            <acn>000105233</acn>
+        </clientOrganisation>
+    </ns2:clientOrganisations>
+</ns2:UserClientOrganisationsResponse>
+].

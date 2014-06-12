@@ -1,0 +1,18 @@
+2014-06-12 09:16:42.328 INFO  [Thread-19606 (HornetQ-client-global-threads-1438318103)] [140612-SN02W-00000] [esb-user-profile.user-client-organisations-retrieval-service] request: [<up:UserClientOrganisationsRequest xmlns:up="http://vedaxml.com/vxml2/veda-userprofile-request-v1.0" xmlns:upc="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0"><upc:pegasusOperatorId>I40G</upc:pegasusOperatorId></up:UserClientOrganisationsRequest>].
+2014-06-12 09:16:42.340 INFO  [Thread-19606 (HornetQ-client-global-threads-1438318103)] [140612-SN02W-00000] [com.veda.esb.userprofile.action.UserClientOrganisationsRetrievalAction] Retrieving user profile for Username [null] Pegasus Operator Id [I40G]
+2014-06-12 09:16:42.436 INFO  [Thread-19606 (HornetQ-client-global-threads-1438318103)] [140612-SN02W-00000] [esb-user-profile.user-client-organisations-retrieval-service] response: [<ns2:UserClientOrganisationsResponse xmlns:ns2="http://vedaxml.com/vxml2/veda-userprofile-response-v1.0" xmlns="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0">
+    <ns2:clientOrganisations/>
+</ns2:UserClientOrganisationsResponse>
+].
+2014-06-12 09:18:30.846 INFO  [Thread-19610 (HornetQ-client-global-threads-1438318103)] [140612-SN02W-00001] [esb-user-profile.user-client-organisations-retrieval-service] request: [<up:UserClientOrganisationsRequest xmlns:up="http://vedaxml.com/vxml2/veda-userprofile-request-v1.0" xmlns:upc="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0"><upc:pegasusOperatorId>I40G</upc:pegasusOperatorId></up:UserClientOrganisationsRequest>].
+2014-06-12 09:18:30.853 INFO  [Thread-19610 (HornetQ-client-global-threads-1438318103)] [140612-SN02W-00001] [com.veda.esb.userprofile.action.UserClientOrganisationsRetrievalAction] Retrieving user profile for Username [null] Pegasus Operator Id [I40G]
+2014-06-12 09:18:30.889 INFO  [Thread-19610 (HornetQ-client-global-threads-1438318103)] [140612-SN02W-00001] [esb-user-profile.user-client-organisations-retrieval-service] response: [<ns2:UserClientOrganisationsResponse xmlns:ns2="http://vedaxml.com/vxml2/veda-userprofile-response-v1.0" xmlns="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0">
+    <ns2:clientOrganisations/>
+</ns2:UserClientOrganisationsResponse>
+].
+2014-06-12 10:29:58.266 INFO  [Thread-19703 (HornetQ-client-global-threads-1438318103)] [140612-SN02X-00002] [esb-user-profile.user-client-organisations-retrieval-service] request: [<up:UserClientOrganisationsRequest xmlns:up="http://vedaxml.com/vxml2/veda-userprofile-request-v1.0" xmlns:upc="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0"><upc:pegasusOperatorId>I40G</upc:pegasusOperatorId></up:UserClientOrganisationsRequest>].
+2014-06-12 10:29:58.268 INFO  [Thread-19703 (HornetQ-client-global-threads-1438318103)] [140612-SN02X-00002] [com.veda.esb.userprofile.action.UserClientOrganisationsRetrievalAction] Retrieving user profile for Username [null] Pegasus Operator Id [I40G]
+2014-06-12 10:29:58.316 INFO  [Thread-19703 (HornetQ-client-global-threads-1438318103)] [140612-SN02X-00002] [esb-user-profile.user-client-organisations-retrieval-service] response: [<ns2:UserClientOrganisationsResponse xmlns:ns2="http://vedaxml.com/vxml2/veda-userprofile-response-v1.0" xmlns="http://vedaxml.com/vxml2/veda-userprofile-common-v1.0">
+    <ns2:clientOrganisations/>
+</ns2:UserClientOrganisationsResponse>
+].

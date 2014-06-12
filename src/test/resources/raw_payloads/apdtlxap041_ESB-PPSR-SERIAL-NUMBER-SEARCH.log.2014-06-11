@@ -1,0 +1,42 @@
+2014-06-11 10:54:11.258 INFO  [Thread-16500 (HornetQ-client-global-threads-2043370373)] [140611-SN02W-00000] [com.veda.esb.cmn.cacheV2.command.decorator.RetryRetrieveCommand] Creating a retryable retrieve cache command with sleep -1ms and -1 max attempts
+2014-06-11 10:54:11.308 INFO  [Thread-16500 (HornetQ-client-global-threads-2043370373)] [140611-SN02W-00000] [com.veda.esb.cmn.cacheV2.command.decorator.RetryRetrieveCommand] Creating a retryable retrieve cache command with sleep -1ms and -1 max attempts
+2014-06-11 10:54:12.764 INFO  [Thread-16536 (HornetQ-client-global-threads-2043370373)] [140611-SN02W-00000] [com.veda.esb.cmn.actions.routingslip.RoutingSlipUtils] Using routing slip [reply-to] to route from [ppsr-serial-number-search-gateway:finalizer] to [ppsr-serial-number-search-gateway:billing]
+2014-06-11 10:54:13.036 INFO  [Thread-16536 (HornetQ-client-global-threads-2043370373)] [140611-SN02W-00000] [ppsr-serial-number-search-gateway.finalizer] serial number search gateway processing time [Status: COMPLETE]: [00:00:07.720].
+2014-06-11 10:54:13.571 INFO  [Thread-16542 (HornetQ-client-global-threads-2043370373)] [140611-SN02W-00000] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: reply-to - valid outcome
+2014-06-11 10:54:14.456 INFO  [Thread-16537 (HornetQ-client-global-threads-2043370373)] [8c2151bf-159a-45b9-aae2-1ed3886e6732] [com.veda.esb.cmn.actions.algorithm.CalculationAction] [IGNORED] Can not initialise com.veda.esb.cmn.algorithm.SlopeAlgorithm@19bbbb99, caused by: Parameter "requestTime" is null
+2014-06-11 13:49:21.963 WARN  [Thread-16750 (HornetQ-client-global-threads-2043370373)] [694dd13e-bc81-4361-ae66-3222c4498db7] [com.veda.esb.cmn.actions.VedaSyncServiceInvoker] Exception thrown from SyncServiceInvoker extracting root cause
+org.jboss.soa.esb.actions.ActionProcessingException: Error delivering message to service 'esb-billing:price-retrievals'
+	at org.jboss.soa.esb.actions.SyncServiceInvoker.process(SyncServiceInvoker.java:86)
+	at com.veda.esb.cmn.actions.VedaSyncServiceInvoker.process(VedaSyncServiceInvoker.java:91)
+	at org.jboss.soa.esb.listeners.message.ActionProcessingPipeline.processPipeline(ActionProcessingPipeline.java:667)
+	at org.jboss.soa.esb.listeners.message.ActionProcessingPipeline.processPipeline(ActionProcessingPipeline.java:614)
+	at org.jboss.soa.esb.listeners.message.ActionProcessingPipeline.process(ActionProcessingPipeline.java:442)
+	at org.jboss.soa.esb.listeners.jca.JcaMessageAwareListener.process(JcaMessageAwareListener.java:163)
+	at org.jboss.soa.esb.listeners.jca.JcaJMSInflowMessageProcessorAdapter.onMessage(JcaJMSInflowMessageProcessorAdapter.java:44)
+	at sun.reflect.GeneratedMethodAccessor708.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:616)
+	at org.jboss.soa.esb.listeners.jca.BaseJcaInflow$1.invoke(BaseJcaInflow.java:210)
+	at org.jboss.soa.esb.listeners.jca.EndpointProxy.delivery(EndpointProxy.java:271)
+	at org.jboss.soa.esb.listeners.jca.EndpointProxy.invoke(EndpointProxy.java:163)
+	at sun.proxy.$Proxy935.onMessage(Unknown Source)
+	at org.hornetq.ra.inflow.HornetQMessageHandler.onMessage(HornetQMessageHandler.java:311)
+	at org.hornetq.core.client.impl.ClientConsumerImpl.callOnMessage(ClientConsumerImpl.java:1028)
+	at org.hornetq.core.client.impl.ClientConsumerImpl.access$400(ClientConsumerImpl.java:50)
+	at org.hornetq.core.client.impl.ClientConsumerImpl$Runner.run(ClientConsumerImpl.java:1173)
+	at org.hornetq.utils.OrderedExecutorFactory$OrderedExecutor$1.run(OrderedExecutorFactory.java:100)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1146)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:679)
+Caused by: org.jboss.soa.esb.listeners.message.ResponseTimeoutException: No response received for service [esb-billing:price-retrievals].
+	at org.jboss.soa.esb.client.ServiceInvoker.post(ServiceInvoker.java:462)
+	at org.jboss.soa.esb.client.ServiceInvoker.deliverSync(ServiceInvoker.java:221)
+	at org.jboss.soa.esb.actions.SyncServiceInvoker.process(SyncServiceInvoker.java:78)
+	... 21 more
+2014-06-11 13:49:30.874 INFO  [Thread-16748 (HornetQ-client-global-threads-2043370373)] [140611-SN02X-00001] [com.veda.esb.cmn.cacheV2.command.decorator.RetryRetrieveCommand] Creating a retryable retrieve cache command with sleep -1ms and -1 max attempts
+2014-06-11 13:49:30.886 INFO  [Thread-16748 (HornetQ-client-global-threads-2043370373)] [140611-SN02X-00001] [com.veda.esb.cmn.cacheV2.command.decorator.RetryRetrieveCommand] Creating a retryable retrieve cache command with sleep -1ms and -1 max attempts
+2014-06-11 13:49:32.875 INFO  [Thread-16747 (HornetQ-client-global-threads-2043370373)] [140611-SN02X-00001] [com.veda.esb.cmn.actions.routingslip.RoutingSlipUtils] Using routing slip [reply-to] to route from [ppsr-serial-number-search-gateway:finalizer] to [ppsr-serial-number-search-gateway:billing]
+2014-06-11 13:49:33.062 INFO  [Thread-16747 (HornetQ-client-global-threads-2043370373)] [140611-SN02X-00001] [ppsr-serial-number-search-gateway.finalizer] serial number search gateway processing time [Status: COMPLETE]: [00:00:08.071].
+2014-06-11 13:49:33.849 INFO  [Thread-16750 (HornetQ-client-global-threads-2043370373)] [140611-SN02X-00001] [com.veda.esb.cmn.actions.AbstractDynamicWiretap] No routingSlip found with name: reply-to - valid outcome
+2014-06-11 13:49:39.932 INFO  [Thread-16747 (HornetQ-client-global-threads-2043370373)] [df655f91-9621-4cce-be48-98397389a078] [com.veda.esb.cmn.actions.algorithm.CalculationAction] [IGNORED] Can not initialise com.veda.esb.cmn.algorithm.SlopeAlgorithm@19bbbb99, caused by: Parameter "requestTime" is null
+2014-06-11 13:56:59.312 INFO  [Thread-16751 (HornetQ-client-global-threads-2043370373)] [81fdd394-2bdc-45b9-8ccb-794c98c7d762] [com.veda.esb.cmn.actions.algorithm.CalculationAction] [IGNORED] Can not initialise com.veda.esb.cmn.algorithm.SlopeAlgorithm@19bbbb99, caused by: Parameter "requestTime" is null

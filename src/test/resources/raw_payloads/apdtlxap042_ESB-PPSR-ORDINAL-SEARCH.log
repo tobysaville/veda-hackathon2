@@ -1,0 +1,10 @@
+2014-06-12 11:27:31.492 INFO  [JBoss Shutdown Hook] [] [org.jboss.internal.soa.esb.services.rules.util.RulesClassLoader] Removing RulesClassLoader?deployment=ID-11&ruleSource=/META-INF/drl/productCodeRule.drl
+2014-06-12 11:40:03.985 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:04.048 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:05.791 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:06.631 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:07.184 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:07.448 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:07.779 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:07.779 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
+2014-06-12 11:40:08.537 INFO  [main] [] [com.veda.esb.cmn.cacheV2.impl.DefaultCacheTreeBuilder] Retrieving Cache [jboss.cache:service=OrdinalSearchCache]
