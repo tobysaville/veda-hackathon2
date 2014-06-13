@@ -44,30 +44,25 @@
     <xsl:template name="payloadToPart">
     	<xsl:param name="payload"/>
     
-    	<xsl:apply-templates select="//data:MailingAddress | //data:PhysicalAddress" />
+    	<xsl:apply-templates select="//data:RegistrationDetail" />
     	
     </xsl:template>
 
-	<!--<xsl:template match="*[ancestor-or-self::data:MailingAddress or ancestor-or-self::data:PhysicalAddress]">
-		<xsl:element name="{local-name()}">
-			<xsl:apply-templates select="@*|node()" />
-		</xsl:element>
-	</xsl:template>-->
-	
-	<xsl:template match="*[ancestor::data:MailingAddress or ancestor::data:PhysicalAddress]">
+	<xsl:template match="*[parent::data:RegistrationDetail]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
 	</xsl:template>
 	
-	<xsl:template match="*[self::data:MailingAddress or self::data:PhysicalAddress]">
-		<Address>
+	
+	<xsl:template match="*[self::data:RegistrationDetail]">
+		<RegistrationDetail>
 			<xsl:apply-templates select="@*|node()" />
-		</Address>
+		</RegistrationDetail>
 	</xsl:template>
 	
-	
-
+	<xsl:template match="data:RegistrationDetail/*//*"/>
+		
 	<!--<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
 	</xsl:template>-->
