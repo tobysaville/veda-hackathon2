@@ -1,1 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?><ns8:companyTradingHistoryRequest xmlns:ns8="http://vedaxml.com/vxml2/veda-cth-request-v1.0" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://vedaxml.com/vxml2/veda-th-common-v1.0" xmlns:ns10="http://vedaxml.com/vxml2/veda-th-business-v1.0" xmlns:ns11="http://vedaxml.com/vxml2/veda-bth-request-v1.0" xmlns:ns12="http://vedaxml.com/vxml2/veda-th-baseboilerplate-v1.0" xmlns:ns13="http://vedaxml.com/vxml2/veda-th-orgboilerplate-v1.0" xmlns:ns14="http://vedaxml.com/vxml2/veda-th-ato-v1.0" xmlns:ns15="http://vedaxml.com/vxml2/veda-th-anzsic-v1.0" xmlns:ns16="http://vedaxml.com/vxml2/veda-th-summary-v1.0" xmlns:ns17="http://vedaxml.com/vxml2/veda-th-trade-payments-v1.0" xmlns:ns18="http://vedaxml.com/vxml2/veda-th-compstructure-v1.0" xmlns:ns19="http://vedaxml.com/vxml2/veda-th-asic-v1.0" xmlns:ns2="http://vedaxml.com/vxml2/veda-th-request-v1.0" xmlns:ns20="http://vedaxml.com/vxml2/veda-th-company-v1.0" xmlns:ns21="http://vedaxml.com/vxml2/veda-th-basepublic-v1.0" xmlns:ns22="http://vedaxml.com/vxml2/veda-th-orgadverse-v1.0" xmlns:ns23="http://www.vedaxml.com/services/grantor-search-v1.0.xsd" xmlns:ns24="http://vedaxml.com/vxml2/veda-th-ppsr-v1.0" xmlns:ns25="http://vedaxml.com/vxml2/veda-th-scoring-commonresponse-v1.0" xmlns:ns26="http://vedaxml.com/vxml2/veda-th-scores-v1.0" xmlns:ns27="http://vedaxml.com/vxml2/veda-th-companyresponse-v1.0" xmlns:ns28="http://vedaxml.com/vxml2/veda-th-fault-v1.0" xmlns:ns29="http://vedaxml.com/vxml2/veda-ce-response-v1.0" xmlns:ns30="http://vedaxml.com/vxml2/veda-th-businessstructure-v1.0" xmlns:ns31="http://vedaxml.com/vxml2/veda-th-businessrepresentatives-v1.0" xmlns:ns32="http://vedaxml.com/vxml2/veda-th-businessresponse-v1.0" xmlns:ns33="http://vedaxml.com/vxml2/veda-th-commindividual-v1.0" xmlns:ns34="http://vedaxml.com/vxml2/veda-th-relatedorganisations-v1.0" xmlns:ns35="http://vedaxml.com/vxml2/veda-th-bureaucompany-v1.0" xmlns:ns36="http://vedaxml.com/vxml2/veda-th-bureaucompstructure-v1.0" xmlns:ns37="http://vedaxml.com/vxml2/veda-th-bureaucompanyresponse-v1.0" xmlns:ns38="http://vedaxml.com/vxml2/veda-th-indivinterest-v1.0" xmlns:ns39="http://vedaxml.com/vxml2/veda-th-indivconsentlist-v1.0" xmlns:ns4="http://vedaxml.com/vxml2/veda-th-individual-v1.0" xmlns:ns40="http://vedaxml.com/vxml2/veda-th-indivadverse-v1.0" xmlns:ns5="http://vedaxml.com/vxml2/veda-th-entity-v1.0" xmlns:ns6="http://vedaxml.com/vxml2/veda-th-orgcredit-v1.0" xmlns:ns7="http://vedaxml.com/vxml2/veda-th-basecredit-v1.0" xmlns:ns9="http://vedaxml.com/vxml2/veda-th-organisation-v1.0" ns3:requestType="REPORT"><ns2:companyTradingHistoryReportRequest><ns2:callerDetails><ns2:uuid>140613-CA05K-00002</ns2:uuid><ns3:memberCode>DACC</ns3:memberCode><ns3:branchCode>0003</ns3:branchCode><ns3:operatorCode>4TZ6</ns3:operatorCode><ns3:channelCode>07</ns3:channelCode><ns3:productCode>161</ns3:productCode><ns3:chargeBackCode>1234</ns3:chargeBackCode></ns2:callerDetails><ns3:acn>000000073</ns3:acn><ns3:abn>12000000073</ns3:abn><ns3:orgName>AMEND NAME LIMITED</ns3:orgName><ns3:ppsrOnAcn>Y</ns3:ppsrOnAcn><ns3:ppsrOnAbn>Y</ns3:ppsrOnAbn><ns3:ppsrOnOrgName>Y</ns3:ppsrOnOrgName><ns2:collateralInformation><ns2:creditEnquiry><ns5:accountType code="30"/><ns5:role code="1"><ns5:type>PRINCIPAL</ns5:type></ns5:role><ns5:coBorrower/><ns5:amount>89</ns5:amount><ns5:refNumber>T1</ns5:refNumber><ns5:enquiryType><ns5:type>ENQUIRY</ns5:type></ns5:enquiryType><ns3:accessGroup>003</ns3:accessGroup></ns2:creditEnquiry><ns7:creditType>COMMERCIAL</ns7:creditType><ns2:linkLimit>0</ns2:linkLimit><ns3:extractType>CURRENT</ns3:extractType><ns2:privacyPermission>N</ns2:privacyPermission><ns2:scoringRequired>N</ns2:scoringRequired><ns3:tradePaymentsRequired>Y</ns3:tradePaymentsRequired><ns3:extractSource>PREFERRED</ns3:extractSource><ns2:amsReport>N</ns2:amsReport><ns2:ppsrRequired>Y</ns2:ppsrRequired></ns2:collateralInformation></ns2:companyTradingHistoryReportRequest></ns8:companyTradingHistoryRequest>
+<?xml version="1.0" encoding="UTF-8"?>
+<ns8:companyTradingHistoryRequest
+	xmlns:ns8="http://vedaxml.com/vxml2/veda-cth-request-v1.0"
+	xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://vedaxml.com/vxml2/veda-th-common-v1.0"
+	xmlns:ns10="http://vedaxml.com/vxml2/veda-th-business-v1.0" xmlns:ns11="http://vedaxml.com/vxml2/veda-bth-request-v1.0"
+	xmlns:ns12="http://vedaxml.com/vxml2/veda-th-baseboilerplate-v1.0"
+	xmlns:ns13="http://vedaxml.com/vxml2/veda-th-orgboilerplate-v1.0"
+	xmlns:ns14="http://vedaxml.com/vxml2/veda-th-ato-v1.0" xmlns:ns15="http://vedaxml.com/vxml2/veda-th-anzsic-v1.0"
+	xmlns:ns16="http://vedaxml.com/vxml2/veda-th-summary-v1.0" xmlns:ns17="http://vedaxml.com/vxml2/veda-th-trade-payments-v1.0"
+	xmlns:ns18="http://vedaxml.com/vxml2/veda-th-compstructure-v1.0"
+	xmlns:ns19="http://vedaxml.com/vxml2/veda-th-asic-v1.0" xmlns:ns2="http://vedaxml.com/vxml2/veda-th-request-v1.0"
+	xmlns:ns20="http://vedaxml.com/vxml2/veda-th-company-v1.0" xmlns:ns21="http://vedaxml.com/vxml2/veda-th-basepublic-v1.0"
+	xmlns:ns22="http://vedaxml.com/vxml2/veda-th-orgadverse-v1.0"
+	xmlns:ns23="http://www.vedaxml.com/services/grantor-search-v1.0.xsd"
+	xmlns:ns24="http://vedaxml.com/vxml2/veda-th-ppsr-v1.0"
+	xmlns:ns25="http://vedaxml.com/vxml2/veda-th-scoring-commonresponse-v1.0"
+	xmlns:ns26="http://vedaxml.com/vxml2/veda-th-scores-v1.0" xmlns:ns27="http://vedaxml.com/vxml2/veda-th-companyresponse-v1.0"
+	xmlns:ns28="http://vedaxml.com/vxml2/veda-th-fault-v1.0" xmlns:ns29="http://vedaxml.com/vxml2/veda-ce-response-v1.0"
+	xmlns:ns30="http://vedaxml.com/vxml2/veda-th-businessstructure-v1.0"
+	xmlns:ns31="http://vedaxml.com/vxml2/veda-th-businessrepresentatives-v1.0"
+	xmlns:ns32="http://vedaxml.com/vxml2/veda-th-businessresponse-v1.0"
+	xmlns:ns33="http://vedaxml.com/vxml2/veda-th-commindividual-v1.0"
+	xmlns:ns34="http://vedaxml.com/vxml2/veda-th-relatedorganisations-v1.0"
+	xmlns:ns35="http://vedaxml.com/vxml2/veda-th-bureaucompany-v1.0"
+	xmlns:ns36="http://vedaxml.com/vxml2/veda-th-bureaucompstructure-v1.0"
+	xmlns:ns37="http://vedaxml.com/vxml2/veda-th-bureaucompanyresponse-v1.0"
+	xmlns:ns38="http://vedaxml.com/vxml2/veda-th-indivinterest-v1.0"
+	xmlns:ns39="http://vedaxml.com/vxml2/veda-th-indivconsentlist-v1.0"
+	xmlns:ns4="http://vedaxml.com/vxml2/veda-th-individual-v1.0"
+	xmlns:ns40="http://vedaxml.com/vxml2/veda-th-indivadverse-v1.0"
+	xmlns:ns5="http://vedaxml.com/vxml2/veda-th-entity-v1.0" xmlns:ns6="http://vedaxml.com/vxml2/veda-th-orgcredit-v1.0"
+	xmlns:ns7="http://vedaxml.com/vxml2/veda-th-basecredit-v1.0" xmlns:ns9="http://vedaxml.com/vxml2/veda-th-organisation-v1.0"
+	ns3:requestType="REPORT">
+	<ns2:companyTradingHistoryReportRequest>
+		<ns2:callerDetails>
+			<ns2:uuid>140613-CA05K-00002</ns2:uuid>
+			<ns3:memberCode>DACC</ns3:memberCode>
+			<ns3:branchCode>0003</ns3:branchCode>
+			<ns3:operatorCode>4TZ6</ns3:operatorCode>
+			<ns3:channelCode>07</ns3:channelCode>
+			<ns3:productCode>161</ns3:productCode>
+			<ns3:chargeBackCode>1234</ns3:chargeBackCode>
+		</ns2:callerDetails>
+		<ns3:acn>000000073</ns3:acn>
+		<ns3:abn>12000000073</ns3:abn>
+		<ns3:orgName>AMEND NAME LIMITED</ns3:orgName>
+		<ns3:ppsrOnAcn>Y</ns3:ppsrOnAcn>
+		<ns3:ppsrOnAbn>Y</ns3:ppsrOnAbn>
+		<ns3:ppsrOnOrgName>Y</ns3:ppsrOnOrgName>
+		<ns2:collateralInformation>
+			<ns2:creditEnquiry>
+				<ns5:accountType code="30" />
+				<ns5:role code="1">
+					<ns5:type>PRINCIPAL</ns5:type>
+				</ns5:role>
+				<ns5:coBorrower />
+				<ns5:amount>89</ns5:amount>
+				<ns5:refNumber>T1</ns5:refNumber>
+				<ns5:enquiryType>
+					<ns5:type>ENQUIRY</ns5:type>
+				</ns5:enquiryType>
+				<ns3:accessGroup>003</ns3:accessGroup>
+			</ns2:creditEnquiry>
+			<ns7:creditType>COMMERCIAL</ns7:creditType>
+			<ns2:linkLimit>0</ns2:linkLimit>
+			<ns3:extractType>CURRENT</ns3:extractType>
+			<ns2:privacyPermission>N</ns2:privacyPermission>
+			<ns2:scoringRequired>N</ns2:scoringRequired>
+			<ns3:tradePaymentsRequired>Y</ns3:tradePaymentsRequired>
+			<ns3:extractSource>PREFERRED</ns3:extractSource>
+			<ns2:amsReport>N</ns2:amsReport>
+			<ns2:ppsrRequired>Y</ns2:ppsrRequired>
+		</ns2:collateralInformation>
+	</ns2:companyTradingHistoryReportRequest>
+</ns8:companyTradingHistoryRequest>
