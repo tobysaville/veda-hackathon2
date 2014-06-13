@@ -8,6 +8,27 @@
 
 	<!-- <beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/> -->
 
+    <beans:bean id="consumerCreditEnquiryByIdentityIO" class="org.apache.camel.model.dataformat.BeanioDataFormat">
+        <beans:property name="mapping" value="mapping.xml"/>
+        <beans:property name="streamName" value="ConsumerCreditEnquiryByIdentity"/>
+    </beans:bean>
+    <!-- use with 
+    
+    <bean id="toListProcessor" class="com.veda.icc.esb.common.camel.processors.util.ToListProcessor"/>
+    <process ref="toListProcessor"/>
+                    <marshal ref="consumerCreditEnquiryByIdentityIO"/>
+      -->              
+    
+    <beans:bean id="bureauIndividualRequestsJAXB" class="org.apache.camel.model.dataformat.JaxbDataFormat">
+        <beans:property name="prettyPrint" value="false"/>
+        <beans:property name="contextPath" value="com.veda.icc.esb.bureau.model.individual.in.request"/>
+        <beans:property name="fragment" value="true"/>
+    </beans:bean>
+    <!--  use with
+    
+            <unmarshal ref="bureauIndividualRequestsJAXB"/>
+             -->
+    
     <beans:import resource="classpath:/META-INF/spring/camel-context/vsa-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/dumper-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/agd-context.xml"/>
