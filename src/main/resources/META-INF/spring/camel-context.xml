@@ -9,18 +9,20 @@
 	<!-- <beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/> -->
 
     <beans:import resource="classpath:/META-INF/spring/camel-context/vsa-context.xml"/>
-    <!-- <beans:import resource="classpath:/META-INF/spring/camel-context/idm-context.xml"/>
-    <beans:import resource="classpath:/META-INF/spring/camel-context/agd-context.xml"/>
-    <beans:import resource="classpath:/META-INF/spring/camel-context/ppsr-context.xml"/> -->
     <beans:import resource="classpath:/META-INF/spring/camel-context/dumper-context.xml"/>
+    <beans:import resource="classpath:/META-INF/spring/camel-context/agd-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/idm-context.xml"/>
+    <!-- <beans:import resource="classpath:/META-INF/spring/camel-context/ppsr-context.xml"/>
+    <beans:import resource="classpath:/META-INF/spring/camel-context/ca-context.xml"/> -->
     
 	<camelContext id="hackathon-context" useMDCLogging="true" trace="true" streamCache="true" autoStartup="true" useBreadcrumb="true">
 
 		<routeContextRef ref="vsa-context"/>
 		<routeContextRef ref="idm-context"/>
-		<!-- <routeContextRef ref="agd-context"/>
-		<routeContextRef ref="ppsr-context"/> -->
+		<routeContextRef ref="agd-context"/>
+		<!-- 
+		<routeContextRef ref="ppsr-context"/>
+		<routeContextRef ref="ca-context"/> -->
 		<routeContextRef ref="dumper-context"/>
 
 		<endpoint id="product-request-handler" uri="direct:start" />
