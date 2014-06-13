@@ -23,3 +23,10 @@ http://localhost:8080/hackathon/services/submit
 (submit request.xml using poster in firefox with ctrl+alt+p)
 
 logs appear in $project_dir\hackathon.log
+
+
+loading screech
+
+do a http post to the following containing the businesses the body
+
+http://0.0.0.0:8080/hackathon/services/screech

@@ -10,7 +10,7 @@ import org.junit.Test;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class ProductRequestHandlerRouteTest extends CamelSpringTestSupport {
+public class ScreechGatewayHandlerRouteTest extends CamelSpringTestSupport {
 
 	Logger log = Logger.getLogger(getClass());
 		
@@ -29,7 +29,7 @@ public class ProductRequestHandlerRouteTest extends CamelSpringTestSupport {
 
     @Test
     public void test() throws Exception {
-    	String startRoute = "direct:start";
+    	String startRoute = "direct:screech-gateway";
     	
     	String request = IOUtils.toString(getClass().getResourceAsStream("/request.xml"));
     	
@@ -37,11 +37,29 @@ public class ProductRequestHandlerRouteTest extends CamelSpringTestSupport {
         String response = (String) template.requestBody(startRoute, request);
     	
         // wait a while to let the file be moved
-        log.debug("waiting for 2 seconds for completion");
-        Thread.sleep(18000);
+        log.debug("waiting for async completion");
+        Thread.sleep(8000);
         log.debug("waiting complete");
         
         log.debug("test complete: " + response);
+    }
+
+
+    @Test
+    public void testFile() throws Exception {
+//    	String startRoute = "direct:screech-gateway";
+    	
+//    	String request = IOUtils.toString(getClass().getResourceAsStream("/request.xml"));
+    	
+        // create a new file in the inbox folder with the name hello.txt and containing Hello World as body
+//        String response = (String) template.requestBody(startRoute, request);
+    	
+        // wait a while to let the file be moved
+        log.debug("waiting for async completion");
+        Thread.sleep(8000);
+        log.debug("waiting complete");
+        
+//        log.debug("test complete: " + response);
     }
     
 }

@@ -2,70 +2,34 @@
         xmlns="http://www.beanio.org/2012/03"
         xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
 
+    <stream name="ScreechBusiness" format="csv">
     
-
-    <template name="business">
-        <field name="segmentId" required="true" rid="true" length="3" literal="XA-" ignore="true" occurs="1"/>
-        <field name="sequence" required="true" occurs="1" minLength="2" maxLength="2" regex="0[1-2]"/>
-        <field name="hash" required="false" minOccurs="0" maxOccurs="1" minLength="8" maxLength="8" />
-        <field name="type" required="true" occurs="1" minLength="1" maxLength="1" regex="[CPM]" />
-        <field name="propertyName" required="false" minOccurs="0" maxOccurs="1" maxLength="40"/>
-        <field name="unitNumber" required="false" minOccurs="0" maxOccurs="1" maxLength="5"/>
-        <field name="houseNumber" required="false" minOccurs="0" maxOccurs="1" maxLength="8"/>
-        <field name="streetName" required="false" minOccurs="0" maxOccurs="1" maxLength="40"/>
-        <field name="streetType" required="false" minOccurs="0" maxOccurs="1" maxLength="4"/>
-        <field name="city" required="true" occurs="1" maxLength="50"/>
-        <field name="state" required="true" occurs="1" maxLength="3"/>
-        <field name="postCode" required="false" minOccurs="0" maxOccurs="1" minLength="4" maxLength="4" regex="\d{4}"/>
-        <field name="deliveryPointIdentifier" required="false" minOccurs="0" maxOccurs="1" minLength="8" maxLength="8"/>
-    </template>
-
-    <stream name="ScreechBusiness" format="delimited">
-    
-        <group name="ScreechBusiness"
-               class="com.veda.icc.esb.screech.Business">
-            <record name="header"
-                    template="reference.MessageHeader" order="1" minOccurs="1" maxOccurs="1"/>
-            <record name="formattedName" class="com.veda.icc.esb.bureau.model.individual.in.FormattedName"
-                    template="individual.FormattedName" order="2" minOccurs="1" maxOccurs="1"/>
-            <record name="personalDetails" class="com.veda.icc.esb.bureau.model.individual.in.PersonalDetails"
-                    template="individual.PersonalDetails" order="3" minOccurs="1" maxOccurs="1"/>
-            <record name="address" class="com.veda.icc.esb.bureau.model.individual.in.Address" template="individual.Address"
-                    collection="list" order="4" minOccurs="0" maxOccurs="2"/>
-            <record name="unformattedAddress" class="com.veda.icc.esb.bureau.model.individual.in.UnformattedAddress"
-                    template="individual.UnformattedAddress" collection="list" order="5" minOccurs="0" maxOccurs="2"/>
-            <record name="employment" class="com.veda.icc.esb.bureau.model.individual.in.Employment"
-                    template="individual.Employment" order="6" minOccurs="0" maxOccurs="1"/>
-            <record name="creditApplication" class="com.veda.icc.esb.bureau.model.individual.in.CreditApplication"
-                    template="individual.CreditApplication" order="7" minOccurs="1" maxOccurs="1"/>
-            <record name="transactionId" class="com.veda.icc.esb.bureau.model.reference.TransactionId"
-                    template="reference.TransactionId" order="8" minOccurs="1" maxOccurs="1"/>
-            <record name="clientData" class="com.veda.icc.esb.bureau.model.reference.ClientData"
-                    template="reference.ClientData" order="9" minOccurs="1" maxOccurs="1"/>
-            <record name="transactionData" class="com.veda.icc.esb.bureau.model.reference.TransactionData"
-                    template="reference.TransactionData" order="10" minOccurs="1" maxOccurs="1"/>
-            <record name="trailer" class="com.veda.icc.esb.bureau.model.reference.MessageTrailer"
-                    template="reference.MessageTrailer" order="11" minOccurs="1" maxOccurs="1"/>
-        </group>
+       <record name="ScreechBusiness" order="1" minOccurs="1" maxOccurs="1" class="com.veda.icc.esb.screech.Business">
+       
+	        <field name="uid"/>
+	        <field name="sourceId"/>
+	        <field name="screechId"/>
+	        <field name="organisation"/>
+	        <field name="address"/>
+	        <field name="location"/>
+	        <field name="state"/>
+	        <field name="postcode"/>
+	        <field name="stName"/>
+	        <field name="stNumber"/>
+	        <field name="stExtra"/>
+	        <field name="oddEven"/>
+	        <field name="email"/>
+	        <field name="website"/>
+	        <field name="noOfEmployees"/>
+	        <field name="phone"/>
+	        <field name="fax"/>
+	        <field name="abn"/>
+	        <field name="types"/>
+	        <field name="received"/>
+	        <field name="revenue"/>
+	        <field name="mobile"/>
+	        <field name="freecall"/>
+       </record>
 
     </stream>
-
-
 </beanio>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

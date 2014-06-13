@@ -8,33 +8,26 @@
 
 	<!-- <beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/> -->
 
-    <beans:bean id="consumerCreditEnquiryByIdentityIO" class="org.apache.camel.model.dataformat.BeanioDataFormat">
+    <beans:bean id="toListProcessor" class="com.veda.icc.esb.common.camel.processors.util.ToListProcessor"/>
+    
+    <beans:bean id="ScreechBusiness" class="org.apache.camel.model.dataformat.BeanioDataFormat">
         <beans:property name="mapping" value="mapping.xml"/>
-        <beans:property name="streamName" value="ConsumerCreditEnquiryByIdentity"/>
+        <beans:property name="streamName" value="ScreechBusiness"/>
     </beans:bean>
-    <!-- use with 
     
-    <bean id="toListProcessor" class="com.veda.icc.esb.common.camel.processors.util.ToListProcessor"/>
-    <process ref="toListProcessor"/>
-                    <marshal ref="consumerCreditEnquiryByIdentityIO"/>
-      -->              
-    
-    <beans:bean id="bureauIndividualRequestsJAXB" class="org.apache.camel.model.dataformat.JaxbDataFormat">
+    <beans:bean id="ScreechBusinessJAXB" class="org.apache.camel.model.dataformat.JaxbDataFormat">
         <beans:property name="prettyPrint" value="false"/>
-        <beans:property name="contextPath" value="com.veda.icc.esb.bureau.model.individual.in.request"/>
+        <beans:property name="contextPath" value="com.veda.icc.esb.screech"/>
         <beans:property name="fragment" value="true"/>
     </beans:bean>
-    <!--  use with
-    
-            <unmarshal ref="bureauIndividualRequestsJAXB"/>
-             -->
-    
+
     <beans:import resource="classpath:/META-INF/spring/camel-context/vsa-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/dumper-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/agd-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/idm-context.xml"/>
-    <!-- <beans:import resource="classpath:/META-INF/spring/camel-context/ppsr-context.xml"/>
-    <beans:import resource="classpath:/META-INF/spring/camel-context/ca-context.xml"/> -->
+    <!-- <beans:import resource="classpath:/META-INF/spring/camel-context/ppsr-context.xml"/> -->
+    <beans:import resource="classpath:/META-INF/spring/camel-context/ca-context.xml"/>
+    <beans:import resource="classpath:/META-INF/spring/camel-context/screech-context.xml"/>
     
 	<camelContext id="hackathon-context" useMDCLogging="true" trace="true" streamCache="true" autoStartup="true" useBreadcrumb="true">
 
@@ -42,8 +35,9 @@
 		<routeContextRef ref="idm-context"/>
 		<routeContextRef ref="agd-context"/>
 		<!-- 
-		<routeContextRef ref="ppsr-context"/>
-		<routeContextRef ref="ca-context"/> -->
+		<routeContextRef ref="ppsr-context"/> -->
+		<routeContextRef ref="ca-context"/>
+		<routeContextRef ref="screech-context"/>
 		<routeContextRef ref="dumper-context"/>
 
 		<endpoint id="product-request-handler" uri="direct:start" />
@@ -57,6 +51,11 @@
 		<endpoint id="vsa-response-dumper" uri="jms:vsa-response-dumper" />
 		<endpoint id="vsa-product" uri="direct:vsa-product" />
 		
+		<endpoint id="ca-orchestrator" uri="direct:ca-orchestrator" />
+		<endpoint id="ca-request-dumper" uri="jms:ca-request-dumper" />
+		<endpoint id="ca-response-dumper" uri="jms:ca-response-dumper" />
+		<endpoint id="ca-product" uri="direct:ca-product" />		
+		
 		<endpoint id="agd-orchestrator" uri="direct:agd-orchestrator" />
 		<endpoint id="agd-request-dumper" uri="jms:agd-request-dumper" />
 		<endpoint id="agd-response-dumper" uri="jms:agd-response-dumper" />
@@ -66,6 +65,12 @@
 		<endpoint id="idm-request-dumper" uri="jms:idm-request-dumper" />
 		<endpoint id="idm-response-dumper" uri="jms:idm-response-dumper" />
 		<endpoint id="idm-product" uri="direct:idm-product" />
+
+		<endpoint id="screech-gateway" uri="direct:screech-gateway" />
+		<endpoint id="screech-gateway-http" uri="jetty:http://0.0.0.0:8080/hackathon/services/screech" />
+		<endpoint id="screech-orchestrator" uri="jms:screech-orchestrator" />
+		<endpoint id="screech-response-dumper" uri="jms:screech-response-dumper" />
+		<endpoint id="screech-product" uri="jms:screech-product" />
 
 		<endpoint id="dumper-request-handler" uri="jms:dumper-request-handler" />
 		<endpoint id="dumper-orchestrator" uri="jms:dumper-orchestrator" />
@@ -87,10 +92,12 @@
 		<route id="product-orchestrator">
 			<from ref="product-orchestrator" />
 			<log message="product request: ${body}" loggingLevel="DEBUG"/>
+			<to ref="agd-orchestrator"/>
 			<to ref="vsa-orchestrator"/>
 			<to ref="idm-orchestrator"/>
-			<!-- <to ref="bureau-orchestrator"/>
-			<to ref="agd-orchestrator"/> -->
+			<to ref="ca-orchestrator"/>
+			<!-- <to ref="bureau-orchestrator"/> -->
+
 		</route>
 
 	</camelContext>

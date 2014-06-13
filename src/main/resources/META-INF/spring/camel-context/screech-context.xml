@@ -1,0 +1,67 @@
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://camel.apache.org/schema/spring"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+								 http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+
+    <routeContext id="screech-context">
+
+		<route id="screech-gateway" group="screech-context-group" shutdownRoute="Defer">
+			<from ref="screech-gateway" />
+			<setBody><simple>resource:classpath:/payloads/screech/business_small.txt</simple></setBody>
+			<to ref="screech-orchestrator"/>	
+		</route>
+
+		<route id="screech-gateway-http" group="screech-context-group" shutdownRoute="Defer">
+			<from ref="screech-gateway-http" />
+			<to ref="screech-orchestrator"/>	
+		</route>
+
+		<route id="screech-gateway-file" group="screech-context-group" shutdownRoute="Defer">
+			<from uri="file://data" />
+			<log message="reading business from data file" loggingLevel="INFO"/>
+			<to ref="screech-orchestrator"/>	
+		</route>
+		
+		<route id="screech-orchestrator" group="screech-context-group" shutdownRoute="Defer">
+			<from ref="screech-orchestrator" />
+			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
+			<!-- <setBody><simple>resource:classpath:/payloads/screech/business_small.txt</simple></setBody> -->
+			<log message="screech request: ${body}" loggingLevel="DEBUG"/>
+			<!-- <wireTap ref="screech-request-dumper"/> -->
+			<to ref="screech-product"/>
+		</route>
+		
+		<!-- <route id="screech-request-dumper" group="screech-context-group" shutdownRoute="Defer">
+			<from ref="screech-request-dumper" />
+			<log message="screech request dumper: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/screech/request-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route> -->
+		
+		<route id="screech-product" group="screech-context-group" shutdownRoute="Defer">
+			<from ref="screech-product" />
+			<split streaming="true" parallelProcessing="true" >
+				<tokenize token="\n" />
+				<log message="screech line: ${body}" loggingLevel="DEBUG"/>
+				<to ref="screech-response-dumper"/>
+			</split>
+			<!-- <log message="screech product response: ${body}" loggingLevel="DEBUG"/> -->
+		</route>
+		
+		<route id="screech-response-dumper" group="screech-context-group" shutdownRoute="Defer">
+			<from ref="screech-response-dumper" />
+            <unmarshal ref="ScreechBusiness"/>
+			<log message="screech business pojo: ${body}" loggingLevel="DEBUG"/>
+			<process ref="toListProcessor"/>
+            <marshal ref="ScreechBusinessJAXB"/>
+			<log message="screech business xml ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/screech/response-dumper.xsl"/>
+			<log message="screech business dumper xml ${body}" loggingLevel="DEBUG"/>
+			<to ref="dumper-request-handler"/> 
+		</route>
+        
+    </routeContext>
+</beans:beans>

@@ -1,7 +1,8 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
-	xmlns:vs2="http://www.vedaxml.com/services/xmlchannel/vsa/v2">
+	xmlns:vs2="http://www.vedaxml.com/services/xmlchannel/vsa/v2"
+	exclude-result-prefixes="vsa vs2">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
@@ -46,7 +47,6 @@
     
     	<request>
     		<_id><xsl:value-of select="$payload//vs2:enquiry-id"/></_id>
-    		<!-- <xsl:apply-templates select="//*[ancestor::vs2:request]"/> -->
     		<xsl:apply-templates select="* | node()" />
     	</request>
     	

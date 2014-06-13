@@ -1,21 +1,24 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
-	exclude-result-prefixes="vsa">
+	xmlns:idm="http://vedaxml.com/vxml2/idmatrix-v4-0.xsd"
+	xmlns:vgc="http://vedaxml.com/vxml2/idmatrix-v2-0-vgate-context.xsd"
+	xmlns:wsa="http://www.w3.org/2005/08/addressing"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	exclude-result-prefixes="idm vgc wsa">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
     
     <xsl:param name="timestamp"/>
     
-    <xsl:variable name="collection">vsa_response</xsl:variable>
+    <xsl:variable name="collection">idm_response</xsl:variable>
     
     <xsl:template match="/">
     
 		<xsl:call-template name="dumperPart">
-		    <xsl:with-param name="payload" select="//vsa:response"/>
+		    <xsl:with-param name="payload" select="//idm:response"/>
 		    <xsl:with-param name="collection" select="$collection"/>
-		    <xsl:with-param name="uuid" select="//vsa:enquiry-id"/>
+		    <xsl:with-param name="uuid" select="//idm:enquiry-id"/>
 		    <xsl:with-param name="timestamp" select="$timestamp"/>
 		
 		</xsl:call-template>
@@ -43,14 +46,13 @@
     	<xsl:param name="payload"/>
     
     	<response>
-    		<_id><xsl:value-of select="$payload//vsa:enquiry-id"/></_id>
-    		<!--<xsl:apply-templates select="//*[ancestor::vsa:response]"/>-->
+    		<_id><xsl:value-of select="//wsa:MessageID"/></_id>
     		<xsl:apply-templates select="* | node()" />
     	</response>
     	
     </xsl:template>
 
-	<xsl:template match="*[ancestor::vsa:response]">
+	<xsl:template match="*[ancestor::idm:response]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
@@ -59,4 +61,8 @@
 	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
 	</xsl:template>
+	
+	<xsl:template match="/soapenv:Envelope/soapenv:Header"/>
+	<!-- <xsl:template match="/soapenv:Envelope/soapenv:Header/vgc:vgate-context"/>
+	<xsl:template match="/soapenv:Envelope/soapenv:Header/wsa:*[not(self::wsa:MessageID)]"/> -->
 </xsl:stylesheet>
