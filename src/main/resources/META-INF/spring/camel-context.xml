@@ -8,6 +8,9 @@
 
 	<!-- <beans:bean id="stringToDbObject" class="com.veda.icc.esb.utilities.dumper.camel.mongo.StringToDbObject"/> -->
 
+    <beans:import resource="classpath:/META-INF/spring/camel-context/vsa-context.xml"/>
+    <beans:import resource="classpath:/META-INF/spring/camel-context/dumper-context.xml"/>
+    
 	<camelContext id="hackathon-2" useMDCLogging="true" trace="true" streamCache="true" autoStartup="true" useBreadcrumb="true">
 
 		<endpoint id="product-request-handler" uri="direct:start" />
@@ -72,28 +75,6 @@
 			<log message="vsa response: ${body}" loggingLevel="DEBUG"/>
 			<to uri="xslt:transformation/vsa/response-dumper.xsl"/>
 			<to ref="dumper-request-handler"/>
-		</route>
-
-		<route id="dumper-request-handler">
-			<from ref="dumper-request-handler" />
-			<log message="dumper payload: ${body}" loggingLevel="INFO"/>
-			<setHeader headerName="CamelMongoDbCollection"><xpath resultType="String">/request/collection/text()</xpath></setHeader>
-			<split>
-				<xpath>/request/parts/*</xpath>
-				<to ref="dumper-orchestrator"/>
-			</split>
-		</route>
-		
-		<route id="dumper-orchestrator">
-			<from ref="dumper-orchestrator" />
-			<log message="xml part: ${body}" loggingLevel="INFO"/>
-			<marshal ref="xmljson"/>
-			<log message="json: ${body}" />
-			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
-			<convertBodyTo type="java.lang.String"/>
-			<!-- <convertBodyTo type="com.mongodb.DBObject"/>
-			<process ref="stringToDbObject"/> -->
-			<to uri="mongodb:myDb?database=test&amp;collection=books&amp;operation=save&amp;dynamicity=true" />
 		</route>
 
 	</camelContext>
