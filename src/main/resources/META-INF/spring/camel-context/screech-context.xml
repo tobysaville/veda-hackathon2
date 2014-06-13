@@ -43,7 +43,7 @@
 		
 		<route id="screech-product" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-product" />
-			<split streaming="true" parallelProcessing="true">
+			<split streaming="true" parallelProcessing="true" >
 				<tokenize token="\n" />
 				<log message="screech line: ${body}" loggingLevel="DEBUG"/>
 				<to ref="screech-response-dumper"/>

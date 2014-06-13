@@ -15,7 +15,7 @@
 						<property name="maxConnections" value="10"/>
 						<property name="connectionFactory">
 							<bean class="org.apache.activemq.ActiveMQConnectionFactory">
-								<property name="brokerURL" value="vm://default?broker.persistent=false&amp;broker.useJmx=false"/>
+								<property name="brokerURL" value="vm://default?broker.persistent=false&amp;broker.useJmx=true"/>
 							</bean>
 						</property>
 					</bean>
@@ -25,9 +25,8 @@
 	</bean>
 
 	<bean id="myDb" class="com.mongodb.Mongo">
-		<constructor-arg index="0" value="localhost"/>
+		<!-- <constructor-arg index="0" value="localhost"/> -->
+		<constructor-arg index="0" value="54.79.47.19"/>
 	</bean>
-	
-	<!-- <bean id="fileLoader" class="com.veda.icc.esb.common.camel.io.FileLoader"/> -->
 
 </beans>
