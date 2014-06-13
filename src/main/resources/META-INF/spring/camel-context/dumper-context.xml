@@ -17,7 +17,7 @@
 			</split>
 		</route>
 		
-		<route id="dumper-orchestrator" group="dumper-context-group" startupOrder="2" shutdownRoute="Defer">
+		<route id="dumper-orchestrator" group="dumper-context-group" shutdownRoute="Defer">
 			<from ref="dumper-orchestrator" />
 			<log message="xml part: ${body}" loggingLevel="INFO"/>
 			<marshal ref="xmljson"/>
