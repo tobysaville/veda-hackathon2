@@ -89,8 +89,8 @@
 			<log message="product request: ${body}" loggingLevel="DEBUG"/>
 			<to ref="vsa-orchestrator"/>
 			<to ref="idm-orchestrator"/>
-			<!-- <to ref="bureau-orchestrator"/>
-			<to ref="agd-orchestrator"/> -->
+			<!-- <to ref="bureau-orchestrator"/>-->
+			<to ref="agd-orchestrator"/>
 		</route>
 
 	</camelContext>
