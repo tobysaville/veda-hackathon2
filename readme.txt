@@ -11,7 +11,7 @@ or
 windows:
 java -cp "target\dependency\*;target\hackathon-2.0.1.jar" com.veda.icc.esb.utilities.dumper.MainRunner
 unix:
-java -cp "target/dependency/*;target\hackathon-2.0.1.jar" com.veda.icc.esb.utilities.dumper.MainRunner
+java -cp "hackathon-2.0.1.jar:dependency/*" com.veda.icc.esb.utilities.dumper.MainRunner
 
 
 
