@@ -10,11 +10,18 @@
 
 		<route id="screech-gateway" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-gateway" />
+			<setBody><simple>resource:classpath:/payloads/screech/business_small.txt</simple></setBody>
 			<to ref="screech-orchestrator"/>	
 		</route>
 
 		<route id="screech-gateway-http" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-gateway-http" />
+			<to ref="screech-orchestrator"/>	
+		</route>
+
+		<route id="screech-gateway-file" group="screech-context-group" shutdownRoute="Defer">
+			<from uri="file://data" />
+			<log message="reading business from data file" loggingLevel="INFO"/>
 			<to ref="screech-orchestrator"/>	
 		</route>
 		
@@ -36,20 +43,24 @@
 		
 		<route id="screech-product" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-product" />
-			<setBody><simple>resource:classpath:/payloads/screech/business_small.txt</simple></setBody>
-			<split streaming="true">
-				<tokenize token="\n"/>
-				<log message="screech line: ${body}" loggingLevel="INFO"/>
-				<!-- <to ref="screech-response-dumper"/> -->
+			<split streaming="true" >
+				<tokenize token="\n" />
+				<log message="screech line: ${body}" loggingLevel="DEBUG"/>
+				<to ref="screech-response-dumper"/>
 			</split>
 			<!-- <log message="screech product response: ${body}" loggingLevel="DEBUG"/> -->
 		</route>
 		
 		<route id="screech-response-dumper" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-response-dumper" />
-			<log message="screech response: ${body}" loggingLevel="DEBUG"/>
-			<!-- <to uri="xslt:transformation/screech/response-dumper.xsl"/> -->
-			<to ref="dumper-request-handler"/>
+            <unmarshal ref="ScreechBusiness"/>
+			<log message="screech business pojo: ${body}" loggingLevel="DEBUG"/>
+			<process ref="toListProcessor"/>
+            <marshal ref="ScreechBusinessJAXB"/>
+			<log message="screech business xml ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/screech/response-dumper.xsl"/>
+			<log message="screech business dumper xml ${body}" loggingLevel="DEBUG"/>
+			<to ref="dumper-request-handler"/> 
 		</route>
         
     </routeContext>

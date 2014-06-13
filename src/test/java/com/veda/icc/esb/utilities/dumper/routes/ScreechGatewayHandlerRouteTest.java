@@ -43,5 +43,23 @@ public class ScreechGatewayHandlerRouteTest extends CamelSpringTestSupport {
         
         log.debug("test complete: " + response);
     }
+
+
+    @Test
+    public void testFile() throws Exception {
+//    	String startRoute = "direct:screech-gateway";
+    	
+//    	String request = IOUtils.toString(getClass().getResourceAsStream("/request.xml"));
+    	
+        // create a new file in the inbox folder with the name hello.txt and containing Hello World as body
+//        String response = (String) template.requestBody(startRoute, request);
+    	
+        // wait a while to let the file be moved
+        log.debug("waiting for async completion");
+        Thread.sleep(8000);
+        log.debug("waiting complete");
+        
+//        log.debug("test complete: " + response);
+    }
     
 }
