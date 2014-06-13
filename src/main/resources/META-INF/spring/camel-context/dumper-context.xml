@@ -1,0 +1,33 @@
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://camel.apache.org/schema/spring"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+								 http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <routeContext id="dumper-context">
+
+		<route id="dumper-request-handler" group="dumper-context-group" startupOrder="1" shutdownRoute="Defer">
+			<from ref="dumper-request-handler" />
+			<log message="dumper payload: ${body}" loggingLevel="INFO"/>
+			<setHeader headerName="CamelMongoDbCollection"><xpath resultType="String">/request/collection/text()</xpath></setHeader>
+			<split>
+				<xpath>/request/parts/*</xpath>
+				<to ref="dumper-orchestrator"/>
+			</split>
+		</route>
+		
+		<route id="dumper-orchestrator" group="dumper-context-group" startupOrder="2" shutdownRoute="Defer">
+			<from ref="dumper-orchestrator" />
+			<log message="xml part: ${body}" loggingLevel="INFO"/>
+			<marshal ref="xmljson"/>
+			<log message="json: ${body}" />
+			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
+			<convertBodyTo type="java.lang.String"/>
+			<!-- <convertBodyTo type="com.mongodb.DBObject"/>
+			<process ref="stringToDbObject"/> -->
+			<to uri="mongodb:myDb?database=test&amp;collection=books&amp;operation=save&amp;dynamicity=true" />
+		</route>
+        
+    </routeContext>
+</beans:beans>
