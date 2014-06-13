@@ -11,7 +11,7 @@
 		<route id="ca-orchestrator" group="ca-context-group" shutdownRoute="Defer">
 			<from ref="ca-orchestrator" />
 			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
-			<setBody><simple>resource:classpath:/payloads/ca/enquiry/request_fn_13093500.xml</simple></setBody>
+			<setBody><simple>resource:classpath:/payloads/ca/enquiry/140613-CA05K-00001_req.xml</simple></setBody>
 			<log message="ca request: ${body}" loggingLevel="DEBUG"/>
 			<wireTap ref="ca-request-dumper"/>
 			<to ref="ca-product"/>
@@ -27,7 +27,7 @@
 		
 		<route id="ca-product" group="ca-context-group" shutdownRoute="Defer">
 			<from ref="ca-product" />
-			<setBody><simple>resource:classpath:/payloads/ca/enquiry/response_fn_13093500.xml</simple></setBody>
+			<setBody><simple>resource:classpath:/payloads/ca/enquiry/140613-CA05K-00001_resp.xml</simple></setBody>
 			<log message="ca product response: ${body}" loggingLevel="DEBUG"/>
 		</route>
 		
