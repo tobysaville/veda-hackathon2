@@ -15,7 +15,7 @@
 			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
 			<setBody><simple>resource:classpath:/payloads/idm/idm_request_140604-V1HL0-02WY9.xml</simple></setBody>
 			<log message="idm request: ${body}" loggingLevel="DEBUG"/>
-			<!-- <wireTap ref="idm-request-dumper"/> -->
+			<wireTap ref="idm-request-dumper"/>
 			<to ref="idm-product"/>
 			<wireTap ref="idm-response-dumper"/>
 		</route>
