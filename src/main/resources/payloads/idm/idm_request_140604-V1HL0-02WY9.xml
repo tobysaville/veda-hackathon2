@@ -1,0 +1,76 @@
+<soapenv:Envelope xmlns:ev="http://vedaxml.com/vxml2/idmatrix-v4-0.xsd"
+	xmlns:evt="http://vedaxml.com/soap/header/ev-test-header-v1-1.xsd"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vh="http://vedaxml.com/soap/header/v-header-v1-8.xsd"
+	xmlns:wsa="http://www.w3.org/2005/08/addressing"
+	xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+	<soapenv:Header>
+		<vgc:vgate-context
+			xmlns:vgc="http://vedaxml.com/vxml2/idmatrix-v2-0-vgate-context.xsd">
+			<vgc:message.type>REQUEST</vgc:message.type>
+			<vgc:request.time>2014-06-04T15:17:10.741+10:00</vgc:request.time>
+			<vgc:response.time>2014-06-04T15:17:15.202+10:00</vgc:response.time>
+			<vgc:request.tcp.remoteAddress>10.1.114.163
+			</vgc:request.tcp.remoteAddress>
+			<vgc:request.url>http://vgate-qa2.corp.dmz:8080/sys2/idmatrix-v4
+			</vgc:request.url>
+			<vgc:request.url.path>/sys2/idmatrix-v4</vgc:request.url.path>
+			<vgc:unique_request_id>140604-V1HL0-02WY9</vgc:unique_request_id>
+		</vgc:vgate-context>
+		<vh:UUID>140604-V1HL0-02WY9</vh:UUID>
+		<vh:MemberCode>VXML</vh:MemberCode>
+		<vh:BranchCode>0006</vh:BranchCode>
+		<vh:SubscriberIdentifier>TestMatrixUs</vh:SubscriberIdentifier>
+		<vh:Mode>Production</vh:Mode>
+		<wsa:To>https://vedaxml.com/sys2/idmatrix-v4</wsa:To>
+		<wsa:Action>http://vedaxml.com/idmatrix/VerifyIdentity</wsa:Action>
+		<wsa:MessageID>urn:123456</wsa:MessageID>
+		<evh:Test xmlns:evh="http://vedaxml.com/soap/header/ev-test-header-v1-1.xsd" />
+	</soapenv:Header>
+	<soapenv:Body>
+		<idm:request client-reference="ref12345"
+			xmlns:idm="http://vedaxml.com/vxml2/idmatrix-v4-0.xsd">
+			<idm:individual-name>
+				<idm:family-name>female</idm:family-name>
+				<idm:first-given-name>FNCONDHL</idm:first-given-name>
+				<idm:other-given-name>MNCONWFF</idm:other-given-name>
+			</idm:individual-name>
+			<idm:date-of-birth>1981-10-14</idm:date-of-birth><!--idm:gender>1981-10-14</idm:gender -->
+			<idm:current-address date-current-from="2005-10"
+				type=""><!--idm:unit-number></idm:unit-number> <idm:street-number></idm:street-number> 
+					<idm:street-name></idm:street-name> <idm:street-type></idm:street-type> <idm:suburb>1 
+					5 WILSON ST HORSHAM VIC 3400</idm:suburb> <idm:state></idm:state> <idm:postcode></idm:postcode -->
+				<idm:unformatted-address>1 5 WILSON ST HORSHAM VIC 3400
+				</idm:unformatted-address>
+			</idm:current-address>
+			<idm:drivers-licence-details>
+				<idm:country-code>AUS</idm:country-code>
+				<idm:state-code>NSW</idm:state-code>
+				<idm:number>NSW12341234</idm:number>
+				<idm:card-number>2014730138</idm:card-number>
+			</idm:drivers-licence-details>
+			<idm:passport-details>
+				<idm:country-code>AUS</idm:country-code>
+				<ev:number>APP12341234</ev:number>
+				<idm:family-name-at-birth>SURCO-EGM</idm:family-name-at-birth>
+				<idm:place-of-birth>Cowra</idm:place-of-birth>
+				<idm:country-of-birth>AUS</idm:country-of-birth>
+			</idm:passport-details>
+			<idm:medicare>
+				<ev:card-number>1234567891</ev:card-number>
+				<idm:reference-number>1</idm:reference-number>
+			</idm:medicare>
+			<idm:birth-certificate-details>
+				<idm:registration-number>BIRTH12341234</idm:registration-number>
+				<idm:registration-state>SA</idm:registration-state>
+				<idm:registration-date>1957-08-02</idm:registration-date>
+				<idm:registered-name>
+					<idm:family-name>SURCO-EGM</idm:family-name>
+					<idm:first-given-name>FNCO-NQD</idm:first-given-name>
+					<idm:other-given-name>MNCO-JOJ</idm:other-given-name>
+				</idm:registered-name>
+				<idm:certificate-number>BIRTH12341234</idm:certificate-number>
+				<idm:date-of-print>1977-07-25</idm:date-of-print>
+			</idm:birth-certificate-details>
+		</idm:request>
+	</soapenv:Body>
+</soapenv:Envelope>

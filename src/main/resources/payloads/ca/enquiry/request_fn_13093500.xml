@@ -1,0 +1,27 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v2="http://www.vedaxml.com/services/xmlchannel/vsa/v2" xmlns:ved="http://vedaxml.com/vxml2/vedascore-apply-v2-0.xsd">
+   <soapenv:Header xmlns:wsa="http://www.w3.org/2005/08/addressing"><wsa:Action>http://vedaxml.com/vedascore-apply/EnquiryRequest</wsa:Action></soapenv:Header>
+   <soapenv:Body>
+      <v2:request>
+         <v2:enquiry-header>
+            <v2:enquiry-id>140512-VSA04-TEST7</v2:enquiry-id>
+            <v2:datetime-requested>2013-11-24T01:44:07</v2:datetime-requested>
+            <v2:member-code>CRED</v2:member-code>
+            <v2:branch-code>0003</v2:branch-code>
+            <v2:client-reference>Client Ref 1</v2:client-reference>
+            <v2:operator-id>I1RZ</v2:operator-id>
+            <v2:operator-name>PAUL</v2:operator-name>
+            <v2:permission-type-code>XY</v2:permission-type-code>
+            <v2:product-data-level-code>C</v2:product-data-level-code>
+         </v2:enquiry-header>
+         <v2:enquiry-data>
+            <v2:bureau-reference>13093500</v2:bureau-reference>
+            <v2:enquiry>
+               <v2:account-type-code>CC</v2:account-type-code>
+               <v2:enquiry-amount>2399</v2:enquiry-amount>
+               <v2:relationship-code>1</v2:relationship-code>
+               <v2:enquiry-client-reference>Client Ref2</v2:enquiry-client-reference>
+            </v2:enquiry>
+        </v2:enquiry-data>
+      </v2:request>
+   </soapenv:Body>
+</soapenv:Envelope>

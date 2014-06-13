@@ -1,3 +1,4 @@
+package com.veda.icc.esb.utilities.dumper.routes;
 
 import java.util.Properties;
 
@@ -9,7 +10,7 @@ import org.junit.Test;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class RequestHandlerRouteTest extends CamelSpringTestSupport {
+public class AgdRequestHandlerRouteTest extends CamelSpringTestSupport {
 
 	Logger log = Logger.getLogger(getClass());
 		
@@ -27,8 +28,8 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
 	}
 
     @Test
-    public void testMoveFile() throws Exception {
-    	String startRoute = "direct:start";
+    public void test() throws Exception {
+    	String startRoute = "direct:agd-orchestrator";
     	
     	String request = IOUtils.toString(getClass().getResourceAsStream("/request.xml"));
     	
@@ -36,7 +37,7 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
         String response = (String) template.requestBody(startRoute, request);
     	
         // wait a while to let the file be moved
-        log.debug("waiting for 2 seconds for completion");
+        log.debug("waiting for 2 seconds for async completion");
         Thread.sleep(8000);
         log.debug("waiting complete");
         

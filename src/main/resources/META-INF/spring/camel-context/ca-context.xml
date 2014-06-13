@@ -1,0 +1,42 @@
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://camel.apache.org/schema/spring"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+								 http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+
+    <routeContext id="ca-context">
+
+		<route id="ca-orchestrator" group="ca-context-group" shutdownRoute="Defer">
+			<from ref="ca-orchestrator" />
+			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
+			<setBody><simple>resource:classpath:/payloads/ca/enquiry/140613-CA05K-00001_req.xml</simple></setBody>
+			<log message="ca request: ${body}" loggingLevel="DEBUG"/>
+			<wireTap ref="ca-request-dumper"/>
+			<to ref="ca-product"/>
+			<wireTap ref="ca-response-dumper"/>
+		</route>
+		
+		<route id="ca-request-dumper" group="ca-context-group" shutdownRoute="Defer">
+			<from ref="ca-request-dumper" />
+			<log message="ca request dumper: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/ca/request-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route>
+		
+		<route id="ca-product" group="ca-context-group" shutdownRoute="Defer">
+			<from ref="ca-product" />
+			<setBody><simple>resource:classpath:/payloads/ca/enquiry/140613-CA05K-00001_resp.xml</simple></setBody>
+			<log message="ca product response: ${body}" loggingLevel="DEBUG"/>
+		</route>
+		
+		<route id="ca-response-dumper" group="ca-context-group" shutdownRoute="Defer">
+			<from ref="ca-response-dumper" />
+			<log message="ca response: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/ca/response-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route>
+        
+    </routeContext>
+</beans:beans>

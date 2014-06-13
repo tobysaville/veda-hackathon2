@@ -7,7 +7,7 @@
 
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" />
 
-	<broker:broker useJmx="false" persistent="false" brokerName="localhost" dataDirectory="target/activemq/data">
+	<broker:broker useJmx="true" persistent="false" brokerName="localhost" dataDirectory="target/activemq/data" >
 
 	</broker:broker>
 

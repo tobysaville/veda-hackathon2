@@ -10,14 +10,14 @@
     
     <xsl:param name="timestamp"/>
     
-    <xsl:variable name="collection">vsa_request</xsl:variable>
+    <xsl:variable name="collection">ca_request</xsl:variable>
     
     <xsl:template match="/">
     
 		<xsl:call-template name="dumperRequest">
-		    <xsl:with-param name="payload" select="//vs2:request"/>
+		    <xsl:with-param name="payload" select="//ns36:companyTradingHistoryRequest"/>
 		    <xsl:with-param name="collection" select="$collection"/>
-		    <xsl:with-param name="uuid" select="//vs2:enquiry-id"/>
+		    <xsl:with-param name="uuid" select="//ns35:uuid"/>
 		    <xsl:with-param name="timestamp" select="$timestamp"/>
 		
 		</xsl:call-template>
@@ -45,14 +45,14 @@
     	<xsl:param name="payload"/>
     
     	<request>
-    		<_id><xsl:value-of select="$payload//vs2:enquiry-id"/></_id>
+    		<_id><xsl:value-of select="$payload//ns35:uuid"/></_id>
     		<!-- <xsl:apply-templates select="//*[ancestor::vs2:request]"/> -->
     		<xsl:apply-templates select="* | node()" />
     	</request>
     	
     </xsl:template>
 
-	<xsl:template match="*[ancestor::vs2:request]">
+	<xsl:template match="*[ancestor::ns36:companyTradingHistoryRequest]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>

@@ -1,1 +1,0 @@
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v2="http://www.vedaxml.com/services/xmlchannel/vsa/v2" xmlns:ved="http://vedaxml.com/vxml2/vedascore-apply-v2-0.xsd">
