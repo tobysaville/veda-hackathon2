@@ -68,9 +68,9 @@
 
 		<endpoint id="screech-gateway" uri="direct:screech-gateway" />
 		<endpoint id="screech-gateway-http" uri="jetty:http://0.0.0.0:8080/hackathon/services/screech" />
-		<endpoint id="screech-orchestrator" uri="direct:screech-orchestrator" />
+		<endpoint id="screech-orchestrator" uri="jms:screech-orchestrator" />
 		<endpoint id="screech-response-dumper" uri="jms:screech-response-dumper" />
-		<endpoint id="screech-product" uri="direct:screech-product" />
+		<endpoint id="screech-product" uri="jms:screech-product" />
 
 		<endpoint id="dumper-request-handler" uri="jms:dumper-request-handler" />
 		<endpoint id="dumper-orchestrator" uri="jms:dumper-orchestrator" />
@@ -97,6 +97,7 @@
 			<to ref="ca-orchestrator"/>
 			<!-- <to ref="bureau-orchestrator"/>
 			<to ref="agd-orchestrator"/> -->
+
 		</route>
 
 	</camelContext>

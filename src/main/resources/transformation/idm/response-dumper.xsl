@@ -1,7 +1,10 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:idm="http://vedaxml.com/vxml2/idmatrix-v4-0.xsd"
-	exclude-result-prefixes="idm">
+	xmlns:vgc="http://vedaxml.com/vxml2/idmatrix-v2-0-vgate-context.xsd"
+	xmlns:wsa="http://www.w3.org/2005/08/addressing"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	exclude-result-prefixes="idm vgc wsa">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
@@ -43,7 +46,7 @@
     	<xsl:param name="payload"/>
     
     	<response>
-    		<_id><xsl:value-of select="$payload//idm:enquiry-id"/></_id>
+    		<_id><xsl:value-of select="//wsa:MessageID"/></_id>
     		<xsl:apply-templates select="* | node()" />
     	</response>
     	
@@ -58,4 +61,8 @@
 	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
 	</xsl:template>
+	
+	<xsl:template match="/soapenv:Envelope/soapenv:Header"/>
+	<!-- <xsl:template match="/soapenv:Envelope/soapenv:Header/vgc:vgate-context"/>
+	<xsl:template match="/soapenv:Envelope/soapenv:Header/wsa:*[not(self::wsa:MessageID)]"/> -->
 </xsl:stylesheet>
