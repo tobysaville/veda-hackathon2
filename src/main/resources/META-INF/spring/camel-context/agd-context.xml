@@ -1,0 +1,42 @@
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://camel.apache.org/schema/spring"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+								 http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+
+    <routeContext id="agd-context">
+
+		<route id="agd-orchestrator" group="agd-context-group" shutdownRoute="Defer">
+			<from ref="agd-orchestrator" />
+			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
+			<setBody><simple>resource:classpath:/payloads/agd/searchByRegistrationNumber/request_rn_201305220000134.xml</simple></setBody>
+			<log message="agd request: ${body}" loggingLevel="DEBUG"/>
+			<wireTap ref="agd-request-dumper"/>
+			<to ref="agd-product"/>
+			<!-- <wireTap ref="agd-response-dumper"/> -->
+		</route>
+		
+		<route id="agd-request-dumper" group="agd-context-group" shutdownRoute="Defer">
+			<from ref="agd-request-dumper" />
+			<log message="agd request dumper: ${body}" loggingLevel="INFO"/>
+			<to uri="xslt:transformation/agd/request-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route>
+		
+		<route id="agd-product" group="agd-context-group" shutdownRoute="Defer">
+			<from ref="agd-product" />
+			<setBody><simple>resource:classpath:/payloads/agd/searchByRegistrationNumber/response_rn_201305220000134.xml</simple></setBody>
+			<log message="agd product response: ${body}" loggingLevel="DEBUG"/>
+		</route>
+		
+		<route id="agd-response-dumper" group="agd-context-group" shutdownRoute="Defer">
+			<from ref="agd-response-dumper" />
+			<log message="agd response: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/agd/response-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route>
+        
+    </routeContext>
+</beans:beans>

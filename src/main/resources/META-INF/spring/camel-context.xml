@@ -24,12 +24,19 @@
 
 		<endpoint id="product-request-handler" uri="direct:start" />
 		<endpoint id="product-request-handler-http" uri="jetty:http://0.0.0.0:8080/hackathon/services/submit" />
+		<endpoint id="product-request-handler-jms" uri="jms:hackathon.gateway" />
+		
 		<endpoint id="product-orchestrator" uri="direct:product-orchestrator" />
 
 		<endpoint id="vsa-orchestrator" uri="direct:vsa-orchestrator" />
 		<endpoint id="vsa-request-dumper" uri="jms:vsa-request-dumper" />
 		<endpoint id="vsa-response-dumper" uri="jms:vsa-response-dumper" />
 		<endpoint id="vsa-product" uri="direct:vsa-product" />
+		
+		<endpoint id="agd-orchestrator" uri="direct:agd-orchestrator" />
+		<endpoint id="agd-request-dumper" uri="jms:agd-request-dumper" />
+		<endpoint id="agd-response-dumper" uri="jms:agd-response-dumper" />
+		<endpoint id="agd-product" uri="direct:agd-product" />
 		
 		<endpoint id="dumper-request-handler" uri="jms:dumper-request-handler" />
 		<endpoint id="dumper-orchestrator" uri="jms:dumper-orchestrator" />
