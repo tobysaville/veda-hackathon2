@@ -13,12 +13,13 @@
     <beans:import resource="classpath:/META-INF/spring/camel-context/agd-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/ppsr-context.xml"/> -->
     <beans:import resource="classpath:/META-INF/spring/camel-context/dumper-context.xml"/>
+    <beans:import resource="classpath:/META-INF/spring/camel-context/idm-context.xml"/>
     
 	<camelContext id="hackathon-context" useMDCLogging="true" trace="true" streamCache="true" autoStartup="true" useBreadcrumb="true">
 
 		<routeContextRef ref="vsa-context"/>
-		<!-- <routeContextRef ref="idm-context"/>
-		<routeContextRef ref="agd-context"/>
+		<routeContextRef ref="idm-context"/>
+		<!-- <routeContextRef ref="agd-context"/>
 		<routeContextRef ref="ppsr-context"/> -->
 		<routeContextRef ref="dumper-context"/>
 
@@ -37,7 +38,12 @@
 		<endpoint id="agd-request-dumper" uri="jms:agd-request-dumper" />
 		<endpoint id="agd-response-dumper" uri="jms:agd-response-dumper" />
 		<endpoint id="agd-product" uri="direct:agd-product" />
-		
+
+		<endpoint id="idm-orchestrator" uri="direct:idm-orchestrator" />
+		<endpoint id="idm-request-dumper" uri="jms:idm-request-dumper" />
+		<endpoint id="idm-response-dumper" uri="jms:idm-response-dumper" />
+		<endpoint id="idm-product" uri="direct:idm-product" />
+
 		<endpoint id="dumper-request-handler" uri="jms:dumper-request-handler" />
 		<endpoint id="dumper-orchestrator" uri="jms:dumper-orchestrator" />
 		
@@ -59,6 +65,7 @@
 			<from ref="product-orchestrator" />
 			<log message="product request: ${body}" loggingLevel="DEBUG"/>
 			<to ref="vsa-orchestrator"/>
+			<to ref="idm-orchestrator"/>
 			<!-- <to ref="bureau-orchestrator"/>
 			<to ref="agd-orchestrator"/> -->
 		</route>
