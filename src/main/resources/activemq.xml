@@ -7,8 +7,39 @@
 
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" />
 
-	<broker:broker useJmx="false" persistent="false" brokerName="localhost" dataDirectory="target/activemq/data">
+	<broker xmlns="http://activemq.apache.org/schema/core"
+            brokerName="hackathon-2-broker" brokerId="hackathon-2-broker"
+            useJmx="true" useShutdownHook="false" persistent="true" 
+            start="true" startAsync="true" useLoggingForShutdownErrors="true"
+            dataDirectory="data" schedulerSupport="true" >
 
-	</broker:broker>
-
+		<managementContext>
+			<managementContext createConnector="true" connectorHost="127.0.0.1" connectorPort="1099" />
+		</managementContext>
+        
+       <persistenceAdapter>
+            <kahaDB directory="data/kahadb"/>
+        </persistenceAdapter>
+        
+        <systemUsage>
+            <systemUsage>
+                <memoryUsage>
+                    <memoryUsage limit="128 mb"/>
+                </memoryUsage>
+                <storeUsage>
+                    <storeUsage limit="100 mb"/>
+                </storeUsage>
+                <tempUsage>
+                    <tempUsage limit="30 mb"/>
+                </tempUsage>
+            </systemUsage>
+        </systemUsage>
+        
+	    <transportConnectors>
+	        <transportConnector name="openwire" uri="tpc://127.0.0.1:61616" updateClusterClients="true" />
+	        <transportConnector name="stomp" uri="stomp+nio://127.0.0.1:61613"/>
+	    </transportConnectors>
+    
+    </broker>
+        
 </beans>
