@@ -1,0 +1,128 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+	<s:Header>
+		<o:Security
+			xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+			s:mustUnderstand="1">
+			<u:Timestamp u:Id="_0">
+				<u:Created>2014-06-12T23:35:24.852Z</u:Created>
+				<u:Expires>2014-06-12T23:40:24.852Z</u:Expires>
+			</u:Timestamp>
+		</o:Security>
+	</s:Header>
+	<s:Body>
+		<RetrieveGrantorSearchResultDetailResponseMessage
+			xmlns="http://schemas.ppsr.gov.au/2011/04/services">
+			<RetrieveGrantorSearchResultDetailResponse
+				xmlns:a="http://schemas.ppsr.gov.au/2011/04/data" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:CustomersRequestMessageId>140613-SN02Z-00000-3-1-2
+				</a:CustomersRequestMessageId>
+				<a:CustomersUserDefinedFields />
+				<a:PpsrRequestMessageId>181447241</a:PpsrRequestMessageId>
+				<a:RequestProcessedByEnvironment>Discovery
+				</a:RequestProcessedByEnvironment>
+				<a:RequestProcessedDateTime>2014-06-13T09:35:24
+				</a:RequestProcessedDateTime>
+				<a:ResultCount>100</a:ResultCount>
+				<a:ResultDetails>
+					<a:ResultDetail>
+						<a:ChangeHistory>
+							<a:ChangeDetails>
+								<a:ChangeDetail>
+									<a:ChangeNumber>1971257</a:ChangeNumber>
+									<a:ChangeType>Create</a:ChangeType>
+									<a:RegistrationChangeTime>2014-05-08T12:04:43
+									</a:RegistrationChangeTime>
+								</a:ChangeDetail>
+							</a:ChangeDetails>
+						</a:ChangeHistory>
+						<a:RegistrationDetail>
+							<a:AddressForService>
+								<a:Addressee>QA Analyst</a:Addressee>
+								<a:EmailAddress>manikya.punjani@vedaadvantage.com
+								</a:EmailAddress>
+								<a:FaxNumber>0292787898</a:FaxNumber>
+								<a:MailingAddress>
+									<a:CountryName>AUSTRALIA</a:CountryName>
+									<a:ISO3166CountryCode>AU</a:ISO3166CountryCode>
+									<a:Line1>Level 14 60 Arthur St S</a:Line1>
+									<a:Line2 />
+									<a:Line3 />
+									<a:Locality>North Sydney</a:Locality>
+									<a:Postcode>2060</a:Postcode>
+									<a:State>NSW</a:State>
+								</a:MailingAddress>
+								<a:PhysicalAddress>
+									<a:CountryName>AUSTRALIA</a:CountryName>
+									<a:ISO3166CountryCode>AU</a:ISO3166CountryCode>
+									<a:Line1>Level 14 60 Arthur St S</a:Line1>
+									<a:Line2 />
+									<a:Line3 />
+									<a:Locality>North Sydney</a:Locality>
+									<a:Postcode>2060</a:Postcode>
+									<a:State>NSW</a:State>
+								</a:PhysicalAddress>
+							</a:AddressForService>
+							<a:AreAssetsSubjectToControl i:nil="true" />
+							<a:AreProceedsClaimed>True</a:AreProceedsClaimed>
+							<a:Attachments />
+							<a:ChangeNumber>1971257</a:ChangeNumber>
+							<a:CollateralClassDescription>Other goods
+							</a:CollateralClassDescription>
+							<a:CollateralClassType>OtherGoods</a:CollateralClassType>
+							<a:CollateralDescription />
+							<a:CollateralType>Commercial</a:CollateralType>
+							<a:EarlierRegistrationNumber i:nil="true" />
+							<a:GivingOfNoticeIdentifier />
+							<a:Grantors>
+								<a:GrantorSearchDetail>
+									<a:GrantorType>Organisation</a:GrantorType>
+									<a:Individual i:nil="true" />
+									<a:Organisation>
+										<a:OrganisationName />
+										<a:OrganisationNumber>000105233</a:OrganisationNumber>
+										<a:OrganisationNumberType>ACN</a:OrganisationNumberType>
+									</a:Organisation>
+								</a:GrantorSearchDetail>
+							</a:Grantors>
+							<a:IsInventory>False</a:IsInventory>
+							<a:IsMigrated>false</a:IsMigrated>
+							<a:IsPMSI>False</a:IsPMSI>
+							<a:IsSecurityInterestRegistrationKind>true
+							</a:IsSecurityInterestRegistrationKind>
+							<a:IsSubordinate>false</a:IsSubordinate>
+							<a:IsTransitional>false</a:IsTransitional>
+							<a:MigrationDetail i:nil="true" />
+							<a:ProceedsClaimedDescription>All present and after acquired
+								property</a:ProceedsClaimedDescription>
+							<a:RegistrationChangeTime>2014-05-08T12:04:43
+							</a:RegistrationChangeTime>
+							<a:RegistrationEndTime>2039-05-08T23:59:59
+							</a:RegistrationEndTime>
+							<a:RegistrationKind>SecurityInterest</a:RegistrationKind>
+							<a:RegistrationNumber>201405080006207</a:RegistrationNumber>
+							<a:RegistrationStartTime>2014-05-08T12:04:43
+							</a:RegistrationStartTime>
+							<a:SecuredParties>
+								<a:CollateralRegistrationSecuredParty>
+									<a:Individual i:nil="true" />
+									<a:Organisation>
+										<a:OrganisationName>TestSPG1</a:OrganisationName>
+										<a:OrganisationNumber />
+										<a:OrganisationNumberType i:nil="true" />
+									</a:Organisation>
+									<a:SecuredPartyType>Organisation</a:SecuredPartyType>
+								</a:CollateralRegistrationSecuredParty>
+							</a:SecuredParties>
+							<a:SerialNumberDetails i:nil="true" />
+						</a:RegistrationDetail>
+						<a:RestrictionDetail i:nil="true" />
+						<a:ResultSequenceNumber>1</a:ResultSequenceNumber>
+					</a:ResultDetail>
+				</a:ResultDetails>
+				<a:SearchResultDetailRetrievedDateTime>2014-06-13T09:35:20
+				</a:SearchResultDetailRetrievedDateTime>
+			</RetrieveGrantorSearchResultDetailResponse>
+		</RetrieveGrantorSearchResultDetailResponseMessage>
+	</s:Body>
+</s:Envelope>

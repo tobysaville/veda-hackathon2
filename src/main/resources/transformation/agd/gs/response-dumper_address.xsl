@@ -10,7 +10,7 @@
     
     <xsl:param name="timestamp"/>
     
-    <xsl:variable name="collection">agd_reg_num_response</xsl:variable>
+    <xsl:variable name="collection">addresses</xsl:variable>
     
     <xsl:template match="/">
     
@@ -66,10 +66,5 @@
 		</Address>
 	</xsl:template>
 	
-	
-
-	<!--<xsl:template match="@*|text()|comment()">
-		<xsl:copy />
-	</xsl:template>-->
 	
 </xsl:stylesheet>

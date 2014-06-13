@@ -13,9 +13,11 @@
 			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
 			<setBody><simple>resource:classpath:/payloads/agd/searchByRegistrationNumber/request_rn_201305220000134.xml</simple></setBody>
 			<log message="agd request: ${body}" loggingLevel="DEBUG"/>
-			<wireTap ref="agd-request-dumper"/>
+			<!-- <wireTap ref="agd-request-dumper"/> -->
 			<to ref="agd-product"/>
-			<wireTap ref="agd-response-dumper"/>
+			<!-- <wireTap ref="agd-response-dumper" /> -->
+			<to ref="agd-product-detail"/>
+			<wireTap ref="agd-product-detail-response-dumper"/>
 		</route>
 		
 		<route id="agd-request-dumper" group="agd-context-group" shutdownRoute="Defer">
@@ -31,10 +33,28 @@
 			<log message="agd product response: ${body}" loggingLevel="DEBUG"/>
 		</route>
 		
+		<route id="agd-product-detail" group="agd-context-group" shutdownRoute="Defer">
+			<from ref="agd-product-detail" />
+			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail_small.xml</simple></setBody>
+			<log message="agd product detail response: ${body}" loggingLevel="DEBUG"/>
+		</route>
+		
 		<route id="agd-response-dumper" group="agd-context-group" shutdownRoute="Defer">
 			<from ref="agd-response-dumper" />
 			<log message="agd response: ${body}" loggingLevel="INFO"/>
 			<to uri="xslt:transformation/agd/response-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route>
+		
+		<route id="agd-product-detail-response-dumper" group="agd-context-group" shutdownRoute="Defer">
+			<from ref="agd-product-detail-response-dumper" />
+			<log message="agd prpduct detail response: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/agd/gs/response-dumper_address.xsl"/>
+			<setHeader headerName="visualise"><constant>true</constant></setHeader>
+			<to ref="dumper-request-handler"/>
+			<removeHeader headerName="visualise"/>
+			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail_small.xml</simple></setBody>
+			<to uri="xslt:transformation/agd/gs/response-dumper_registrations.xsl"/>
 			<to ref="dumper-request-handler"/>
 		</route>
         

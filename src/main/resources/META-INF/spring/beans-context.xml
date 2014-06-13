@@ -25,8 +25,8 @@
 	</bean>
 
 	<bean id="myDb" class="com.mongodb.Mongo">
-		<!-- <constructor-arg index="0" value="localhost"/> -->
-		<constructor-arg index="0" value="54.79.47.19"/>
+		<constructor-arg index="0" value="localhost"/>
+		<!-- <constructor-arg index="0" value="54.79.47.19"/> -->
 	</bean>
 
 </beans>

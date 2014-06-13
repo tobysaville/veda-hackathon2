@@ -60,6 +60,8 @@
 		<endpoint id="agd-request-dumper" uri="jms:agd-request-dumper" />
 		<endpoint id="agd-response-dumper" uri="jms:agd-response-dumper" />
 		<endpoint id="agd-product" uri="direct:agd-product" />
+		<endpoint id="agd-product-detail" uri="direct:agd-product-detail" />
+		<endpoint id="agd-product-detail-response-dumper" uri="jms:agd-product-detail-response-dumper" />
 
 		<endpoint id="idm-orchestrator" uri="direct:idm-orchestrator" />
 		<endpoint id="idm-request-dumper" uri="jms:idm-request-dumper" />
@@ -74,6 +76,7 @@
 
 		<endpoint id="dumper-request-handler" uri="jms:dumper-request-handler" />
 		<endpoint id="dumper-orchestrator" uri="jms:dumper-orchestrator" />
+		<endpoint id="dumper-visualise" uri="jms:dumper-visualise" />
 		
 		<dataFormats>
 			<xmljson id="xmljson" />

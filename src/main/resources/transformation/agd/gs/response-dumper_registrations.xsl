@@ -10,7 +10,7 @@
     
     <xsl:param name="timestamp"/>
     
-    <xsl:variable name="collection">agd_reg_num_response</xsl:variable>
+    <xsl:variable name="collection">registrations</xsl:variable>
     
     <xsl:template match="/">
     
