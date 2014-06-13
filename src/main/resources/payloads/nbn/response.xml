@@ -1,0 +1,50 @@
+<veda:bnExtractResponse xmlns:veda="http://vedaxml.com/vxml2/veda-nbn-v1.0.xsd"
+	xmlns:uri="uri:veda.nbn.bn.types" xmlns:uri1="uri:veda.nbn.common.types"
+	xmlns:uri2="uri:veda.nbn.abn.types">
+	<veda:extract>
+
+		<veda:business>
+			<uri:abrEntity>
+				<uri2:abn>86232811351</uri2:abn>
+			</uri:abrEntity>
+			<uri:individual>
+				<uri:name>
+					<uri1:givenNames>UTE</uri1:givenNames>
+					<uri1:otherGivenNames>RENATE</uri1:otherGivenNames>
+					<uri1:familyName>GIERINGER</uri1:familyName>
+				</uri:name>
+			</uri:individual>
+			<uri:ownerType>IND</uri:ownerType>
+			<veda:startDate>2012-06-18</veda:startDate>
+		</veda:business>
+		<veda:businessName>
+			<uri:nniNumber>$GKOFIKKJH</uri:nniNumber>
+			<uri:bnReferenceNumber>86232811351001</uri:bnReferenceNumber>
+			<uri:name>
+				<uri1:name>WALL EXPRESSIONS</uri1:name>
+			</uri:name>
+			<uri:status>
+				<uri1:code>REGD</uri1:code>
+				<uri1:description>Registered</uri1:description>
+				<uri1:isRegistered>true</uri1:isRegistered>
+				<uri1:startDate>2012-06-18</uri1:startDate>
+			</uri:status>
+			<uri:jurisdiction>ASIC</uri:jurisdiction>
+			<uri:dateRegistered>2012-06-18</uri:dateRegistered>
+			<uri:dateRenewal>2013-06-18</uri:dateRenewal>
+			<uri:address>
+				<uri1:type>GD</uri1:type>
+				<uri1:addressLine>DUNCRAIG WA 6023</uri1:addressLine>
+				<uri1:country>AUSTRALIA</uri1:country>
+				<uri1:startDate>2012-06-18</uri1:startDate>
+			</uri:address>
+			<uri:address>
+				<uri1:type>GE</uri1:type>
+				<uri1:addressLine>21 ARNISDALE RD</uri1:addressLine>
+				<uri1:addressLine>DUNCRAIG WA 6023</uri1:addressLine>
+				<uri1:country>AUSTRALIA</uri1:country>
+				<uri1:startDate>2012-06-18</uri1:startDate>
+			</uri:address>
+		</veda:businessName>
+	</veda:extract>
+</veda:bnExtractResponse>

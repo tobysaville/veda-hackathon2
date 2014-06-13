@@ -1,0 +1,24 @@
+<vags:SearchByGrantorRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                             xmlns:vags="http://www.vedaxml.com/services/agd/grantor-search-v1.0.xsd"
+                             xmlns:vcmn="uri:veda-ppsr-model-common-types">
+   <vcmn:CustomersRequestMessageId>140612-SN02W-00004-3-1</vcmn:CustomersRequestMessageId>
+   <vcmn:CustomersUserDefinedFields xsi:nil="true"/>
+   <vags:SearchCriteria>
+      <vags:CollateralClassSearchCriteria xsi:nil="true"/>
+      <vags:GrantorOrganisationSearchCriteria>
+         <vcmn:OrganisationName>N &amp; S HOLMES INTERIOR LININGS PTY LTD</vcmn:OrganisationName>
+      </vags:GrantorOrganisationSearchCriteria>
+      <vags:GrantorType>Organisation</vags:GrantorType>
+      <vags:IncludeArchived>false</vags:IncludeArchived>
+      <vags:IncludeCurrent>true</vags:IncludeCurrent>
+      <vags:IncludeExpired>false</vags:IncludeExpired>
+      <vags:IncludeMigratedTransitional>true</vags:IncludeMigratedTransitional>
+      <vags:IncludeNonMigratedTransitional>true</vags:IncludeNonMigratedTransitional>
+      <vags:IncludeNonTransitional>true</vags:IncludeNonTransitional>
+      <vags:IncludeRemoved>false</vags:IncludeRemoved>
+      <vags:IsPMSISearchCriteria>Either</vags:IsPMSISearchCriteria>
+      <vags:PointInTimeDateTime xsi:nil="true"/>
+      <vags:RegistrationNumberSortOrder>Descending</vags:RegistrationNumberSortOrder>
+      <vags:SecurityInterestsOnly>false</vags:SecurityInterestsOnly>
+   </vags:SearchCriteria>
+</vags:SearchByGrantorRequest>

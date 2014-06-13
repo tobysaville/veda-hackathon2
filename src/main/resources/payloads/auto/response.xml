@@ -1,0 +1,16 @@
+<VINValidationResponse xmlns="http://www.vedaxml.com/services/auto-v1.0.xsd">
+	<VINValidationSummary>
+		<Value>true</Value>
+		<Result>VALID</Result>
+	</VINValidationSummary>
+	<VINValidationResultDetails>
+		<VIN>TRUZZZ8NZX1016418</VIN>
+		<Make>AUDI</Make>
+		<Model>TT</Model>
+		<EngineCapacity>1.8L</EngineCapacity>
+		<MonthYearOfManufacture>1999</MonthYearOfManufacture>
+		<Value>31065</Value>
+	</VINValidationResultDetails>
+	<Message />
+	<TransactionId>31065</TransactionId>
+</VINValidationResponse>

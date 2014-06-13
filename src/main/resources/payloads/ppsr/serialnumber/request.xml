@@ -1,0 +1,34 @@
+<ns6:SerialNumberSearchGatewayRequest
+	xmlns:ns5="uri:veda-ppsr-model-common-types"
+	xmlns:ns6="http://www.vedaxml.com/services/ppsr/serial-number-search-v1.0.xsd"
+	xmlns:ns7="http://www.veda.com.au/services/ppsr/generic-fault-v1.0.xsd"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ns6:RequestDetails>
+		<ns5:clientCode>ELEP</ns5:clientCode>
+		<ns5:businessUnit>0003</ns5:businessUnit>
+		<ns5:userCode>I0IX</ns5:userCode>
+		<ns5:pvgCode>003</ns5:pvgCode>
+		<ns5:deliveryChannelCode>WEB</ns5:deliveryChannelCode>
+		<ns5:chargeBackCode>SerialSearch2</ns5:chargeBackCode>
+		<ns5:clientReferenceCode>SerialSearch2</ns5:clientReferenceCode>
+		<ns5:searchKeywords>
+			<ns5:keywordEntry>
+				<ns5:keywordName>callingApp</ns5:keywordName>
+				<ns5:keywordValue>PPSRWEB</ns5:keywordValue>
+			</ns5:keywordEntry>
+		</ns5:searchKeywords>
+		<ns5:linkedRequestExtId xsi:nil="true" />
+	</ns6:RequestDetails>
+	<ns6:SearchCriteria>
+		<ns6:IncludeArchived>false</ns6:IncludeArchived>
+		<ns6:IncludeCurrent>true</ns6:IncludeCurrent>
+		<ns6:IncludeExpired>false</ns6:IncludeExpired>
+		<ns6:IncludeRemoved>false</ns6:IncludeRemoved>
+		<ns6:PointInTimeDateTime xsi:nil="true" />
+		<ns6:SerialNumber>TRUZZZ8NZX1016418</ns6:SerialNumber>
+		<ns6:SerialNumberType>VIN</ns6:SerialNumberType>
+	</ns6:SearchCriteria>
+	<ns6:SearchCertificateRequired>false</ns6:SearchCertificateRequired>
+</ns6:SerialNumberSearchGatewayRequest>

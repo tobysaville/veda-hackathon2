@@ -1,0 +1,5 @@
+<veda:bnExtractRequest xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:veda="http://vedaxml.com/vxml2/veda-nbn-v1.0.xsd" branchCode="999"
+	channel="xml" memberCode="4TZ6" uuid="?">
+	<veda:abn>86232811351</veda:abn>
+</veda:bnExtractRequest>

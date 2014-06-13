@@ -1,0 +1,13 @@
+<ns5:VINValidationRequest
+	xmlns:ns5="http://www.vedaxml.com/services/auto-v1.0.xsd"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ns5:User>
+		<ns5:ClientCode>DACC</ns5:ClientCode>
+		<ns5:BusinessUnit>0003</ns5:BusinessUnit>
+		<ns5:UserCode>4TZ6</ns5:UserCode>
+	</ns5:User>
+	<ns5:VIN>TRUZZZ8NZX1016418</ns5:VIN>
+	<ns5:UseAdditionalSources>true</ns5:UseAdditionalSources>
+</ns5:VINValidationRequest>
