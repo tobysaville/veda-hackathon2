@@ -1,0 +1,732 @@
+<soapenv:Envelope xmlns:ns2="http://vedaxml.com/vxml2/idmatrix-v4-0.xsd"
+	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vh="http://vedaxml.com/soap/header/v-header-v1-8.xsd"
+	xmlns:wsa="http://www.w3.org/2005/08/addressing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<soapenv:Header>
+		<vgc:vgate-context xmlns:ev="http://vedaxml.com/vxml2/idmatrix-v4-0.xsd"
+			xmlns:evh="http://vedaxml.com/soap/header/ev-test-header-v1-1.xsd"
+			xmlns:vgc="http://vedaxml.com/vxml2/idmatrix-v2-0-vgate-context.xsd"
+			xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+			<vgc:message.type>RESPONSE</vgc:message.type>
+			<vgc:request.time>2014-06-11T13:08:10.605+10:00</vgc:request.time>
+			<vgc:response.time>2014-06-11T13:08:23.488+10:00</vgc:response.time>
+			<vgc:request.tcp.remoteAddress>10.1.85.71
+			</vgc:request.tcp.remoteAddress>
+			<vgc:request.url>http://vgate-qa2.corp.dmz:8080/sys2/idmatrix-v4
+			</vgc:request.url>
+			<vgc:request.url.path>/sys2/idmatrix-v4</vgc:request.url.path>
+			<vgc:unique_request_id>140611-V1HL0-02YFG</vgc:unique_request_id>
+		</vgc:vgate-context>
+		<wsa:MessageID>140611-V1HL0-02YFG</wsa:MessageID>
+		<wsa:RelatesTo>urn:uuid:9189a20b-18b3-4fcb-9c4b-2480fbb90fde
+		</wsa:RelatesTo>
+		<wsa:To>http://www.w3.org/2005/08/addressing/anonymous</wsa:To>
+		<wsa:From>
+			<wsa:Address>http://vgate-qa2.corp.dmz:8080/sys2/idmatrix-v4
+			</wsa:Address>
+		</wsa:From>
+		<wsa:Action>http://vedaxml.com/idmatrix/VerifyIdentityResult
+		</wsa:Action>
+	</soapenv:Header>
+	<soapenv:Body xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+		<ns5:response enquiry-id="140611-V1HL0-02YFF"
+			profile-name="VKYC-QA-INS" profile-version="1"
+			xmlns:ns5="http://vedaxml.com/vxml2/idmatrix-v4-0.xsd">
+			<ns5:response-outcome>
+				<ns5:overall-outcome>ACCEPT</ns5:overall-outcome>
+			</ns5:response-outcome>
+			<ns5:component-responses>
+				<ns5:verification-response>
+					<ns5:verification-outcome>
+						<ns5:indicator>ACCEPT</ns5:indicator>
+						<ns5:total-points>202</ns5:total-points>
+						<ns5:self-verification-url>https://idmatrixqa.dcms.corp.dmz/ev/?token=KqcUyQonsoMVAul%2F%2BGOtG3z9nnmbGG6MGeA6%2B8uB19bwgSTib7f%2FrmOisarH0AXFh1pzPx2X7Ftt4AWJ4H7y8SFMbUgF0O9eJkac%2BES4pQc%3D
+						</ns5:self-verification-url>
+					</ns5:verification-outcome>
+					<ns5:rules-results>
+						<ns5:rule-result name="OVERALL">
+							<ns5:indicator>ACCEPT</ns5:indicator>
+							<ns5:reason>Overall Decision</ns5:reason>
+						</ns5:rule-result>
+						<ns5:rule-result name="TOTALPOINTS">
+							<ns5:indicator>202.0</ns5:indicator>
+							<ns5:reason>Overall Points</ns5:reason>
+						</ns5:rule-result>
+						<ns5:rule-result name="IDMatrix Minimum Requirements Verification">
+							<ns5:indicator>MATCH</ns5:indicator>
+							<ns5:reason>IDMatrix Minimum Requirements Verification
+							</ns5:reason>
+						</ns5:rule-result>
+						<ns5:rule-result name="IDMatrix Safe Harbour Verification">
+							<ns5:indicator>MATCH</ns5:indicator>
+							<ns5:reason>IDMatrix Safe Harbour Verification</ns5:reason>
+						</ns5:rule-result>
+					</ns5:rules-results>
+					<ns5:analysis-results>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-CBCONS-0032</ns5:search-name>
+							<ns5:raw-score>98</ns5:raw-score>
+							<ns5:minimum-value>90</ns5:minimum-value>
+							<ns5:filtered-score>98</ns5:filtered-score>
+							<ns5:weight>0.60</ns5:weight>
+							<ns5:points>59</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-NTD-0036</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>90</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.25</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-CBCOMM-0033</ns5:search-name>
+							<ns5:raw-score>98</ns5:raw-score>
+							<ns5:minimum-value>90</ns5:minimum-value>
+							<ns5:filtered-score>98</ns5:filtered-score>
+							<ns5:weight>0.60</ns5:weight>
+							<ns5:points>59</ns5:points>
+							<ns5:contributing-factors>
+								<ns5:name-match>Y</ns5:name-match>
+								<ns5:address-match>Y</ns5:address-match>
+								<ns5:date-of-birth-match>Y</ns5:date-of-birth-match>
+							</ns5:contributing-factors>
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>DL</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>ACC-COMPLINK-0021</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>ACC-PEPS-0048</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-IRS-0035</ns5:search-name>
+							<ns5:raw-score>98</ns5:raw-score>
+							<ns5:minimum-value>90</ns5:minimum-value>
+							<ns5:filtered-score>98</ns5:filtered-score>
+							<ns5:weight>0.25</ns5:weight>
+							<ns5:points>25</ns5:points>
+							<ns5:contributing-factors>
+								<ns5:name-match>Y</ns5:name-match>
+								<ns5:address-match>Y</ns5:address-match>
+								<ns5:date-of-birth-match>Y</ns5:date-of-birth-match>
+							</ns5:contributing-factors>
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>MIRUS-HER-0047</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-SFDPHONE-0022</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-SFDADDR-0023</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-SFDDL-0024</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-SFDPASSPORT-0025</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>AEC-ER-0031</ns5:search-name>
+							<ns5:raw-score>98</ns5:raw-score>
+							<ns5:minimum-value>90</ns5:minimum-value>
+							<ns5:filtered-score>98</ns5:filtered-score>
+							<ns5:weight>0.60</ns5:weight>
+							<ns5:points>59</ns5:points>
+							<ns5:contributing-factors>
+								<ns5:name-match>Y</ns5:name-match>
+								<ns5:address-match>Y</ns5:address-match>
+							</ns5:contributing-factors>
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>MEDICARE-CARD-0007</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-EVVELOCITY-0026</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>BDM-MCVS-0004</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>AP</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>NSW-POAC-0009</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>MIRUS-SPD-0046</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>90</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.15</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>VEDA-CBPR-0034</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>90</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.60</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+						<ns5:analysis-result>
+							<ns5:category />
+							<ns5:search-name>BDM-BCVS-0003</ns5:search-name>
+							<ns5:raw-score>0</ns5:raw-score>
+							<ns5:minimum-value>0</ns5:minimum-value>
+							<ns5:filtered-score>0</ns5:filtered-score>
+							<ns5:weight>0.00</ns5:weight>
+							<ns5:points>0</ns5:points>
+							<ns5:contributing-factors />
+						</ns5:analysis-result>
+					</ns5:analysis-results>
+					<ns5:search-results>
+						<ns5:search-result match-indicator="PASS"
+							match-score="98" search-name="VEDA-CBCONS-0032" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name match-score-weight="12">
+								<ns5:family-name match-indicator="Surname"
+									match-score-weight="4" search-value="SIMPSON" />
+								<ns5:first-given-name match-indicator="First_Name"
+									match-score-weight="4" search-value="HOMER" />
+								<ns5:other-given-name match-indicator="Middle_Names"
+									match-score-weight="4" search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth match-indicator="Date"
+								match-score-weight="5" search-value="1947-10-09" />
+							<ns5:gender match-indicator="Attribute1"
+								match-score-weight="1" search-value="male" />
+							<ns5:current-address match-score-weight="20">
+								<ns5:unit-number match-indicator="Unit_Number_Noalpha"
+									match-score-weight="4" search-value="" />
+								<ns5:street-number match-indicator="Street_Number_Noalpha"
+									match-score-weight="4" search-value="37" />
+								<ns5:street-name match-indicator="Address_Part1"
+									match-score-weight="4" search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb match-indicator="Address_Part2"
+									match-score-weight="4" search-value="DUBBO" />
+								<ns5:state match-indicator="State" match-score-weight="4"
+									search-value="NSW" />
+								<ns5:postcode match-indicator="Postal_Area"
+									match-score-weight="4" search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="FAIL"
+							match-score="0" search-name="VEDA-NTD-0036" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name>
+								<ns5:family-name search-value="SIMPSON" />
+								<ns5:first-given-name search-value="HOMER" />
+								<ns5:other-given-name search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth search-value="1947-10-09" />
+							<ns5:gender search-value="male" />
+							<ns5:current-address>
+								<ns5:unit-number search-value="" />
+								<ns5:street-number search-value="37" />
+								<ns5:street-name search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb search-value="DUBBO" />
+								<ns5:state search-value="NSW" />
+								<ns5:postcode search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="PASS"
+							match-score="98" search-name="VEDA-CBCOMM-0033" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name match-score="96"
+								match-score-weight="12">
+								<ns5:family-name match-indicator="Surname"
+									match-score="100" match-score-weight="4" search-value="SIMPSON" />
+								<ns5:first-given-name match-indicator="First_Name"
+									match-score="100" match-score-weight="4" search-value="HOMER" />
+								<ns5:other-given-name match-indicator="Middle_Names"
+									match-score="90" match-score-weight="4" search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth match-indicator="Date"
+								match-score="100" match-score-weight="5" search-value="1947-10-09" />
+							<ns5:gender match-indicator="Attribute1" match-score="100"
+								match-score-weight="1" search-value="male" />
+							<ns5:current-address match-score="100"
+								match-score-weight="20">
+								<ns5:unit-number match-indicator="Unit_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="" />
+								<ns5:street-number match-indicator="Street_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="37" />
+								<ns5:street-name match-indicator="Address_Part1"
+									match-score="100" match-score-weight="4" search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb match-indicator="Address_Part2"
+									match-score="100" match-score-weight="4" search-value="DUBBO" />
+								<ns5:state match-indicator="State" match-score="100"
+									match-score-weight="4" search-value="NSW" />
+								<ns5:postcode match-indicator="Postal_Area"
+									match-score="0" match-score-weight="4" search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="NULL-NS"
+							search-name="DL" search-type="verification" service-result-code="0"
+							service-result-detail="No search performed"
+							service-result-string="OK" />
+						<ns5:search-result match-indicator="ERROR"
+							search-name="ACC-COMPLINK-0021" search-type="exclusion"
+							service-result-code="99" service-result-detail=""
+							service-result-string="Unknown Error" />
+						<ns5:search-result match-indicator="ERROR"
+							search-name="ACC-PEPS-0048" search-type="exclusion"
+							service-result-code="99" service-result-detail=""
+							service-result-string="Unknown Error" />
+						<ns5:search-result match-indicator="PASS"
+							match-score="98" search-name="VEDA-IRS-0035" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name match-score="96"
+								match-score-weight="12">
+								<ns5:family-name match-indicator="Surname"
+									match-score="100" match-score-weight="4" search-value="SIMPSON" />
+								<ns5:first-given-name match-indicator="First_Name"
+									match-score="100" match-score-weight="4" search-value="HOMER" />
+								<ns5:other-given-name match-indicator="Middle_Names"
+									match-score="90" match-score-weight="4" search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth match-indicator="Date"
+								match-score="100" match-score-weight="5" search-value="1947-10-09" />
+							<ns5:gender match-indicator="Attribute1" match-score="100"
+								match-score-weight="1" search-value="male" />
+							<ns5:current-address match-score="100"
+								match-score-weight="20">
+								<ns5:unit-number match-indicator="Unit_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="" />
+								<ns5:street-number match-indicator="Street_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="37" />
+								<ns5:street-name match-indicator="Address_Part1"
+									match-score="100" match-score-weight="4" search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb match-indicator="Address_Part2"
+									match-score="100" match-score-weight="4" search-value="DUBBO" />
+								<ns5:state match-indicator="State" match-score="100"
+									match-score-weight="4" search-value="NSW" />
+								<ns5:postcode match-indicator="Postal_Area"
+									match-score="0" match-score-weight="4" search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="PASS"
+							match-score="98" search-name="MIRUS-HER-0047" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name match-score="96"
+								match-score-weight="12">
+								<ns5:family-name match-indicator="Surname"
+									match-score="100" match-score-weight="4" search-value="SIMPSON" />
+								<ns5:first-given-name match-indicator="First_Name"
+									match-score="100" match-score-weight="4" search-value="HOMER" />
+								<ns5:other-given-name match-indicator="Middle_Names"
+									match-score="90" match-score-weight="4" search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth search-value="1947-10-09" />
+							<ns5:gender search-value="male" />
+							<ns5:current-address match-score="100"
+								match-score-weight="20">
+								<ns5:unit-number match-indicator="Unit_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="" />
+								<ns5:street-number match-indicator="Street_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="37" />
+								<ns5:street-name match-indicator="Address_Part1"
+									match-score="100" match-score-weight="4" search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb match-indicator="Address_Part2"
+									match-score="100" match-score-weight="4" search-value="DUBBO" />
+								<ns5:state match-indicator="State" match-score="100"
+									match-score-weight="4" search-value="NSW" />
+								<ns5:postcode match-indicator="Postal_Area"
+									match-score="0" match-score-weight="4" search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="ERROR"
+							search-name="VEDA-SFDPHONE-0022" search-type="exclusion"
+							service-result-code="99" service-result-detail=""
+							service-result-string="Unknown Error" />
+						<ns5:search-result match-indicator="ERROR"
+							search-name="VEDA-SFDADDR-0023" search-type="exclusion"
+							service-result-code="99" service-result-detail=""
+							service-result-string="Unknown Error" />
+						<ns5:search-result match-indicator="ERROR"
+							search-name="VEDA-SFDDL-0024" search-type="exclusion"
+							service-result-code="99" service-result-detail=""
+							service-result-string="Unknown Error" />
+						<ns5:search-result match-indicator="ERROR"
+							search-name="VEDA-SFDPASSPORT-0025" search-type="exclusion"
+							service-result-code="99" service-result-detail=""
+							service-result-string="Unknown Error" />
+						<ns5:search-result match-indicator="PASS"
+							match-score="98" search-name="AEC-ER-0031" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name match-score="96"
+								match-score-weight="12">
+								<ns5:family-name match-indicator="Surname"
+									match-score="100" match-score-weight="4" search-value="SIMPSON" />
+								<ns5:first-given-name match-indicator="First_Name"
+									match-score="100" match-score-weight="4" search-value="HOMER" />
+								<ns5:other-given-name match-indicator="Middle_Names"
+									match-score="90" match-score-weight="4" search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth search-value="1947-10-09" />
+							<ns5:gender search-value="male" />
+							<ns5:current-address match-score="100"
+								match-score-weight="20">
+								<ns5:unit-number match-indicator="Unit_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="" />
+								<ns5:street-number match-indicator="Street_Number_Noalpha"
+									match-score="100" match-score-weight="4" search-value="37" />
+								<ns5:street-name match-indicator="Address_Part1"
+									match-score="100" match-score-weight="4" search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb match-indicator="Address_Part2"
+									match-score="100" match-score-weight="4" search-value="DUBBO" />
+								<ns5:state match-indicator="State" match-score="100"
+									match-score-weight="4" search-value="NSW" />
+								<ns5:postcode match-indicator="Postal_Area"
+									match-score="0" match-score-weight="4" search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="NULL-NS"
+							search-name="MEDICARE-CARD-0007" search-type="verification"
+							service-result-code="0"
+							service-result-detail="Request missing mandatory value :  medicareCard.  "
+							service-result-string="OK" />
+						<ns5:search-result match-indicator="ERROR"
+							search-name="VEDA-EVVELOCITY-0026" search-type="exclusion"
+							service-result-code="99" service-result-detail=""
+							service-result-string="Unknown Error" />
+						<ns5:search-result match-indicator="NULL-NS"
+							search-name="BDM-MCVS-0004" search-type="verification"
+							service-result-code="0"
+							service-result-detail="Request missing mandatory value :  marriageCertificate.  "
+							service-result-string="OK" />
+						<ns5:search-result match-indicator="NULL-NS"
+							search-name="AP" search-type="verification" service-result-code="0"
+							service-result-detail="No search performed"
+							service-result-string="OK" />
+						<ns5:search-result match-indicator="NULL-NS"
+							search-name="NSW-POAC-0009" search-type="verification"
+							service-result-code="0"
+							service-result-detail="Request missing mandatory value :  proofOfAgeCard.  "
+							service-result-string="OK" />
+						<ns5:search-result match-indicator="FAIL"
+							match-score="0" search-name="MIRUS-SPD-0046" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name>
+								<ns5:family-name search-value="SIMPSON" />
+								<ns5:first-given-name search-value="HOMER" />
+								<ns5:other-given-name search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth search-value="1947-10-09" />
+							<ns5:gender search-value="male" />
+							<ns5:current-address>
+								<ns5:unit-number search-value="" />
+								<ns5:street-number search-value="37" />
+								<ns5:street-name search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb search-value="DUBBO" />
+								<ns5:state search-value="NSW" />
+								<ns5:postcode search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="FAIL"
+							match-score="0" search-name="VEDA-CBPR-0034" search-type="verification"
+							service-result-code="0" service-result-detail=""
+							service-result-string="OK">
+							<ns5:individual-name>
+								<ns5:family-name search-value="SIMPSON" />
+								<ns5:first-given-name search-value="HOMER" />
+								<ns5:other-given-name search-value="" />
+							</ns5:individual-name>
+							<ns5:date-of-birth search-value="1947-10-09" />
+							<ns5:gender search-value="male" />
+							<ns5:current-address>
+								<ns5:unit-number search-value="" />
+								<ns5:street-number search-value="37" />
+								<ns5:street-name search-value="SMALL" />
+								<ns5:street-type search-value="AVE" />
+								<ns5:suburb search-value="DUBBO" />
+								<ns5:state search-value="NSW" />
+								<ns5:postcode search-value="2023" />
+								<ns5:unformatted-address
+									search-value="37 SMALL Avenue, DUBBO NSW 2023" />
+							</ns5:current-address>
+						</ns5:search-result>
+						<ns5:search-result match-indicator="NULL-NS"
+							search-name="BDM-BCVS-0003" search-type="verification"
+							service-result-code="0"
+							service-result-detail="Request missing mandatory value :  birthCertificate.  "
+							service-result-string="OK" />
+					</ns5:search-results>
+					<ns5:records />
+				</ns5:verification-response>
+				<ns5:fraud-assessment-response>
+					<ns5:score>0.0</ns5:score>
+					<ns5:threshold>50.0</ns5:threshold>
+					<ns5:result>FAIL</ns5:result>
+					<ns5:assessment-factors>
+						<ns5:assessment-factor>
+							<ns5:type>KYC_VLC</ns5:type>
+							<ns5:score>0.0</ns5:score>
+							<ns5:weight>0.27</ns5:weight>
+							<ns5:threshold>50.0</ns5:threshold>
+							<ns5:result>ERROR</ns5:result>
+						</ns5:assessment-factor>
+						<ns5:assessment-factor>
+							<ns5:type>KBA</ns5:type>
+							<ns5:score>0.0</ns5:score>
+							<ns5:weight>0.27</ns5:weight>
+							<ns5:threshold>20.0</ns5:threshold>
+							<ns5:result>FAIL</ns5:result>
+						</ns5:assessment-factor>
+						<ns5:assessment-factor>
+							<ns5:type>PNV</ns5:type>
+							<ns5:score>0.0</ns5:score>
+							<ns5:weight>0.15</ns5:weight>
+							<ns5:threshold>50.0</ns5:threshold>
+							<ns5:result>FAIL</ns5:result>
+						</ns5:assessment-factor>
+						<ns5:assessment-factor>
+							<ns5:type>SFA</ns5:type>
+							<ns5:score>0.0</ns5:score>
+							<ns5:weight>0.05</ns5:weight>
+							<ns5:threshold>50.0</ns5:threshold>
+							<ns5:result>FAIL</ns5:result>
+						</ns5:assessment-factor>
+						<ns5:assessment-factor>
+							<ns5:type>KYC_SFD</ns5:type>
+							<ns5:score>0.0</ns5:score>
+							<ns5:weight>0.26</ns5:weight>
+							<ns5:threshold>50.0</ns5:threshold>
+							<ns5:result>ERROR</ns5:result>
+						</ns5:assessment-factor>
+					</ns5:assessment-factors>
+				</ns5:fraud-assessment-response>
+				<ns5:knowledge-based-authentication-response
+					question-generation-message="The maximum number of questions for the KBA configuration were generated."
+					question-generation-status="OK" scoring-message="" scoring-status="UNSCORED">
+					<ns5:questionnaire>
+						<ns5:multiple-choice-question
+							sequence-no="1" status="UNANSWERED" status-message="">
+							<ns5:question-text>What was the latest type of Insurance Claim
+								you made?</ns5:question-text>
+							<ns5:response-option sequence-no="1">
+								<ns5:option-text>Motor Vehicle - Unclassified</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="2">
+								<ns5:option-text>Household Building and Contents - Fusion
+								</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="3">
+								<ns5:option-text>Household Building and Contents - Fidelity
+									Guarantee / Misappropriation</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="4">
+								<ns5:option-text>Household Building and Contents - Not at Fault
+									Collision</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="5">
+								<ns5:option-text>NONE OF THE ABOVE</ns5:option-text>
+							</ns5:response-option>
+						</ns5:multiple-choice-question>
+						<ns5:multiple-choice-question
+							sequence-no="2" status="UNANSWERED" status-message="">
+							<ns5:question-text>Who were you working for during September
+								1980?</ns5:question-text>
+							<ns5:response-option sequence-no="1">
+								<ns5:option-text>IWL LTD</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="2">
+								<ns5:option-text>CASH BACK P/L</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="3">
+								<ns5:option-text>HOMER SIMPSON</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="4">
+								<ns5:option-text>TRANSFIELD SERVICE HOPKINS</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="5">
+								<ns5:option-text>NONE OF THE ABOVE</ns5:option-text>
+							</ns5:response-option>
+						</ns5:multiple-choice-question>
+						<ns5:multiple-choice-question
+							sequence-no="3" status="UNANSWERED" status-message="">
+							<ns5:question-text>What type of insurance claim you made in
+								December 2013?</ns5:question-text>
+							<ns5:response-option sequence-no="1">
+								<ns5:option-text>Household Building and Contents - Earthquake
+								</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="2">
+								<ns5:option-text>Motor Vehicle - Unclassified</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="3">
+								<ns5:option-text>Household Building and Contents - At Fault
+									Collision</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="4">
+								<ns5:option-text>Household Building and Contents - Flood
+								</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="5">
+								<ns5:option-text>NONE OF THE ABOVE</ns5:option-text>
+							</ns5:response-option>
+						</ns5:multiple-choice-question>
+						<ns5:multiple-choice-question
+							sequence-no="4" status="UNANSWERED" status-message="">
+							<ns5:question-text>Which of the following companies have you
+								worked for?</ns5:question-text>
+							<ns5:response-option sequence-no="1">
+								<ns5:option-text>DESIGN DISPLAY &amp; MANAGEMENT
+								</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="2">
+								<ns5:option-text>PRESTIGE DISPLAYS P/L</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="3">
+								<ns5:option-text>ADVANCE SP PTY LTD</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="4">
+								<ns5:option-text>ALL OF THE ABOVE</ns5:option-text>
+							</ns5:response-option>
+							<ns5:response-option sequence-no="5">
+								<ns5:option-text>NONE OF THE ABOVE</ns5:option-text>
+							</ns5:response-option>
+						</ns5:multiple-choice-question>
+					</ns5:questionnaire>
+					<ns5:score>0</ns5:score>
+					<ns5:threshold>50</ns5:threshold>
+					<ns5:match-indicator>NO-MATCH</ns5:match-indicator>
+				</ns5:knowledge-based-authentication-response>
+			</ns5:component-responses>
+		</ns5:response>
+	</soapenv:Body>
+</soapenv:Envelope>

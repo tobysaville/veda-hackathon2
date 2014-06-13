@@ -1,0 +1,44 @@
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://camel.apache.org/schema/spring"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+								 http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <!-- @author: christopher.thill -->
+
+
+    <routeContext id="idm-context">
+
+		<route id="idm-orchestrator" group="idm-context-group" shutdownRoute="Defer">
+			<from ref="idm-orchestrator" />
+			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
+			<setBody><simple>resource:classpath:/payloads/idm/idm_request_140604-V1HL0-02WY9.xml</simple></setBody>
+			<log message="idm request: ${body}" loggingLevel="DEBUG"/>
+			<!-- <wireTap ref="idm-request-dumper"/> -->
+			<to ref="idm-product"/>
+			<wireTap ref="idm-response-dumper"/>
+		</route>
+		
+		<route id="idm-request-dumper" group="idm-context-group" shutdownRoute="Defer">
+			<from ref="idm-request-dumper" />
+			<log message="idm request dumper: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/idm/request-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route>
+		
+		<route id="idm-product" group="idm-context-group" shutdownRoute="Defer">
+			<from ref="idm-product" />
+			<setBody><simple>resource:classpath:/payloads/idm/idm_response-140611-V1HL0-02YFG.xml</simple></setBody>
+			<log message="idm product response: ${body}" loggingLevel="DEBUG"/>
+		</route>
+		
+		<route id="idm-response-dumper" group="idm-context-group" startupOrder="3" shutdownRoute="Defer">
+			<from ref="idm-response-dumper" />
+			<log message="idm response: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/idm/response-dumper.xsl"/>
+			<to ref="dumper-request-handler"/>
+		</route>
+        
+    </routeContext>
+</beans:beans>
