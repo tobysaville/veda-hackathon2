@@ -28,6 +28,7 @@
     <!-- <beans:import resource="classpath:/META-INF/spring/camel-context/ppsr-context.xml"/> -->
     <beans:import resource="classpath:/META-INF/spring/camel-context/ca-context.xml"/>
     <beans:import resource="classpath:/META-INF/spring/camel-context/screech-context.xml"/>
+    <beans:import resource="classpath:/META-INF/spring/camel-context/visualise-context.xml"/>
     
 	<camelContext id="hackathon-context" useMDCLogging="true" trace="true" streamCache="true" autoStartup="true" useBreadcrumb="true">
 
@@ -39,6 +40,7 @@
 		<routeContextRef ref="ca-context"/>
 		<routeContextRef ref="screech-context"/>
 		<routeContextRef ref="dumper-context"/>
+		<routeContextRef ref="visualiser-context"/>
 
 		<endpoint id="product-request-handler" uri="direct:start" />
 		<endpoint id="product-request-handler-http" uri="jetty:http://0.0.0.0:8080/hackathon/services/submit" />
@@ -62,6 +64,7 @@
 		<endpoint id="agd-product" uri="direct:agd-product" />
 		<endpoint id="agd-product-detail" uri="direct:agd-product-detail" />
 		<endpoint id="agd-product-detail-response-dumper" uri="jms:agd-product-detail-response-dumper" />
+		<endpoint id="agd-product-detail-response-visualiser" uri="jms:agd-product-detail-response-visualiser" />
 
 		<endpoint id="idm-orchestrator" uri="direct:idm-orchestrator" />
 		<endpoint id="idm-request-dumper" uri="jms:idm-request-dumper" />
@@ -76,7 +79,10 @@
 
 		<endpoint id="dumper-request-handler" uri="jms:dumper-request-handler" />
 		<endpoint id="dumper-orchestrator" uri="jms:dumper-orchestrator" />
-		<endpoint id="dumper-visualise" uri="jms:dumper-visualise" />
+		
+		<endpoint id="visualiser-request-handler" uri="jms:visualiser-request-handler" />
+		<endpoint id="visualiser-orchestrator" uri="jms:visualiser-orchestrator" />
+		<endpoint id="visualiser-visualise" uri="jms:visualiser-visualise" />
 		
 		<dataFormats>
 			<xmljson id="xmljson" />

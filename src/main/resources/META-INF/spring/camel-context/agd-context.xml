@@ -17,7 +17,8 @@
 			<to ref="agd-product"/>
 			<!-- <wireTap ref="agd-response-dumper" /> -->
 			<to ref="agd-product-detail"/>
-			<wireTap ref="agd-product-detail-response-dumper"/>
+			<!-- <wireTap ref="agd-product-detail-response-dumper"/> -->
+			<wireTap ref="agd-product-detail-response-visualiser"/>
 		</route>
 		
 		<route id="agd-request-dumper" group="agd-context-group" shutdownRoute="Defer">
@@ -56,6 +57,23 @@
 			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail_small.xml</simple></setBody>
 			<to uri="xslt:transformation/agd/gs/response-dumper_registrations.xsl"/>
 			<to ref="dumper-request-handler"/>
+		</route>
+		
+		<route id="agd-product-detail-response-visualiser" group="agd-context-group" shutdownRoute="Defer">
+			<from ref="agd-product-detail-response-visualiser" />
+			<log message="agd prpduct detail response: ${body}" loggingLevel="DEBUG"/>
+			<to uri="xslt:transformation/agd/gs/response-dumper_address.xsl"/>
+			<setHeader headerName="visualise.template">
+				<simple>resource:classpath:/templates/addAddress.json</simple>
+			</setHeader>
+			<wireTap ref="visualiser-request-handler"/>
+			
+			<setHeader headerName="visualise.template">
+				<simple>resource:classpath:/templates/addRegistration.json</simple>
+			</setHeader>
+			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail_small.xml</simple></setBody>
+			<to uri="xslt:transformation/agd/gs/response-dumper_registrations.xsl"/>
+			<wireTap ref="visualiser-request-handler"/>
 		</route>
         
     </routeContext>

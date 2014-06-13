@@ -23,36 +23,10 @@
 			<marshal ref="xmljson"/>
 			<convertBodyTo type="java.lang.String"/>
 			<log message="json: ${body}" />
-			<choice>
-				<when>
-					<simple>${headers.visualise}</simple>
-					<log message="visualising payload"/>
-					<wireTap ref="dumper-visualise"/>
-				</when>
-				<otherwise>
-					<log message="NOT visualising payload: ${headers.visualise}"/>
-				</otherwise>
-			</choice>
 			<log message="saving payload to collection: ${headers.CamelMongoDbCollection}"/>
 			<to uri="mongodb:myDb?database=test&amp;collection=books&amp;operation=save&amp;dynamicity=true" />
 		</route>
         
-		<route id="dumper-visualise" group="dumper-context-group" shutdownRoute="Defer">
-			<from ref="dumper-visualise" />
-			
-			<process ref="visualiseAddress"/>
-			
-			<log message="visualise body: ${body}" loggingLevel="INFO"/>
-			
-			<setHeader headerName="Accept"><constant>application/json; charset=UTF-8</constant></setHeader>
-			<setHeader headerName="Content-Type"><constant>application/json</constant></setHeader>
-			
-			<to uri="jetty:http://54.79.47.19:7474/db/data/cypher"/>
-			
-			<log message="visualise response: ${body}"/>
-			
-		</route>
     </routeContext>
     
-    <beans:bean id="visualiseAddress" class="com.veda.icc.esb.common.camel.processors.neo4j.CreateAddress"/>
 </beans:beans>

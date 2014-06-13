@@ -1,0 +1,52 @@
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://camel.apache.org/schema/spring"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+								 http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd">
+
+    <routeContext id="visualiser-context">
+
+		<route id="visualiser-request-handler" group="visualiser-context-group" shutdownRoute="Defer">
+			<from ref="visualiser-request-handler" />
+			<log message="visualiser payload: ${body}" loggingLevel="INFO"/>
+			<split>
+				<xpath>/request/parts/*</xpath>
+				<to ref="visualiser-orchestrator"/>
+			</split>
+		</route>
+		
+		<route id="visualiser-orchestrator" group="visualiser-context-group" shutdownRoute="Defer">
+			<from ref="visualiser-orchestrator" />
+			<log message="xml part: ${body}" loggingLevel="TRACE"/>
+			<marshal ref="xmljson"/>
+			<convertBodyTo type="java.lang.String"/>
+			<log message="json: ${body}" loggingLevel="TRACE"/>
+			<choice>
+				<when>
+					<simple>${headers.visualise.template}</simple>
+					<log message="visualising payload"/>
+					
+					<process ref="wrapCreateTemplate"/>
+					
+					<log message="visualise body: ${body}" loggingLevel="INFO"/>
+					
+					<setHeader headerName="Accept"><constant>application/json; charset=UTF-8</constant></setHeader>
+					<setHeader headerName="Content-Type"><constant>application/json</constant></setHeader>
+					
+					<to uri="jetty:http://54.79.47.19:7474/db/data/cypher"/>
+					
+					<log message="visualise response: ${body}"/>
+			
+				</when>
+				<otherwise>
+					<log message="NOT visualising payload: ${headers.visualise.template}"/>
+				</otherwise>
+			</choice>
+		</route>
+        
+    </routeContext>
+    
+    <beans:bean id="wrapCreateTemplate" class="com.veda.icc.esb.common.camel.processors.neo4j.WrapCreateTemplate"/>
+    
+</beans:beans>
