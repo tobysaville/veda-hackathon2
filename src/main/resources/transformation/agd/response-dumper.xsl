@@ -1,7 +1,10 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
-	exclude-result-prefixes="vsa">
+	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:ser="http://schemas.ppsr.gov.au/2011/04/services" 
+	xmlns:data="http://schemas.ppsr.gov.au/2011/04/data"
+	exclude-result-prefixes="#all">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
@@ -13,9 +16,9 @@
     <xsl:template match="/">
     
 		<xsl:call-template name="dumperPart">
-		    <xsl:with-param name="payload" select="//vsa:response"/>
+		    <xsl:with-param name="payload" select="//ser:SearchByRegistrationNumberResponseMessage"/>
 		    <xsl:with-param name="collection" select="$collection"/>
-		    <xsl:with-param name="uuid" select="//vsa:enquiry-id"/>
+		    <xsl:with-param name="uuid" select="//data:CustomersRequestMessageId"/>
 		    <xsl:with-param name="timestamp" select="$timestamp"/>
 		
 		</xsl:call-template>
@@ -43,8 +46,7 @@
     	<xsl:param name="payload"/>
     
     	<response>
-    		<_id><xsl:value-of select="$payload//vsa:enquiry-id"/></_id>
-    		<!--<xsl:apply-templates select="//*[ancestor::vsa:response]"/>-->
+    		<_id><xsl:value-of select="$payload//data:CustomersRequestMessageId"/></_id>
     		<xsl:apply-templates select="* | node()" />
     	</response>
     	
@@ -59,4 +61,6 @@
 	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
 	</xsl:template>
+	
+	<xsl:template match="soap:Header"/>
 </xsl:stylesheet>

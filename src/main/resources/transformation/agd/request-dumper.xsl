@@ -1,7 +1,10 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:ns4="http://schemas.ppsr.gov.au/2011/04/services" 
-	xmlns:ns2="http://schemas.ppsr.gov.au/2011/04/data">
+	xmlns:ser="http://schemas.ppsr.gov.au/2011/04/services" 
+	xmlns:data="http://schemas.ppsr.gov.au/2011/04/data"
+	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+	xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+	exclude-result-prefixes="#all">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
@@ -13,9 +16,9 @@
     <xsl:template match="/">
     
 		<xsl:call-template name="dumperRequest">
-		    <xsl:with-param name="payload" select="//ns4:SearchByRegistrationNumberRequestMessage"/>
+		    <xsl:with-param name="payload" select="//ser:SearchByRegistrationNumberRequestMessage"/>
 		    <xsl:with-param name="collection" select="$collection"/>
-		    <xsl:with-param name="uuid" select="//ns2:CustomersRequestMessageId"/>
+		    <xsl:with-param name="uuid" select="//data:CustomersRequestMessageId"/>
 		    <xsl:with-param name="timestamp" select="$timestamp"/>
 		
 		</xsl:call-template>
@@ -43,13 +46,13 @@
     	<xsl:param name="payload"/>
     
     	<request>
-    		<_id><xsl:value-of select="$payload//ns2:CustomersRequestMessageId"/></_id>
+    		<_id><xsl:value-of select="$payload//data:CustomersRequestMessageId"/></_id>
     		<xsl:apply-templates select="* | node()" />
     	</request>
     	
     </xsl:template>
 
-	<xsl:template match="*[ancestor::ns4:SearchByRegistrationNumberRequestMessage]">
+	<xsl:template match="*[ancestor::ser:SearchByRegistrationNumberRequestMessage]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
@@ -58,4 +61,7 @@
 	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
 	</xsl:template>
+	
+	<xsl:template match="soap:Header"/>
+	<xsl:template match="wsse:UsernameToken"/>
 </xsl:stylesheet>

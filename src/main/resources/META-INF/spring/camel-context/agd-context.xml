@@ -20,7 +20,7 @@
 		
 		<route id="agd-request-dumper" group="agd-context-group" shutdownRoute="Defer">
 			<from ref="agd-request-dumper" />
-			<log message="agd request dumper: ${body}" loggingLevel="INFO"/>
+			<log message="agd request dumper: ${body}" loggingLevel="DEBUG"/>
 			<to uri="xslt:transformation/agd/request-dumper.xsl"/>
 			<to ref="dumper-request-handler"/>
 		</route>
@@ -33,7 +33,7 @@
 		
 		<route id="agd-response-dumper" group="agd-context-group" shutdownRoute="Defer">
 			<from ref="agd-response-dumper" />
-			<log message="agd response: ${body}" loggingLevel="DEBUG"/>
+			<log message="agd response: ${body}" loggingLevel="INFO"/>
 			<to uri="xslt:transformation/agd/response-dumper.xsl"/>
 			<to ref="dumper-request-handler"/>
 		</route>
