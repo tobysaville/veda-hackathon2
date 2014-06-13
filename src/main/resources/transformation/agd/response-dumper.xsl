@@ -1,10 +1,9 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
 	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 	xmlns:ser="http://schemas.ppsr.gov.au/2011/04/services" 
 	xmlns:data="http://schemas.ppsr.gov.au/2011/04/data"
-	exclude-result-prefixes="#all">
+	exclude-result-prefixes="ser data soap">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
@@ -52,7 +51,7 @@
     	
     </xsl:template>
 
-	<xsl:template match="*[ancestor::vsa:response]">
+	<xsl:template match="*[ancestor::ser:SearchByRegistrationNumberResponseMessage]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>

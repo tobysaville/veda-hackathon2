@@ -1,0 +1,35 @@
+<beanio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.beanio.org/2012/03"
+        xsi:schemaLocation="http://www.beanio.org/2012/03 http://www.beanio.org/2012/03/mapping.xsd">
+
+    <stream name="ScreechBusiness" format="csv">
+    
+       <record name="ScreechBusiness" order="1" minOccurs="1" maxOccurs="1" class="com.veda.icc.esb.screech.Business">
+       
+	        <field name="uid"/>
+	        <field name="sourceId"/>
+	        <field name="screechId"/>
+	        <field name="organisation"/>
+	        <field name="address"/>
+	        <field name="location"/>
+	        <field name="state"/>
+	        <field name="postcode"/>
+	        <field name="stName"/>
+	        <field name="stNumber"/>
+	        <field name="stExtra"/>
+	        <field name="oddEven"/>
+	        <field name="email"/>
+	        <field name="website"/>
+	        <field name="noOfEmployees"/>
+	        <field name="phone"/>
+	        <field name="fax"/>
+	        <field name="abn"/>
+	        <field name="types"/>
+	        <field name="received"/>
+	        <field name="revenue"/>
+	        <field name="mobile"/>
+	        <field name="freecall"/>
+       </record>
+
+    </stream>
+</beanio>
