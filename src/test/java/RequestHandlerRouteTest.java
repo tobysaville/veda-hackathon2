@@ -27,7 +27,7 @@ public class RequestHandlerRouteTest extends CamelSpringTestSupport {
 	}
 
     @Test
-    public void testMoveFile() throws Exception {
+    public void test() throws Exception {
     	String startRoute = "direct:start";
     	
     	String request = IOUtils.toString(getClass().getResourceAsStream("/request.xml"));

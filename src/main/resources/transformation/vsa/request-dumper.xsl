@@ -15,7 +15,7 @@
     <xsl:template match="/">
     
 		<xsl:call-template name="dumperRequest">
-		    <xsl:with-param name="request" select="//vs2:request"/>
+		    <xsl:with-param name="payload" select="//vs2:request"/>
 		    <xsl:with-param name="collection" select="$collection"/>
 		    <xsl:with-param name="uuid" select="//vs2:enquiry-id"/>
 		    <xsl:with-param name="timestamp" select="$timestamp"/>
@@ -24,7 +24,7 @@
     </xsl:template>
     
     <xsl:template name="dumperRequest">
-	    <xsl:param name="request"/>
+	    <xsl:param name="payload"/>
 	    <xsl:param name="collection"/>
 	    <xsl:param name="uuid"/>
 	    <xsl:param name="timestamp"/>
@@ -34,24 +34,25 @@
 			<uuid><xsl:value-of select="$uuid"/></uuid>
 			<timestamp><xsl:value-of select="$timestamp"/></timestamp>
 			<parts>
-				<xsl:call-template name="requestToPart">
-					<xsl:with-param name="request" select="$request"/>
+				<xsl:call-template name="payloadToPart">
+					<xsl:with-param name="payload" select="$payload"/>
 				</xsl:call-template>
 			</parts>
 		</request>
     </xsl:template>
     
-    <xsl:template name="requestToPart">
-    	<xsl:param name="request"/>
+    <xsl:template name="payloadToPart">
+    	<xsl:param name="payload"/>
     
     	<request>
-    		<_id><xsl:value-of select="$request//vs2:enquiry-id"/></_id>
-    		<xsl:apply-templates select="//*[ancestor::vs2:request]"/>
+    		<_id><xsl:value-of select="$payload//vs2:enquiry-id"/></_id>
+    		<!-- <xsl:apply-templates select="//*[ancestor::vs2:request]"/> -->
+    		<xsl:apply-templates select="* | node()" />
     	</request>
     	
     </xsl:template>
 
-	<xsl:template match="//vs2:*[ancestor::vs2:request]">
+	<xsl:template match="*[ancestor::vs2:request]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
