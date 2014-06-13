@@ -1,23 +1,21 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-	xmlns:ser="http://schemas.ppsr.gov.au/2011/04/services" 
-	xmlns:data="http://schemas.ppsr.gov.au/2011/04/data"
-	exclude-result-prefixes="ser data soap">
+	xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
+	exclude-result-prefixes="vsa">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
     
     <xsl:param name="timestamp"/>
     
-    <xsl:variable name="collection">agd_reg_num_response</xsl:variable>
+    <xsl:variable name="collection">ca_response</xsl:variable>
     
     <xsl:template match="/">
     
 		<xsl:call-template name="dumperPart">
-		    <xsl:with-param name="payload" select="//ser:SearchByRegistrationNumberResponseMessage"/>
+		    <xsl:with-param name="payload" select="//cth:companyTradingHistoryResponse"/>
 		    <xsl:with-param name="collection" select="$collection"/>
-		    <xsl:with-param name="uuid" select="//data:CustomersRequestMessageId"/>
+		    <xsl:with-param name="uuid" select="//thc:requestId"/>
 		    <xsl:with-param name="timestamp" select="$timestamp"/>
 		
 		</xsl:call-template>
@@ -45,13 +43,14 @@
     	<xsl:param name="payload"/>
     
     	<response>
-    		<_id><xsl:value-of select="$payload//data:CustomersRequestMessageId"/></_id>
+    		<_id><xsl:value-of select="$payload//thc:requestId"/></_id>
+    		<!--<xsl:apply-templates select="//*[ancestor::vsa:response]"/>-->
     		<xsl:apply-templates select="* | node()" />
     	</response>
     	
     </xsl:template>
 
-	<xsl:template match="*[ancestor::ser:SearchByRegistrationNumberResponseMessage]">
+	<xsl:template match="*[ancestor::cth:companyTradingHistoryResponse]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
@@ -60,6 +59,4 @@
 	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
 	</xsl:template>
-	
-	<xsl:template match="soap:Header"/>
 </xsl:stylesheet>

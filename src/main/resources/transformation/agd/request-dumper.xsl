@@ -4,7 +4,7 @@
 	xmlns:data="http://schemas.ppsr.gov.au/2011/04/data"
 	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
 	xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
-	exclude-result-prefixes="#all">
+	exclude-result-prefixes="ser data soap wsse">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>

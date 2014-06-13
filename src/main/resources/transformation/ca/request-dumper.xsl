@@ -1,29 +1,29 @@
 <xsl:stylesheet version="2.0"
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
-	xmlns:ser="http://schemas.ppsr.gov.au/2011/04/services" 
-	xmlns:data="http://schemas.ppsr.gov.au/2011/04/data"
-	exclude-result-prefixes="ser data soap">
+	xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
+	xmlns:vs2="http://www.vedaxml.com/services/xmlchannel/vsa/v2">
 
     <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes" indent="no"/>
     <xsl:strip-space elements="*"/>
     
+   <!--  <xsl:import href="../dumper/request-template.xsl"/> -->
+    
     <xsl:param name="timestamp"/>
     
-    <xsl:variable name="collection">agd_reg_num_response</xsl:variable>
+    <xsl:variable name="collection">ca_request</xsl:variable>
     
     <xsl:template match="/">
     
-		<xsl:call-template name="dumperPart">
-		    <xsl:with-param name="payload" select="//ser:SearchByRegistrationNumberResponseMessage"/>
+		<xsl:call-template name="dumperRequest">
+		    <xsl:with-param name="payload" select="//ns36:companyTradingHistoryRequest"/>
 		    <xsl:with-param name="collection" select="$collection"/>
-		    <xsl:with-param name="uuid" select="//data:CustomersRequestMessageId"/>
+		    <xsl:with-param name="uuid" select="//ns35:uuid"/>
 		    <xsl:with-param name="timestamp" select="$timestamp"/>
 		
 		</xsl:call-template>
     </xsl:template>
     
-    <xsl:template name="dumperPart">
+    <xsl:template name="dumperRequest">
 	    <xsl:param name="payload"/>
 	    <xsl:param name="collection"/>
 	    <xsl:param name="uuid"/>
@@ -44,14 +44,15 @@
     <xsl:template name="payloadToPart">
     	<xsl:param name="payload"/>
     
-    	<response>
-    		<_id><xsl:value-of select="$payload//data:CustomersRequestMessageId"/></_id>
+    	<request>
+    		<_id><xsl:value-of select="$payload//ns35:uuid"/></_id>
+    		<!-- <xsl:apply-templates select="//*[ancestor::vs2:request]"/> -->
     		<xsl:apply-templates select="* | node()" />
-    	</response>
+    	</request>
     	
     </xsl:template>
 
-	<xsl:template match="*[ancestor::ser:SearchByRegistrationNumberResponseMessage]">
+	<xsl:template match="*[ancestor::ns36:companyTradingHistoryRequest]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
@@ -60,6 +61,4 @@
 	<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
 	</xsl:template>
-	
-	<xsl:template match="soap:Header"/>
 </xsl:stylesheet>

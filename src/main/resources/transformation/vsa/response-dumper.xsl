@@ -44,7 +44,6 @@
     
     	<response>
     		<_id><xsl:value-of select="$payload//vsa:enquiry-id"/></_id>
-    		<!--<xsl:apply-templates select="//*[ancestor::vsa:response]"/>-->
     		<xsl:apply-templates select="* | node()" />
     	</response>
     	

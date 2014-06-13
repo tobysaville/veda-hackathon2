@@ -15,7 +15,7 @@
 			<log message="agd request: ${body}" loggingLevel="DEBUG"/>
 			<wireTap ref="agd-request-dumper"/>
 			<to ref="agd-product"/>
-			<!-- <wireTap ref="agd-response-dumper"/> -->
+			<wireTap ref="agd-response-dumper"/>
 		</route>
 		
 		<route id="agd-request-dumper" group="agd-context-group" shutdownRoute="Defer">
