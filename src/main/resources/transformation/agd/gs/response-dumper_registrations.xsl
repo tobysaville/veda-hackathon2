@@ -61,6 +61,11 @@
 		</RegistrationDetail>
 	</xsl:template>
 	
+	<xsl:template match="//data:Grantors">
+		<OrganisationNumber><xsl:value-of select=".//data:OrganisationNumber[1]"/></OrganisationNumber>
+		<OrganisationName><xsl:value-of select=".//data:OrganisationName[1]"/></OrganisationName>
+	</xsl:template>
+	
 	<xsl:template match="data:RegistrationDetail/*//*"/>
 		
 	<!--<xsl:template match="@*|text()|comment()">
