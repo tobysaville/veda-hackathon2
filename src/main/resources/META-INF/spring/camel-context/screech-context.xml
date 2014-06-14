@@ -10,7 +10,7 @@
 
 		<route id="screech-gateway" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-gateway" />
-			<setBody><simple>resource:classpath:/payloads/screech/business_small.txt</simple></setBody>
+			<!-- <setBody><simple>resource:classpath:/payloads/screech/business_small.txt</simple></setBody> -->
 			<to ref="screech-orchestrator"/>	
 		</route>
 
@@ -28,18 +28,9 @@
 		<route id="screech-orchestrator" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-orchestrator" />
 			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
-			<!-- <setBody><simple>resource:classpath:/payloads/screech/business_small.txt</simple></setBody> -->
 			<log message="screech request: ${body}" loggingLevel="DEBUG"/>
-			<!-- <wireTap ref="screech-request-dumper"/> -->
 			<to ref="screech-product"/>
 		</route>
-		
-		<!-- <route id="screech-request-dumper" group="screech-context-group" shutdownRoute="Defer">
-			<from ref="screech-request-dumper" />
-			<log message="screech request dumper: ${body}" loggingLevel="DEBUG"/>
-			<to uri="xslt:transformation/screech/request-dumper.xsl"/>
-			<to ref="dumper-request-handler"/>
-		</route> -->
 		
 		<route id="screech-product" group="screech-context-group" shutdownRoute="Defer">
 			<from ref="screech-product" />
@@ -47,6 +38,7 @@
 				<tokenize token="\n" />
 				<log message="screech line: ${body}" loggingLevel="DEBUG"/>
 				<to ref="screech-response-dumper"/>
+				<delay><constant>250</constant></delay>
 			</split>
 			<!-- <log message="screech product response: ${body}" loggingLevel="DEBUG"/> -->
 		</route>
@@ -59,8 +51,22 @@
             <marshal ref="ScreechBusinessJAXB"/>
 			<log message="screech business xml ${body}" loggingLevel="DEBUG"/>
 			<to uri="xslt:transformation/screech/response-dumper.xsl"/>
-			<log message="screech business dumper xml ${body}" loggingLevel="DEBUG"/>
+			<log message="screech business dumper xml ${body}" loggingLevel="INFO"/>
 			<to ref="dumper-request-handler"/> 
+			<to ref="screech-response-visualiser"/>
+			
+		</route>
+		
+		<route id="screech-response-visualiser" group="screech-context-group" shutdownRoute="Defer">
+			<from ref="screech-response-visualiser" />
+
+			<setHeader headerName="visualise.template">
+				<simple>resource:classpath:/templates/addBusiness.json</simple>
+			</setHeader>
+			
+			<wireTap ref="visualiser-request-handler"/>
+			<removeHeader headerName="visualise.template"/>
+			
 		</route>
         
     </routeContext>

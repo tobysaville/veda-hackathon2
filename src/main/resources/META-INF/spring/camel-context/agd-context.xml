@@ -36,7 +36,7 @@
 		
 		<route id="agd-product-detail" group="agd-context-group" shutdownRoute="Defer">
 			<from ref="agd-product-detail" />
-			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail_small.xml</simple></setBody>
+			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail.xml</simple></setBody>
 			<log message="agd product detail response: ${body}" loggingLevel="DEBUG"/>
 		</route>
 		
@@ -71,9 +71,11 @@
 			<setHeader headerName="visualise.template">
 				<simple>resource:classpath:/templates/addRegistration.json</simple>
 			</setHeader>
-			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail_small.xml</simple></setBody>
+			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail.xml</simple></setBody>
 			<to uri="xslt:transformation/agd/gs/response-dumper_registrations.xsl"/>
 			<wireTap ref="visualiser-request-handler"/>
+			
+			<removeHeader headerName="visualise.template"/>
 		</route>
         
     </routeContext>

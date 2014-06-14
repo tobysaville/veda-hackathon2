@@ -13,6 +13,7 @@
 			<split>
 				<xpath>/request/parts/*</xpath>
 				<to ref="visualiser-orchestrator"/>
+				<delay><constant>500</constant></delay>
 			</split>
 		</route>
 		
@@ -37,7 +38,17 @@
 					<to uri="jetty:http://54.79.47.19:7474/db/data/cypher"/>
 					
 					<log message="visualise response: ${body}"/>
+					
+					<unmarshal ref="xmljson"/>
+					
+					<log message="visualise response: ${body}" loggingLevel="INFO"/>
+					
+					<setHeader headerName="node.self.url">
+						<xpath resultType="String">//self/text</xpath>
+					</setHeader>
 			
+					<log message="self url: ${headers.node.self.url}"/>
+					
 				</when>
 				<otherwise>
 					<log message="NOT visualising payload: ${headers.visualise.template}"/>

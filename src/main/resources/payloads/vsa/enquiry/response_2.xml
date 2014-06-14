@@ -1,0 +1,1336 @@
+<vsa:response xmlns:vsa="http://www.vedaxml.com/products/vedascore/apply/v1"
+	response-type="report">
+	<vsa:product-header xmlns:vs2="http://www.vedaxml.com/services/xmlchannel/vsa/v2">
+		<vsa:enquiry-id>000000-00000-00700</vsa:enquiry-id>
+		<vsa:datetime-requested>2013-11-24T01:44:07</vsa:datetime-requested>
+		<vsa:datetime-generated>2014-06-06T09:25:58</vsa:datetime-generated>
+		<vsa:client-reference>1234</vsa:client-reference>
+		<vsa:operator-id>regemque dedit</vsa:operator-id>
+		<vsa:operator-name>fremunt celsa</vsa:operator-name>
+		<vsa:product-name>VedaScore Apply</vsa:product-name>
+		<vsa:permission-type code="XY">CONSUMER+COMMERCIAL
+		</vsa:permission-type>
+		<vsa:product-data-level code="C">Comprehensive
+		</vsa:product-data-level>
+		<vsa:product-version>2.0</vsa:product-version>
+	</vsa:product-header>
+	<vsa:product-data>
+		<vsa:enquiry-report>
+			<vsa:primary-match type="strong">
+				<vsa:bureau-reference>203876651</vsa:bureau-reference>
+				<vsa:individual-name first-reported-date="2014-01-13"
+					last-reported-date="2014-06-05" last-credit-enquiry-date="2014-06-06">
+					<vsa:family-name>OVER-ALL</vsa:family-name>
+					<vsa:first-given-name>BARRY</vsa:first-given-name>
+					<vsa:other-given-name>JOHN</vsa:other-given-name>
+				</vsa:individual-name>
+				<vsa:gender code="M">Male</vsa:gender>
+				<vsa:date-of-birth first-reported-date="2014-06-03"
+					last-reported-date="2014-06-05">1972-02-03</vsa:date-of-birth>
+				<vsa:drivers-licence first-reported-date="2014-02-05"
+					last-reported-date="2014-06-05">
+					<vsa:number>12385231</vsa:number>
+				</vsa:drivers-licence>
+				<vsa:lodged-complaint reported-date="2013-08-05">true
+				</vsa:lodged-complaint>
+				<vsa:is-deceased reported-date="2014-05-01">true
+				</vsa:is-deceased>
+			</vsa:primary-match>
+			<vsa:other-identities>
+				<vsa:other-identity>
+					<vsa:individual-name first-reported-date="2014-02-05"
+						last-credit-enquiry-date="2014-06-06">
+						<vsa:family-name>DOHERTY</vsa:family-name>
+						<vsa:first-given-name>REVS</vsa:first-given-name>
+					</vsa:individual-name>
+					<vsa:gender code="F">Female</vsa:gender>
+					<vsa:date-of-birth first-reported-date="2014-06-05">1986-02-05
+					</vsa:date-of-birth>
+					<vsa:is-deceased reported-date="2014-05-06">true
+					</vsa:is-deceased>
+				</vsa:other-identity>
+			</vsa:other-identities>
+			<vsa:addresses xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+				<vsa:address type="C">
+					<vsa:id-references>
+						<vsa:id-reference>203876651</vsa:id-reference>
+						<vsa:id-reference>203873425</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:property>VEDA BUILDING</vsa:property>
+					<vsa:unit-number>99</vsa:unit-number>
+					<vsa:street-number>100</vsa:street-number>
+					<vsa:street-name>ARTHUR</vsa:street-name>
+					<vsa:street-type>ST</vsa:street-type>
+					<vsa:suburb>NORTH SYDNEY</vsa:suburb>
+					<vsa:state>NSW</vsa:state>
+					<vsa:postcode>2060</vsa:postcode>
+					<vsa:country-code>AUS</vsa:country-code>
+				</vsa:address>
+				<vsa:address type="P">
+					<vsa:id-references>
+						<vsa:id-reference>203876651</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:street-number>22</vsa:street-number>
+					<vsa:street-name>NUMBER</vsa:street-name>
+					<vsa:street-type>ST</vsa:street-type>
+					<vsa:suburb>BRIGHTON</vsa:suburb>
+					<vsa:state>QLD</vsa:state>
+					<vsa:postcode>4017</vsa:postcode>
+					<vsa:country-code>AUS</vsa:country-code>
+				</vsa:address>
+				<vsa:address type="P">
+					<vsa:id-references>
+						<vsa:id-reference>203876651</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:street-number>1A</vsa:street-number>
+					<vsa:street-name>EIGHTEENTH</vsa:street-name>
+					<vsa:street-type>ST</vsa:street-type>
+					<vsa:suburb>BRIGHTON</vsa:suburb>
+					<vsa:state>QLD</vsa:state>
+					<vsa:postcode>4017</vsa:postcode>
+					<vsa:country-code>AUS</vsa:country-code>
+				</vsa:address>
+			</vsa:addresses>
+			<vsa:employment
+				xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+				<vsa:employer type="C">
+					<vsa:id-references>
+						<vsa:id-reference>203876651</vsa:id-reference>
+					</vsa:id-references>
+					<vsa:name>NEW EMPLOYER</vsa:name>
+				</vsa:employer>
+			</vsa:employment>
+			<vsa:consumer-credit-file>
+				<vsa:file-notes>
+					<vsa:file-note date-recorded="2015-01-24" code="l7oc_cC9">
+						<vsa:note>hdYNvKzG</vsa:note>
+					</vsa:file-note>
+				</vsa:file-notes>
+				<vsa:credit-enquiries
+					xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-06">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-06">
+						<vsa:account-type code="TC">Telecommunications
+							Services</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">3000</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1970BRAZIL</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-06">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-06">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">2399</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>CLIENT REF2</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-06">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-06">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">2399</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>CREDIT PROVIDER BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>CLIENT REF2</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">2001</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>TYPE1</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">2001</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>TYPE1</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">2399</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>CLIENT REF2</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="TC">Telecommunications
+							Services</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">3000</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1970BRAZIL</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">239</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>CLIENT REF2</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">999999</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1930</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">2001</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>TYPE1</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>1234</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-06-05">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">999999999</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-25">
+						<vsa:account-type code="AL">Auto Loan
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">0</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>THE MORTGAGE CENTRE</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>AL01012011</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-24">
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">0</vsa:enquiry-amount>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>CREDIT PROVIDER BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>CC02022012</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-22">
+						<vsa:account-type code="OD">Overdraft
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">22</vsa:enquiry-amount>
+						<vsa:relationship code="3">Guarantor
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>PROD TEST BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>OD04042014</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-22">
+						<vsa:account-type code="AL">Auto Loan
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">200</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>TYPE1</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-21">
+						<vsa:account-type code="PF">Personal Loan (fixed term)
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">3333</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>CONVERTED BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>PF11112011</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-20">
+						<vsa:account-type code="PR">Personal Loan (revolving)
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">4444</vsa:enquiry-amount>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>A.S.K. SOLUTIONS P/L</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>PR12122012</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-19">
+						<vsa:account-type code="RE">Equipment Hire or Rental
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">55555</vsa:enquiry-amount>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ABC BRISBANE BRANCH QLD</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>RE20122012</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-18">
+						<vsa:account-type code="RM">Real Property Mortgage
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">666666</vsa:enquiry-amount>
+						<vsa:relationship code="3">Guarantor
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ARCA 0003</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>RM01042014</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-17">
+						<vsa:account-type code="TC">Telecommunications
+							Services</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">7777777</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>BANK A 0003</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>TC21042014</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-16">
+						<vsa:account-type code="UA">Utilities
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">88888888</vsa:enquiry-amount>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>FIN B 0003 BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>UA14022014</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-05-15">
+						<vsa:account-type code="AO">All Other Account Types
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">999999999</vsa:enquiry-amount>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>INTEGRAL ENERGY 0003</vsa:name>
+						</vsa:credit-enquirer>
+						<vsa:enquiry-client-reference>AO28052015</vsa:enquiry-client-reference>
+					</vsa:credit-enquiry>
+					<vsa:credit-enquiry type="credit-application"
+						enquiry-date="2014-02-05">
+						<vsa:account-type code="CA">Charge Card
+						</vsa:account-type>
+						<vsa:enquiry-amount currency-code="AUD">1000</vsa:enquiry-amount>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:credit-enquirer>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:credit-enquirer>
+					</vsa:credit-enquiry>
+				</vsa:credit-enquiries>
+				<vsa:accounts xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+					<vsa:account latest-update-date="2014-06-04">
+						<vsa:account-id>NNNSA1111</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>RODNEY TIES NSW</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="AO">All Other Account Types
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:association-information>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-06-04">
+						<vsa:account-id>VVVVVSA1111</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>SUBSCRIBER QUEUE</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>SUBSCRIBER QUEUE</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="PF">Personal Loan (fixed term)
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:association-information>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-06-04">
+						<vsa:account-id>SCI100</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>GGGG-0000 TRAINING SUB BRANC</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>GGGG-0000 TRAINING SUB BRANC</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="RM">Real Property Mortgage
+						</vsa:account-type>
+						<vsa:relationship code="3">Guarantor
+						</vsa:relationship>
+						<vsa:association-information>
+							<vsa:is-serious-credit-infringement>true
+							</vsa:is-serious-credit-infringement>
+							<vsa:sci-date>2014-06-04</vsa:sci-date>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-30">
+						<vsa:account-id>OPENDATEONLY1</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:account-holder-count>1</vsa:account-holder-count>
+						<vsa:account-open-date>2014-05-30</vsa:account-open-date>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-05-30</vsa:latest-start-date>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-30">
+						<vsa:account-id>PAUL1234</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:account-open-date>2014-05-30</vsa:account-open-date>
+						<vsa:loan-payment-method code="I">Interest
+							only</vsa:loan-payment-method>
+						<vsa:term-type code="F">Fixed</vsa:term-type>
+						<vsa:secured-credit code="N">Unsecured</vsa:secured-credit>
+						<vsa:term-of-loan>012</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">1000</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>false</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-30">
+						<vsa:account-id>1SULYHT</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:account-holder-count>1</vsa:account-holder-count>
+						<vsa:account-open-date>2014-05-30</vsa:account-open-date>
+						<vsa:loan-payment-method code="I">Interest
+							only</vsa:loan-payment-method>
+						<vsa:term-type code="F">Fixed</vsa:term-type>
+						<vsa:secured-credit code="N">Unsecured</vsa:secured-credit>
+						<vsa:term-of-loan>012</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">10000</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>false</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-05-30</vsa:latest-start-date>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-29">
+						<vsa:account-id>101</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:association-information>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-06-03">
+						<vsa:account-id>1NTREST0NLY</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+							<vsa:transfer-date>2014-05-30</vsa:transfer-date>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="AL">Auto Loan
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:account-open-date>2013-05-20</vsa:account-open-date>
+						<vsa:account-closed-date>2014-04-21</vsa:account-closed-date>
+						<vsa:loan-payment-method code="I">Interest
+							only</vsa:loan-payment-method>
+						<vsa:term-type code="F">Fixed</vsa:term-type>
+						<vsa:secured-credit code="S">Secured or Partially
+							Secured</vsa:secured-credit>
+						<vsa:term-of-loan>999</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">0</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>true</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:latest-start-date>2013-05-20</vsa:latest-start-date>
+							<vsa:latest-ceased-date>2013-05-29</vsa:latest-ceased-date>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+						<vsa:repayment-history>
+							<vsa:payment>
+								<vsa:period>2014-05</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-04</vsa:period>
+								<vsa:status>1</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-03</vsa:period>
+								<vsa:status>2</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-02</vsa:period>
+								<vsa:status>3</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-01</vsa:period>
+								<vsa:status>4</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-12</vsa:period>
+								<vsa:status>5</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-11</vsa:period>
+								<vsa:status>6</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-10</vsa:period>
+								<vsa:status>X</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-09</vsa:period>
+								<vsa:status>A</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-08</vsa:period>
+								<vsa:status>A</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-07</vsa:period>
+								<vsa:status>A</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-06</vsa:period>
+								<vsa:status>A</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-05</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-04</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-03</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-02</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-01</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-12</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-11</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-10</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-09</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-08</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-07</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-06</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+						</vsa:repayment-history>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-28">
+						<vsa:account-id>NOT4PPL1C4BL3</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>THE MORTGAGE CENTRE</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>THE MORTGAGE CENTRE</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="PF">Personal Loan (fixed term)
+						</vsa:account-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:account-holder-count>1</vsa:account-holder-count>
+						<vsa:account-open-date>2012-05-11</vsa:account-open-date>
+						<vsa:account-closed-date>2013-05-11</vsa:account-closed-date>
+						<vsa:loan-payment-method code="N">Not
+							applicable for the account</vsa:loan-payment-method>
+						<vsa:term-type code="R">Revolving</vsa:term-type>
+						<vsa:secured-credit code="N">Unsecured</vsa:secured-credit>
+						<vsa:term-of-loan>999</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">111111111</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>false</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:latest-start-date>2012-05-11</vsa:latest-start-date>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-28">
+						<vsa:account-id>PR1N1P4LFU11</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>INTEGRAL ENERGY 0003</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>INTEGRAL ENERGY 0003</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:account-holder-count>1</vsa:account-holder-count>
+						<vsa:account-open-date>2012-12-08</vsa:account-open-date>
+						<vsa:account-closed-date>2013-12-08</vsa:account-closed-date>
+						<vsa:loan-payment-method code="R">Principal
+							and Interest with residual unpaid amount</vsa:loan-payment-method>
+						<vsa:term-type code="F">Fixed</vsa:term-type>
+						<vsa:secured-credit code="U">Unspecified</vsa:secured-credit>
+						<vsa:term-of-loan>024</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">1000</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>false</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:latest-start-date>2012-12-08</vsa:latest-start-date>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-28">
+						<vsa:account-id>PR1NC1P4L1NT3R35TUNP41D</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>FIN B 0003 BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>FIN B 0003 BRANCH</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="OD">Overdraft
+						</vsa:account-type>
+						<vsa:relationship code="3">Guarantor
+						</vsa:relationship>
+						<vsa:account-open-date>2011-09-24</vsa:account-open-date>
+						<vsa:account-closed-date>2012-09-24</vsa:account-closed-date>
+						<vsa:loan-payment-method code="R">Principal
+							and Interest with residual unpaid amount</vsa:loan-payment-method>
+						<vsa:term-type code="F">Fixed</vsa:term-type>
+						<vsa:secured-credit code="S">Secured or Partially
+							Secured</vsa:secured-credit>
+						<vsa:term-of-loan>100</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">0</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>true</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:latest-start-date>2011-09-24</vsa:latest-start-date>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-24">
+						<vsa:account-id>VSAACCOUNT1</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:account-open-date>2014-01-01</vsa:account-open-date>
+						<vsa:loan-payment-method code="I">Interest
+							only</vsa:loan-payment-method>
+						<vsa:term-type code="F">Fixed</vsa:term-type>
+						<vsa:secured-credit code="N">Unsecured</vsa:secured-credit>
+						<vsa:term-of-loan>012</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">7000</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>false</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-01-01</vsa:latest-start-date>
+							<vsa:latest-ceased-date>2014-05-08</vsa:latest-ceased-date>
+							<vsa:is-serious-credit-infringement>true
+							</vsa:is-serious-credit-infringement>
+							<vsa:sci-date>2014-05-07</vsa:sci-date>
+							<vsa:default-association-start-date>2014-05-07</vsa:default-association-start-date>
+							<vsa:default-association-cease-date>2014-05-08</vsa:default-association-cease-date>
+						</vsa:association-information>
+						<vsa:repayment-history>
+							<vsa:payment>
+								<vsa:period>2014-05</vsa:period>
+								<vsa:status>4</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-04</vsa:period>
+								<vsa:status>3</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-03</vsa:period>
+								<vsa:status>2</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-02</vsa:period>
+								<vsa:status>1</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2014-01</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-12</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-11</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-10</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-09</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-08</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-07</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-06</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-05</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-04</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-03</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-02</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2013-01</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-12</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-11</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-10</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-09</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-08</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-07</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+							<vsa:payment>
+								<vsa:period>2012-06</vsa:period>
+								<vsa:status>C</vsa:status>
+							</vsa:payment>
+						</vsa:repayment-history>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-10">
+						<vsa:account-id>VSAACCOUNT1</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+							<vsa:transfer-date>2014-05-10</vsa:transfer-date>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="CC">Credit Card
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:account-holder-count>1</vsa:account-holder-count>
+						<vsa:account-open-date>2012-05-06</vsa:account-open-date>
+						<vsa:loan-payment-method code="I">Interest
+							only</vsa:loan-payment-method>
+						<vsa:term-type code="F">Fixed</vsa:term-type>
+						<vsa:secured-credit code="S">Secured or Partially
+							Secured</vsa:secured-credit>
+						<vsa:term-of-loan>012</vsa:term-of-loan>
+						<vsa:latest-maximum-amount-credit
+							currency-code="AUD">10000</vsa:latest-maximum-amount-credit>
+						<vsa:is-unlimited-credit>false</vsa:is-unlimited-credit>
+						<vsa:association-information>
+							<vsa:latest-start-date>2012-05-06</vsa:latest-start-date>
+							<vsa:is-serious-credit-infringement>false
+							</vsa:is-serious-credit-infringement>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>DACC0003</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-02-04</vsa:latest-start-date>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>DACC0003</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-02-03</vsa:latest-start-date>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>DACC0003</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-02-02</vsa:latest-start-date>
+						</vsa:association-information>
+					</vsa:account>
+				</vsa:accounts>
+				<vsa:messages>
+					<vsa:message code="m-fIITis">Q6SBN5WB</vsa:message>
+				</vsa:messages>
+			</vsa:consumer-credit-file>
+			<vsa:commercial-credit-file>
+				<vsa:file-notes>
+					<vsa:file-note date-recorded="2014-05-08" code="ImrssMZv">
+						<vsa:note>u-7C:PL1</vsa:note>
+					</vsa:file-note>
+				</vsa:file-notes>
+				<vsa:credit-enquiries>
+					<vsa:credit-enquiry enquiry-date="2014-10-22"
+						type=".m0QP5Y7" dispute-code="96YjRaPL" dispute-reported-date="2014-11-08"
+						is-disputed="0" />
+				</vsa:credit-enquiries>
+				<vsa:accounts xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+					<vsa:account latest-update-date="2014-06-04">
+						<vsa:account-id>VSAACCOUNT1</vsa:account-id>
+						<vsa:original-credit-provider>
+							<vsa:name>ITIG TCPIP 003 ACTIVE BRANCH</vsa:name>
+						</vsa:original-credit-provider>
+						<vsa:latest-credit-provider>
+							<vsa:name>CRED - 003 ACTIVE BRANCH</vsa:name>
+							<vsa:transfer-date>2014-05-01</vsa:transfer-date>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="30">$accountTypeCode
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:association-information>
+							<vsa:latest-start-date>2012-01-01</vsa:latest-start-date>
+							<vsa:latest-ceased-date>2014-02-03</vsa:latest-ceased-date>
+							<vsa:is-serious-credit-infringement>true
+							</vsa:is-serious-credit-infringement>
+							<vsa:sci-date>2014-01-16</vsa:sci-date>
+							<vsa:default-association-start-date>2013-12-25</vsa:default-association-start-date>
+							<vsa:default-association-cease-date>2013-12-26</vsa:default-association-cease-date>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account latest-update-date="2014-05-28">
+						<vsa:account-id>RECREATECOMM1</vsa:account-id>
+						<vsa:latest-credit-provider>
+							<vsa:name>ITIG TCPIP 009 ACTIVE BRANCH</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:account-type code="60">$accountTypeCode
+						</vsa:account-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>DACC0009</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-02-04</vsa:latest-start-date>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>DACC0009</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-02-04</vsa:latest-start-date>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>DACC0003</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-02-03</vsa:latest-start-date>
+						</vsa:association-information>
+					</vsa:account>
+					<vsa:account>
+						<vsa:account-id />
+						<vsa:latest-credit-provider>
+							<vsa:name>AAKL0000</vsa:name>
+						</vsa:latest-credit-provider>
+						<vsa:association-information>
+							<vsa:latest-start-date>2014-02-02</vsa:latest-start-date>
+						</vsa:association-information>
+					</vsa:account>
+				</vsa:accounts>
+				<vsa:messages>
+					<vsa:message code="DoxvOHa9">DgUF</vsa:message>
+				</vsa:messages>
+			</vsa:commercial-credit-file>
+			<vsa:public-record-or-consumer-credit-information
+				xmlns:bureau="http://www.vedaxml.com/bureau/internal/individual/v1">
+				<vsa:court-actions>
+					<vsa:court-action type="other-court-action">
+						<vsa:action-date>2014-02-04</vsa:action-date>
+						<vsa:creditor>BIGGEST BANK</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">500000</vsa:court-action-amount>
+						<vsa:plaint-number>0402/14/QBNE</vsa:plaint-number>
+						<vsa:court-type>Supreme Court</vsa:court-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:co-borrower>PAUL CO</vsa:co-borrower>
+						<vsa:court-action-status date="2014-05-04"
+							code="P">Paid</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="other-court-action">
+						<vsa:action-date>2014-02-03</vsa:action-date>
+						<vsa:creditor>BIGGER BANK</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">50000</vsa:court-action-amount>
+						<vsa:plaint-number>0302/14/QBNE</vsa:plaint-number>
+						<vsa:court-type>Supreme Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:court-action>
+					<vsa:court-action type="other-court-action">
+						<vsa:action-date>2014-02-02</vsa:action-date>
+						<vsa:creditor>BIG BANK</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">5000</vsa:court-action-amount>
+						<vsa:plaint-number>0202/14/QBNE</vsa:plaint-number>
+						<vsa:court-type>District Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:court-action>
+					<vsa:court-action type="other-court-action">
+						<vsa:action-date>2013-02-02</vsa:action-date>
+						<vsa:creditor>MANCE RAYDER</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">999999999</vsa:court-action-amount>
+						<vsa:plaint-number>09/12/2WYW</vsa:plaint-number>
+						<vsa:court-type>Magistrates Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:court-action-status date="2013-08-02"
+							code="S">Settled</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="other-court-action">
+						<vsa:action-date>2012-02-06</vsa:action-date>
+						<vsa:creditor>PETYR BAELISH</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">77777777</vsa:court-action-amount>
+						<vsa:plaint-number>99/12/QAYR</vsa:plaint-number>
+						<vsa:court-type>Local Court</vsa:court-type>
+						<vsa:relationship code="3">Guarantor
+						</vsa:relationship>
+						<vsa:co-borrower>NOKIA</vsa:co-borrower>
+					</vsa:court-action>
+					<vsa:court-action type="other-court-action">
+						<vsa:action-date>2012-02-02</vsa:action-date>
+						<vsa:creditor>STANNIS BARATHEON</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">6666666</vsa:court-action-amount>
+						<vsa:plaint-number>99/12/TBUR</vsa:plaint-number>
+						<vsa:court-type>District Court</vsa:court-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:co-borrower>MC HAMMER</vsa:co-borrower>
+						<vsa:court-action-status date="2013-06-06"
+							code="S">Settled</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="other-court-action">
+						<vsa:action-date>2012-02-02</vsa:action-date>
+						<vsa:creditor>ROBERT BARATHEON</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">555555</vsa:court-action-amount>
+						<vsa:plaint-number>9999/07/ALCO</vsa:plaint-number>
+						<vsa:court-type>Supreme Court</vsa:court-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:co-borrower>GARY COLEMAN</vsa:co-borrower>
+						<vsa:court-action-status date="2013-05-06"
+							code="P">Paid</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2014-02-04</vsa:action-date>
+						<vsa:creditor>BIGGEST BANK</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">500000</vsa:court-action-amount>
+						<vsa:plaint-number>0402/14/QBNE</vsa:plaint-number>
+						<vsa:court-type>Magistrates Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2014-02-04</vsa:action-date>
+						<vsa:creditor>ANZ</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">789456123</vsa:court-action-amount>
+						<vsa:plaint-number>EF1247878/10/CASN</vsa:plaint-number>
+						<vsa:court-type>District Court</vsa:court-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:co-borrower>CBA</vsa:co-borrower>
+						<vsa:court-action-status date="2014-02-04"
+							code="P">Paid</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2014-02-03</vsa:action-date>
+						<vsa:creditor>BIGGER BANK</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">50000</vsa:court-action-amount>
+						<vsa:plaint-number>0302/14/QBNE</vsa:plaint-number>
+						<vsa:court-type>Magistrates Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2014-02-02</vsa:action-date>
+						<vsa:creditor>BIG BANK</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">5000</vsa:court-action-amount>
+						<vsa:plaint-number>0202/14/QBNE</vsa:plaint-number>
+						<vsa:court-type>Magistrates Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2013-03-06</vsa:action-date>
+						<vsa:creditor>TYWIN LANNISTER</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">3333</vsa:court-action-amount>
+						<vsa:plaint-number>999999/09/WALB</vsa:plaint-number>
+						<vsa:court-type>County Court</vsa:court-type>
+						<vsa:relationship code="3">Guarantor
+						</vsa:relationship>
+						<vsa:co-borrower>NOKIA</vsa:co-borrower>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2012-06-02</vsa:action-date>
+						<vsa:creditor>DAENERYS TARGARYEN</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">11</vsa:court-action-amount>
+						<vsa:plaint-number>ABC999999999/12/CASN</vsa:plaint-number>
+						<vsa:court-type>District Court</vsa:court-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:co-borrower>SHANE FILIAN</vsa:co-borrower>
+						<vsa:court-action-status date="2013-06-03"
+							code="P">Paid</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2012-02-02</vsa:action-date>
+						<vsa:creditor>JOFFREY BARATHEON</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">44444</vsa:court-action-amount>
+						<vsa:plaint-number>999999/08/VARA</vsa:plaint-number>
+						<vsa:court-type>Magistrates Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:court-action-status date="2013-04-06"
+							code="D">Discontinued</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2012-02-02</vsa:action-date>
+						<vsa:creditor>JON ARRYN</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">222</vsa:court-action-amount>
+						<vsa:plaint-number>9999999/11/NASP</vsa:plaint-number>
+						<vsa:court-type>Local Court</vsa:court-type>
+						<vsa:relationship code="2">Principal’s Account
+							(joint)</vsa:relationship>
+						<vsa:co-borrower>KERRY KATONA</vsa:co-borrower>
+						<vsa:court-action-status date="2014-03-06"
+							code="S">Settled</vsa:court-action-status>
+					</vsa:court-action>
+					<vsa:court-action type="default-judgement">
+						<vsa:action-date>2012-02-02</vsa:action-date>
+						<vsa:creditor>EDDARD STARK</vsa:creditor>
+						<vsa:court-action-amount currency-code="AUD">0</vsa:court-action-amount>
+						<vsa:plaint-number>999999999999/11/ACTM</vsa:plaint-number>
+						<vsa:court-type>Small Court</vsa:court-type>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+						<vsa:court-action-status date="2014-06-03"
+							code="D">Discontinued</vsa:court-action-status>
+					</vsa:court-action>
+				</vsa:court-actions>
+				<vsa:disqualified-directorships>
+					<vsa:disqualified-directorship
+						last-extract-date="2014-02-04" last-extract-time="15:30:00.000">
+						<vsa:date-disqualified>2014-02-02</vsa:date-disqualified>
+						<vsa:date-disqualified-until>2024-02-02</vsa:date-disqualified-until>
+					</vsa:disqualified-directorship>
+					<vsa:disqualified-directorship
+						last-extract-date="2014-05-24" last-extract-time="13:52:00.000">
+						<vsa:date-disqualified>1999-01-01</vsa:date-disqualified>
+					</vsa:disqualified-directorship>
+				</vsa:disqualified-directorships>
+				<vsa:personal-insolvencies>
+					<vsa:personal-insolvency>
+						<vsa:type code="P">Personal Insolvency Agreement (Part 10
+							Deed)</vsa:type>
+						<vsa:date-declared>2014-02-03</vsa:date-declared>
+						<vsa:administration-id>
+							<vsa:district>QLD</vsa:district>
+							<vsa:year>2014</vsa:year>
+							<vsa:number>0302</vsa:number>
+							<vsa:proceedings-status>X</vsa:proceedings-status>
+						</vsa:administration-id>
+						<vsa:status code="D">Discharged</vsa:status>
+						<vsa:status-date>2014-05-05</vsa:status-date>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:personal-insolvency>
+					<vsa:personal-insolvency>
+						<vsa:type code="D">Debt Agreement (Part 9)</vsa:type>
+						<vsa:date-declared>2014-02-02</vsa:date-declared>
+						<vsa:administration-id>
+							<vsa:district>QLD</vsa:district>
+							<vsa:year>2014</vsa:year>
+							<vsa:number>0202</vsa:number>
+							<vsa:proceedings-status>9</vsa:proceedings-status>
+						</vsa:administration-id>
+						<vsa:relationship code="1">Principal’s Account (sole)
+						</vsa:relationship>
+					</vsa:personal-insolvency>
+				</vsa:personal-insolvencies>
+			</vsa:public-record-or-consumer-credit-information>
+		</vsa:enquiry-report>
+	</vsa:product-data>
+</vsa:response>
