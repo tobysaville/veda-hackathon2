@@ -50,13 +50,13 @@
 			<log message="vsa address visualiser payload: ${body}" loggingLevel="INFO"/>
 			<to ref="visualiser-request-handler"/>
 			
-			<!-- <setBody><simple>resource:classpath:/payloads/vsa/enquiry/response_fn_13093500.xml</simple></setBody>
+			<setBody><simple>resource:classpath:/payloads/vsa/enquiry/response_fn_13093500.xml</simple></setBody>
 			<setHeader headerName="visualise.template">
 				<simple>resource:classpath:/templates/addIdentity.json</simple>
 			</setHeader>
 			<to uri="xslt:transformation/vsa/response-dumper_identities.xsl"/>
 			<log message="vsa identity visualiser payload: ${body}" loggingLevel="INFO"/>
-			<to ref="visualiser-request-handler"/> -->
+			<to ref="visualiser-request-handler"/>
 			
 			<removeHeader headerName="visualise.template"/>
 		</route>
