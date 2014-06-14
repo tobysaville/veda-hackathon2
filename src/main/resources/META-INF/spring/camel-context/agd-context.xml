@@ -69,7 +69,7 @@
 			<wireTap ref="visualiser-request-handler"/>
 			
 			<setHeader headerName="visualise.template">
-				<simple>resource:classpath:/templates/addRegistration.json</simple>
+				<simple>resource:classpath:/templates/addSecurity.json</simple>
 			</setHeader>
 			<setBody><simple>resource:classpath:/payloads/agd/searchByGrantor/gs_response_detail.xml</simple></setBody>
 			<to uri="xslt:transformation/agd/gs/response-dumper_registrations.xsl"/>

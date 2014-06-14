@@ -44,7 +44,7 @@
 					<log message="visualise response: ${body}" loggingLevel="INFO"/>
 					
 					<setHeader headerName="node.self.url">
-						<xpath resultType="String">//self/text</xpath>
+						<xpath resultType="String">//self/text()</xpath>
 					</setHeader>
 			
 					<log message="self url: ${headers.node.self.url}"/>
