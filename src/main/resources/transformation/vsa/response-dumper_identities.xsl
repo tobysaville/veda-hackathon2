@@ -35,7 +35,7 @@
 		</request>
     </xsl:template>
 	
-	<xsl:template match="*[parent::vsa:primary-match or parent::vsa:individual-name]">
+	<xsl:template match="*[parent::vsa:primary-match ]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
@@ -45,6 +45,12 @@
 		<identity>
 			<xsl:apply-templates select="@*|node()" />
 		</identity>
+	</xsl:template>
+	
+	<xsl:template match="*[self::vsa:individual-name]">
+		<family-name><xsl:value-of select="vsa:family-name"/></family-name>
+		<first-given-name><xsl:value-of select="vsa:first-given-name"/></first-given-name>
+		<other-given-name><xsl:value-of select="vsa:other-given-name"/></other-given-name>
 	</xsl:template>
 	
 	<xsl:template match="@*|text()|comment()">
