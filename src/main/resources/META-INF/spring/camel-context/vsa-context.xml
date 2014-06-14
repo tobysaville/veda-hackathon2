@@ -58,6 +58,14 @@
 			<log message="vsa identity visualiser payload: ${body}" loggingLevel="INFO"/>
 			<to ref="visualiser-request-handler"/>
 			
+			<setBody><simple>resource:classpath:/payloads/vsa/enquiry/response_2.xml</simple></setBody>
+			<setHeader headerName="visualise.template">
+				<simple>resource:classpath:/templates/addAccount.json</simple>
+			</setHeader>
+			<to uri="xslt:transformation/vsa/response-dumper_accounts.xsl"/>
+			<log message="vsa accounts visualiser payload: ${body}" loggingLevel="INFO"/>
+			<to ref="visualiser-request-handler"/>
+			
 			<removeHeader headerName="visualise.template"/>
 		</route>
         

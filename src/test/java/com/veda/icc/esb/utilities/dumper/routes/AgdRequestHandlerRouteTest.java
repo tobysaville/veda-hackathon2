@@ -38,7 +38,7 @@ public class AgdRequestHandlerRouteTest extends CamelSpringTestSupport {
     	
         // wait a while to let the file be moved
         log.debug("waiting for 2 seconds for async completion");
-        Thread.sleep(8000);
+        Thread.sleep(258000);
         log.debug("waiting complete");
         
         log.debug("test complete: " + response);

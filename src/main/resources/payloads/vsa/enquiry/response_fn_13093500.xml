@@ -22,9 +22,9 @@
 				<vsa:bureau-reference>13093500</vsa:bureau-reference>
 				<vsa:individual-name first-reported-date="1988-06-01"
 					last-reported-date="2014-05-22" last-credit-enquiry-date="2014-05-23">
-					<vsa:family-name>LAST CONSUMER</vsa:family-name>
-					<vsa:first-given-name>FIRSTCONSUMER</vsa:first-given-name>
-					<vsa:other-given-name>MIDCONSUMER</vsa:other-given-name>
+					<vsa:family-name>SMITH</vsa:family-name>
+					<vsa:first-given-name>BARRY</vsa:first-given-name>
+					<vsa:other-given-name>JOHN</vsa:other-given-name>
 				</vsa:individual-name>
 				<vsa:gender code="M">Male</vsa:gender>
 				<vsa:date-of-birth first-reported-date="2013-01-22"

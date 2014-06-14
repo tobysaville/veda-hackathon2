@@ -38,7 +38,7 @@ public class VsaRequestHandlerRouteTest extends CamelSpringTestSupport {
     	
         // wait a while to let the file be moved
         log.debug("waiting for async completion");
-        Thread.sleep(8000);
+        Thread.sleep(98000);
         log.debug("waiting complete");
         
         log.debug("test complete: " + response);
