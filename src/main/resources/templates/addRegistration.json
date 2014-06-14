@@ -1,6 +1,0 @@
-{
-  "query" : "CREATE (n:Registration { props } ) RETURN n",
-  "params" : {
-    "props" : %s
-  }
-}

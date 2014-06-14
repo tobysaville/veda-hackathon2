@@ -8,7 +8,7 @@
     
     <xsl:param name="timestamp"/>
     
-    <xsl:variable name="collection">addresses</xsl:variable>
+    <xsl:variable name="collection">accounts</xsl:variable>
     
     <xsl:template match="/">
     
@@ -30,15 +30,21 @@
 			<uuid><xsl:value-of select="$uuid"/></uuid>
 			<timestamp><xsl:value-of select="$timestamp"/></timestamp>
 			<parts>
-    			<xsl:apply-templates select="//vsa:address" />
+				<xsl:apply-templates select="//vsa:account" />
 			</parts>
 		</request>
     </xsl:template>
 	
-	<xsl:template match="*[ancestor-or-self::vsa:address]">
+	<xsl:template match="*[parent::vsa:account]">
 		<xsl:element name="{local-name()}">
 			<xsl:apply-templates select="@*|node()" />
 		</xsl:element>
+	</xsl:template>
+	
+	<xsl:template match="*[self::vsa:account]">
+		<account>
+			<xsl:apply-templates select="@*|node()" />
+		</account>
 	</xsl:template>
 	
 	<xsl:template match="@*|text()|comment()">
