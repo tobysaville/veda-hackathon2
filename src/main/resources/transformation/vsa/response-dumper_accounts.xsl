@@ -37,18 +37,18 @@
 	
 	<xsl:template match="*[parent::vsa:account]">
 		<xsl:element name="{local-name()}">
-			<xsl:apply-templates select="@*|node()" />
+			<xsl:apply-templates select="node()" />
 		</xsl:element>
 	</xsl:template>
 	
 	<xsl:template match="*[self::vsa:account]">
 		<account>
-			<xsl:apply-templates select="@*|node()" />
+			<xsl:apply-templates select="node()" />
 		</account>
 	</xsl:template>
 	
-	<xsl:template match="@*|text()|comment()">
+	<!--<xsl:template match="@*|text()|comment()">
 		<xsl:copy />
-	</xsl:template>
+	</xsl:template>-->
 	
 </xsl:stylesheet>
