@@ -1,0 +1,6 @@
+{
+  "query" : "CREATE (n:Request { props } ) RETURN n",
+  "params" : {
+    "props" : %s
+  }
+}

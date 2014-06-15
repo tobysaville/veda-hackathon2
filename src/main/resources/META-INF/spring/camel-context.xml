@@ -105,8 +105,9 @@
 			<log message="product request: ${body}" loggingLevel="DEBUG"/>
 			<to ref="agd-orchestrator"/>
 			<to ref="vsa-orchestrator"/>
-			<to ref="idm-orchestrator"/>
-			<to ref="ca-orchestrator"/>
+			<!-- <to ref="idm-orchestrator"/>
+			<to ref="ca-orchestrator"/> -->
+			
 			<!-- <to ref="bureau-orchestrator"/> -->
 
 		</route>

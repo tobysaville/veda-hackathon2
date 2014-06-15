@@ -13,11 +13,11 @@
 			<setHeader headerName="timestamp"><simple>date:now:yyyy-MM-dd'T'HH:mm:ss</simple></setHeader>
 			<setBody><simple>resource:classpath:/payloads/agd/searchByRegistrationNumber/request_rn_201305220000134.xml</simple></setBody>
 			<log message="agd request: ${body}" loggingLevel="DEBUG"/>
-			<!-- <wireTap ref="agd-request-dumper"/> -->
+			<wireTap ref="agd-request-dumper"/>
 			<to ref="agd-product"/>
-			<!-- <wireTap ref="agd-response-dumper" /> -->
+			<wireTap ref="agd-response-dumper" />
 			<to ref="agd-product-detail"/>
-			<!-- <wireTap ref="agd-product-detail-response-dumper"/> -->
+			<wireTap ref="agd-product-detail-response-dumper"/>
 			<wireTap ref="agd-product-detail-response-visualiser"/>
 		</route>
 		

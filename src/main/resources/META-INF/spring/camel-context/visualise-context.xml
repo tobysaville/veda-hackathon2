@@ -12,7 +12,7 @@
 			<log message="visualiser payload: ${body}" loggingLevel="INFO"/>
 			<split>
 				<xpath>/request/parts/*</xpath>
-				<to ref="visualiser-orchestrator"/>
+				<!-- <to ref="visualiser-orchestrator"/> -->
 				<delay><constant>500</constant></delay>
 			</split>
 		</route>
